@@ -15,11 +15,6 @@ public class DoorTeleport : MonoBehaviour
 
     bool isOnCooldown;
 
-    private void Start()
-    {
-        var col = GetComponent<Collider2D>();
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isOnCooldown) return;
