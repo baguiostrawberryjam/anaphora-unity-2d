@@ -1113,6 +1113,7 @@ RectTransform:
   - {fileID: 699802745}
   - {fileID: 970134063}
   - {fileID: 927752019}
+  - {fileID: 1204489160}
   m_Father: {fileID: 2083299991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1214,8 +1215,10 @@ MonoBehaviour:
   target: {fileID: 610882582}
   pairedDoor: {fileID: 403983526}
   exitDirection: {x: 0, y: -1}
-  exitOffset: 0.4
+  exitOffset: 2
   cooldownSeconds: 0.15
+  blackPanel: {fileID: 1204489159}
+  fadeDuration: 0.2
 --- !u!1 &407198228
 GameObject:
   m_ObjectHideFlags: 0
@@ -10846,6 +10849,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 123300855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1204489159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204489160}
+  - component: {fileID: 1204489162}
+  - component: {fileID: 1204489161}
+  m_Layer: 5
+  m_Name: Transition Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1204489160
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204489159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 366600929}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1204489161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204489159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1204489162
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204489159}
+  m_CullTransparentMesh: 1
 --- !u!1 &1331935247
 GameObject:
   m_ObjectHideFlags: 0
@@ -11128,6 +11206,8 @@ MonoBehaviour:
   exitDirection: {x: 0, y: 1}
   exitOffset: 0.4
   cooldownSeconds: 0.15
+  blackPanel: {fileID: 0}
+  fadeDuration: 0.15
 --- !u!483693784 &1445022527
 TilemapRenderer:
   serializedVersion: 2
@@ -13155,10 +13235,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door Way
       objectReference: {fileID: 0}
+    - target: {fileID: 4914237305157503082, guid: 932757856bd9eb54b954533424e3b867, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3753147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914237305157503082, guid: 932757856bd9eb54b954533424e3b867, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.43273062
+      objectReference: {fileID: 0}
     - target: {fileID: 6935885226912704380, guid: 932757856bd9eb54b954533424e3b867, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 403983524}
+    - target: {fileID: 6935885226912704380, guid: 932757856bd9eb54b954533424e3b867, type: 3}
+      propertyPath: blackPanel
+      value: 
+      objectReference: {fileID: 1204489159}
+    - target: {fileID: 6935885226912704380, guid: 932757856bd9eb54b954533424e3b867, type: 3}
+      propertyPath: fadeDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
