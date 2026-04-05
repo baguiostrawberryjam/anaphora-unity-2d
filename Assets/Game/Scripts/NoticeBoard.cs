@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class NoticeBoard : MonoBehaviour
 {
     public GameObject noticePanel;
-
     public GameObject interactPrompt;
     public Text interactPromptText;
 

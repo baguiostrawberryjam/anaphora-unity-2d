@@ -3,10 +3,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public bool isKeyCollected;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
+
 
     void Start()
     {
