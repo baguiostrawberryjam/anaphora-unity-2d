@@ -1067,6 +1067,10 @@ PrefabInstance:
       value: TP_Victim_House_Entrance
       objectReference: {fileID: 0}
     - target: {fileID: 4297520071082605391, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
+      propertyPath: sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 3534a0d4203975e479fa9c52481e39e5, type: 3}
+    - target: {fileID: 4297520071082605391, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
       propertyPath: sceneToLoad
       value: 4_1_Intro_Victim_House-Inside
       objectReference: {fileID: 0}
@@ -1337,7 +1341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fbf8acdbbcf27b41b93a7e4e404e94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneToLoad: 3_0_Intro_Agency-Outside
+  sceneAsset: {fileID: 102900000, guid: f8c342683ac8dea4493dd3d8d66eafd7, type: 3}
   spawnPointName: SP_Agency_Outside_Exit
   teleportDelay: 3
 --- !u!212 &1767002068

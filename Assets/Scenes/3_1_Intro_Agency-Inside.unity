@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fbf8acdbbcf27b41b93a7e4e404e94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneToLoad: 3_0_Intro_Agency-Outside
+  sceneAsset: {fileID: 102900000, guid: f8c342683ac8dea4493dd3d8d66eafd7, type: 3}
   spawnPointName: SP_Agency_Outside_Entrance
   teleportDelay: 1.5
 --- !u!61 &119742787

@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fbf8acdbbcf27b41b93a7e4e404e94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneToLoad: 2_Intro_MC-Backyard
+  sceneAsset: {fileID: 102900000, guid: abfcc39a757e49747a4d87696a1ef42e, type: 3}
   spawnPointName: SP_MC_Apartment_Outside
   teleportDelay: 1.5
 --- !u!61 &119742787

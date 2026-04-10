@@ -179,9 +179,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00054973364, y: 0.393229}
-  m_Size: {x: 0.37093198, y: 0.63735867}
-  m_Direction: 0
+  m_Offset: {x: -0.0015479733, y: 0.077335685}
+  m_Size: {x: 0.40088034, y: 0.081439875}
+  m_Direction: 1
 --- !u!58 &8197737959455620813
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.088008165}
-  m_Radius: 0.073135614
+  m_Radius: 0.2251665
 --- !u!114 &3885553557748280335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,5 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98185d0ab98670740adb3ad67c988221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 3
+  moveSpeed: 1.5
   isKeyCollected: 0
+  joystick: {fileID: 0}
