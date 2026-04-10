@@ -15,9 +15,13 @@ public class Flashlight : MonoBehaviour
         }
         else
         {
-            interactButton.gameObject.SetActive(false);
-            isInteractVisible = false;
             interactButton.onClick.AddListener(OnInteractButtonPressed);
+
+            interactButton.gameObject.SetActive(true);
+            Canvas.ForceUpdateCanvases();
+            interactButton.gameObject.SetActive(false);
+
+            isInteractVisible = false;
         }
     }
 
@@ -78,11 +82,13 @@ public class Flashlight : MonoBehaviour
     private void PickUp()
     {
         Debug.Log("Flashlight picked up successfully!");
+
         if (interactButton != null && isInteractVisible)
         {
             interactButton.gameObject.SetActive(false);
             isInteractVisible = false;
         }
+
         Destroy(gameObject);
     }
 }

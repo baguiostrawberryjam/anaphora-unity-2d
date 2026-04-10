@@ -12,7 +12,20 @@ public class JoystickController : MonoBehaviour, IDragHandler, IPointerUpHandler
     public float moveRadius = 100f;
     public float moveThreshold = 1f;
 
-    public Vector2 InputDirection => inputVector;
+
+    public Vector2 InputDirection
+    {
+        get
+        {
+            const float deadZone = 0.1f;
+            if (inputVector.magnitude < deadZone) return Vector2.zero;
+
+            if (Mathf.Abs(inputVector.x) > Mathf.Abs(inputVector.y))
+                return new Vector2(Mathf.Sign(inputVector.x), 0f);
+            else
+                return new Vector2(0f, Mathf.Sign(inputVector.y));
+        }
+    }
 
     void Start()
     {
@@ -49,7 +62,6 @@ public class JoystickController : MonoBehaviour, IDragHandler, IPointerUpHandler
             float magnitude = position.magnitude / moveRadius;
             Vector2 normalised = position.normalized;
 
-            // Dynamic: background follows finger if dragged past threshold
             if (magnitude > moveThreshold)
             {
                 Vector2 difference = normalised * (magnitude - moveThreshold) * moveRadius;
@@ -66,6 +78,6 @@ public class JoystickController : MonoBehaviour, IDragHandler, IPointerUpHandler
     {
         inputVector = Vector2.zero;
         handle.anchoredPosition = Vector2.zero;
-        background.gameObject.SetActive(false); // hide on release
+        background.gameObject.SetActive(false);
     }
 }

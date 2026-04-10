@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        MoveToSpawnPoint();
     }
 
     void Update()
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
             moveInput = keyboardInput.normalized;
         }
 
-        // Prevents diagonal speed boost
+        // Prevent diagonal speed boost
         moveInput = Vector2.ClampMagnitude(moveInput, 1f);
 
         if (moveInput != Vector2.zero)
@@ -50,5 +52,20 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    void MoveToSpawnPoint()
+    {
+        string spawnName = PlayerPrefs.GetString("SpawnPoint", "");
+
+        if (!string.IsNullOrEmpty(spawnName))
+        {
+            GameObject spawnPoint = GameObject.Find(spawnName);
+
+            if (spawnPoint != null)
+            {
+                transform.position = spawnPoint.transform.position;
+            }
+        }
     }
 }
