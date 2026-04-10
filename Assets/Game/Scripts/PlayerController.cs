@@ -1,14 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public bool isKeyCollected;
 
+    public JoystickController joystick;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
-
 
     void Start()
     {
@@ -18,25 +19,31 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // 1. Get Input
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        // 2. Kill Diagonal (Prioritize Horizontal)
-        if (moveX != 0) moveY = 0;
+        Vector2 keyboardInput = new Vector2(moveX, moveY);
+        Vector2 joystickInput = joystick != null ? joystick.InputDirection : Vector2.zero;
 
-        moveInput = new Vector2(moveX, moveY).normalized;
+        if (joystickInput.magnitude > 0.1f)
+        {
+            moveInput = joystickInput;
+        }
+        else
+        {
+            if (moveX != 0) moveY = 0;
+            moveInput = keyboardInput.normalized;
+        }
 
-        // 3. ANIMATION LOGIC
-        // Only update "FaceX" and "FaceY" if we are actually moving.
-        // This acts as the "Memory" for the Idle state.
+        // Prevents diagonal speed boost
+        moveInput = Vector2.ClampMagnitude(moveInput, 1f);
+
         if (moveInput != Vector2.zero)
         {
             animator.SetFloat("FaceX", moveInput.x);
             animator.SetFloat("FaceY", moveInput.y);
         }
 
-        // Always update speed so we know when to switch between Idle and Walk
         animator.SetFloat("Speed", moveInput.sqrMagnitude);
     }
 
