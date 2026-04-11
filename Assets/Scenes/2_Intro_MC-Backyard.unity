@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 389120403}
   - component: {fileID: 389120404}
   m_Layer: 0
-  m_Name: Outside Assets_0
+  m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5046,8 +5046,8 @@ Transform:
   m_GameObject: {fileID: 1895083827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4745, y: 1.3617, z: 0}
-  m_LocalScale: {x: 1.5491347, y: 1.9255471, z: 1}
+  m_LocalPosition: {x: 2.5123, y: 1.3163, z: 0}
+  m_LocalScale: {x: 1.4432718, y: 1.0187874, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 166535599}

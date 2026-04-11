@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
         MoveToSpawnPoint();
     }
 
@@ -24,7 +23,6 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        Vector2 keyboardInput = new Vector2(moveX, moveY);
         Vector2 joystickInput = joystick != null ? joystick.InputDirection : Vector2.zero;
 
         if (joystickInput.magnitude > 0.1f)
@@ -33,19 +31,27 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (moveX != 0) moveY = 0;
+            if (moveX != 0f && moveY != 0f)
+            {
+                if (Mathf.Abs(moveX) >= Mathf.Abs(moveY))
+                {
+                    moveY = 0f;
+                }
+                else
+                {
+                    moveX = 0f;
+                }
+            }
+            Vector2 keyboardInput = new Vector2(moveX, moveY);
             moveInput = keyboardInput.normalized;
         }
 
-        // Prevent diagonal speed boost
         moveInput = Vector2.ClampMagnitude(moveInput, 1f);
-
         if (moveInput != Vector2.zero)
         {
             animator.SetFloat("FaceX", moveInput.x);
             animator.SetFloat("FaceY", moveInput.y);
         }
-
         animator.SetFloat("Speed", moveInput.sqrMagnitude);
     }
 
