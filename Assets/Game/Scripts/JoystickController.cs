@@ -80,4 +80,11 @@ public class JoystickController : MonoBehaviour, IDragHandler, IPointerUpHandler
         handle.anchoredPosition = Vector2.zero;
         background.gameObject.SetActive(false);
     }
+
+    public void ForceReset()
+    {
+        inputVector = Vector2.zero;
+        handle.anchoredPosition = Vector2.zero;
+        background.gameObject.SetActive(false);
+    }
 }

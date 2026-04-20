@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         if (!canMove)
         {
             moveInput = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             animator.SetFloat("Speed", 0);
             return;
         }
@@ -67,11 +68,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!canMove) return;
+        if (!canMove)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            return;
+        }
 
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
     }
-    
+
     void MoveToSpawnPoint()
     {
         string spawnName = PlayerPrefs.GetString("SpawnPoint", "");

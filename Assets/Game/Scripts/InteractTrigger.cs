@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class InteractTrigger : MonoBehaviour
 {
@@ -13,70 +14,175 @@ public class InteractTrigger : MonoBehaviour
     public string[] dialogues;
 
     public float typingSpeed = 0.03f;
-    public PlayerController playerMovementScript;
 
-    [Header("Player Bools to Set on Interact")]
+    public PlayerController playerMovementScript;
+    public JoystickController joystick;
+
+    [Header("Player Bools To Set")]
     public bool setHasFlashlight = false;
     public bool setHasInteractedSwitch = false;
     public bool setHasKey = false;
 
-    private bool playerInside;
-    private bool dialogueOpen;
+    private static List<InteractTrigger> nearbyTriggers = new List<InteractTrigger>();
+
     private bool isTyping;
 
     private int currentIndex;
+    private Coroutine typingCoroutine;
 
     private void Start()
     {
         dialoguePanel.SetActive(false);
         interactButton.gameObject.SetActive(false);
 
-        interactButton.onClick.AddListener(OpenDialogue);
+        interactButton.onClick.RemoveAllListeners();
+        interactButton.onClick.AddListener(OpenNearestDialogue);
     }
 
     private void OnDestroy()
     {
-        interactButton.onClick.RemoveListener(OpenDialogue);
-        continueButton.onClick.RemoveListener(OnContinuePressed);
+        nearbyTriggers.Remove(this);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        playerInside = true;
-        if (!dialogueOpen)
-            interactButton.gameObject.SetActive(true);
+
+
+        if (!nearbyTriggers.Contains(this))
+            nearbyTriggers.Add(this);
+
+        RefreshInteractButton();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        playerInside = false;
-        interactButton.gameObject.SetActive(false);
+
+        nearbyTriggers.Remove(this);
+
+        RefreshInteractButton();
     }
 
     private void Update()
     {
-        if (playerInside && !dialogueOpen && Input.GetKeyDown(KeyCode.F))
-            OpenDialogue();
+        if (Input.GetKeyDown(KeyCode.F))
+            OpenNearestDialogue();
+    }
+
+    void OpenNearestDialogue()
+    {
+        if (dialoguePanel.activeSelf) return;
+
+        InteractTrigger nearest = GetNearestTrigger();
+
+        if (nearest != null)
+            nearest.OpenDialogue();
+    }
+
+    InteractTrigger GetNearestTrigger()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null) return null;
+
+        float closest = Mathf.Infinity;
+        InteractTrigger nearest = null;
+
+        foreach (InteractTrigger trigger in nearbyTriggers)
+        {
+            float dist = Vector2.Distance(player.transform.position, trigger.transform.position);
+
+            if (dist < closest)
+            {
+                closest = dist;
+                nearest = trigger;
+            }
+        }
+
+        return nearest;
+    }
+
+    void RefreshInteractButton()
+    {
+        interactButton.gameObject.SetActive(
+            nearbyTriggers.Count > 0 &&
+            !dialoguePanel.activeSelf
+        );
     }
 
     void OpenDialogue()
     {
-        if (dialogueOpen) return;
-
-        dialogueOpen = true;
         currentIndex = 0;
 
+        if (joystick != null)
+            joystick.ForceReset();
+
         interactButton.gameObject.SetActive(false);
+
         dialoguePanel.SetActive(true);
+
+        if (playerMovementScript != null)
+            playerMovementScript.canMove = false;
 
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(OnContinuePressed);
 
         SetPlayerBools();
-        LockPlayer();
-        StartCoroutine(TypeDialogue(dialogues[currentIndex]));
+
+        StartTyping(dialogues[currentIndex]);
+    }
+
+    void StartTyping(string line)
+    {
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeDialogue(line));
+    }
+
+    IEnumerator TypeDialogue(string line)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        foreach (char c in line)
+        {
+            dialogueText.text += c;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        isTyping = false;
+    }
+
+    void OnContinuePressed()
+    {
+        if (isTyping) return;
+
+        currentIndex++;
+
+        if (currentIndex < dialogues.Length)
+        {
+            StartTyping(dialogues[currentIndex]);
+        }
+        else
+        {
+            CloseDialogue();
+        }
+    }
+
+    void CloseDialogue()
+    {
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        dialoguePanel.SetActive(false);
+        dialogueText.text = "";
+
+        if (playerMovementScript != null)
+            playerMovementScript.canMove = true;
+
+        RefreshInteractButton();
     }
 
     void SetPlayerBools()
@@ -91,69 +197,5 @@ public class InteractTrigger : MonoBehaviour
 
         if (setHasKey)
             playerMovementScript.hasKey = true;
-    }
-
-    IEnumerator TypeDialogue(string message)
-    {
-        isTyping = true;
-        dialogueText.text = "";
-
-        foreach (char letter in message)
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
-        }
-
-        isTyping = false;
-    }
-
-    void OnContinuePressed()
-    {
-        if (isTyping)
-        {
-            StopAllCoroutines();
-            dialogueText.text = dialogues[currentIndex];
-            isTyping = false;
-            return;
-        }
-
-        currentIndex++;
-
-        if (currentIndex < dialogues.Length)
-        {
-            StopAllCoroutines();
-            StartCoroutine(TypeDialogue(dialogues[currentIndex]));
-        }
-        else
-        {
-            CloseDialogue();
-        }
-    }
-
-    void CloseDialogue()
-    {
-        StopAllCoroutines();
-        continueButton.onClick.RemoveAllListeners();
-
-        dialoguePanel.SetActive(false);
-        dialogueOpen = false;
-        isTyping = false;
-
-        UnlockPlayer();
-
-        if (playerInside)
-            interactButton.gameObject.SetActive(true);
-    }
-
-    void LockPlayer()
-    {
-        if (playerMovementScript != null)
-            playerMovementScript.canMove = false;
-    }
-
-    void UnlockPlayer()
-    {
-        if (playerMovementScript != null)
-            playerMovementScript.canMove = true;
     }
 }

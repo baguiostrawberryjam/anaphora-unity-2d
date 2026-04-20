@@ -20,6 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     private bool hasTriggered = false;
     private bool isTyping = false;
     private int currentIndex = 0;
+    private Coroutine typingCoroutine;
 
     private void Start()
     {
@@ -36,10 +37,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        // If not repeatable, block after first trigger
         if (!isRepeatable && hasTriggered) return;
-
-        // Prevent overlapping if already open
         if (isTyping || dialoguePanel.activeSelf) return;
 
         hasTriggered = true;
@@ -52,21 +50,34 @@ public class DialogueTrigger : MonoBehaviour
 
         currentIndex = 0;
         dialoguePanel.SetActive(true);
+        dialogueText.text = "";
 
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(OnContinuePressed);
 
         LockPlayer();
 
-        // Wait a frame before typing to avoid jumbled first line
-        yield return null;
+        StartTyping(dialogues[currentIndex]);
+    }
 
-        StartCoroutine(TypeLine(dialogues[currentIndex]));
+    void StartTyping(string line)
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+
+        dialogueText.text = "";
+        typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
     IEnumerator TypeLine(string line)
     {
         isTyping = true;
+
+        yield return new WaitForEndOfFrame();
+
         dialogueText.text = "";
 
         foreach (char letter in line)
@@ -76,13 +87,18 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         isTyping = false;
+        typingCoroutine = null;
     }
 
     void OnContinuePressed()
     {
         if (isTyping)
         {
-            StopAllCoroutines();
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+                typingCoroutine = null;
+            }
             dialogueText.text = dialogues[currentIndex];
             isTyping = false;
             return;
@@ -92,8 +108,7 @@ public class DialogueTrigger : MonoBehaviour
 
         if (currentIndex < dialogues.Length)
         {
-            StopAllCoroutines();
-            StartCoroutine(TypeLine(dialogues[currentIndex]));
+            StartTyping(dialogues[currentIndex]);
         }
         else
         {
@@ -103,9 +118,15 @@ public class DialogueTrigger : MonoBehaviour
 
     public void CloseDialogue()
     {
-        StopAllCoroutines();
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+
         continueButton.onClick.RemoveAllListeners();
         dialoguePanel.SetActive(false);
+        dialogueText.text = "";
         isTyping = false;
 
         UnlockPlayer();
