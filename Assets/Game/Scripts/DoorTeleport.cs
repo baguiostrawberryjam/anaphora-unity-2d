@@ -1,0 +1,113 @@
+using UnityEngine;
+using System.Collections;
+
+public class DoorTeleport : MonoBehaviour
+{
+    [Header("Teleport Settings")]
+    public DoorTeleport linkedDoor;
+    public Vector2 spawnOffset = new Vector2(0f, 1f);
+    public float cooldown = 1.5f;
+
+    [Header("Conditions (leave unchecked to ignore)")]
+    public bool requireFlashlight = false;
+    public bool requireInteractedSwitch = false;
+    public bool requireKey = false;
+
+    [Header("Blocked Dialogue")]
+    public DialogueTrigger blockedDialogueTrigger;
+
+    [Header("Warning Collider (optional)")]
+    public Collider2D warningCollider;
+
+    private bool isOnCooldown = false;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+        if (isOnCooldown) return;
+
+        if (linkedDoor == null)
+        {
+            Debug.LogWarning($"[DoorTeleport] '{gameObject.name}' has no Linked Door assigned!", this);
+            return;
+        }
+
+        PlayerController player = other.GetComponent<PlayerController>();
+
+        if (!MeetsConditions(player))
+        {
+            if (blockedDialogueTrigger != null)
+                blockedDialogueTrigger.TriggerDialogue();
+            return;
+        }
+
+        TeleportPlayer(other.gameObject);
+    }
+
+    private bool MeetsConditions(PlayerController player)
+    {
+        if (player == null) return false;
+
+        Debug.Log($"hasFlashlight: {player.hasFlashlight} | hasInteractedSwitch: {player.hasInteractedSwitch}");
+
+        if (requireFlashlight && !player.hasFlashlight) return false;
+        if (requireInteractedSwitch && !player.hasInteractedSwitch) return false;
+        if (requireKey && !player.hasKey) return false;
+
+        return true;
+    }
+
+    private void TeleportPlayer(GameObject playerObj)
+    {
+        Vector2 destination = (Vector2)linkedDoor.transform.position + linkedDoor.spawnOffset;
+
+        Rigidbody2D rb = playerObj.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.position = destination;
+        }
+        else
+        {
+            playerObj.transform.position = new Vector3(destination.x, destination.y, playerObj.transform.position.z);
+        }
+
+        linkedDoor.StartCooldown();
+        StartCooldown();
+
+        Debug.Log($"[DoorTeleport] Player teleported from '{gameObject.name}' to '{linkedDoor.gameObject.name}'.");
+    }
+
+    public void StartCooldown()
+    {
+        if (!isOnCooldown)
+            StartCoroutine(CooldownRoutine());
+    }
+
+    private IEnumerator CooldownRoutine()
+    {
+        isOnCooldown = true;
+        yield return new WaitForSeconds(cooldown);
+        isOnCooldown = false;
+    }
+
+    // Call this from other scripts to enable/disable the warning collider
+    public void SetWarningCollider(bool active)
+    {
+        if (warningCollider != null)
+            warningCollider.enabled = active;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (linkedDoor == null) return;
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(transform.position, linkedDoor.transform.position);
+        Gizmos.DrawWireSphere(transform.position, 0.3f);
+
+        Gizmos.color = Color.green;
+        Vector3 spawnPoint = linkedDoor.transform.position + new Vector3(linkedDoor.spawnOffset.x, linkedDoor.spawnOffset.y, 0f);
+        Gizmos.DrawWireSphere(spawnPoint, 0.25f);
+    }
+}

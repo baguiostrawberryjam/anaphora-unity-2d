@@ -48,14 +48,17 @@ TagManager:
   - name: Ground
     uniqueID: 825567905
     locked: 0
-  - name: Objects
+  - name: Objects - Floor
     uniqueID: 2255638283
-    locked: 0
-  - name: Entities
-    uniqueID: 3665407047
     locked: 0
   - name: Foreground
     uniqueID: 2793102351
+    locked: 0
+  - name: Object - Walls
+    uniqueID: 1791995813
+    locked: 0
+  - name: Entities
+    uniqueID: 3665407047
     locked: 0
   - name: UI
     uniqueID: 2875208995

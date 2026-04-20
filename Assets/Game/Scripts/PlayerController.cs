@@ -3,7 +3,10 @@
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 3f;
-    public bool isKeyCollected;
+    public bool hasFlashlight = false;
+    public bool hasInteractedSwitch = false;
+    public bool hasKey = false;
+    public bool canMove = true;
 
     public JoystickController joystick;
 
@@ -20,6 +23,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!canMove)
+        {
+            moveInput = Vector2.zero;
+            animator.SetFloat("Speed", 0);
+            return;
+        }
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -57,9 +67,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!canMove) return;
+
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
     }
-
+    
     void MoveToSpawnPoint()
     {
         string spawnName = PlayerPrefs.GetString("SpawnPoint", "");
