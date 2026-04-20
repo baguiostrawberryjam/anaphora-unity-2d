@@ -51,7 +51,7 @@ TagManager:
   - name: Objects - Floor
     uniqueID: 2255638283
     locked: 0
-  - name: Foreground
+  - name: Wall - Behind
     uniqueID: 2793102351
     locked: 0
   - name: Object - Walls
@@ -59,6 +59,12 @@ TagManager:
     locked: 0
   - name: Entities
     uniqueID: 3665407047
+    locked: 0
+  - name: Wall - Front
+    uniqueID: 1961950131
+    locked: 0
+  - name: Objects - Front Walls
+    uniqueID: 3934167337
     locked: 0
   - name: UI
     uniqueID: 2875208995
