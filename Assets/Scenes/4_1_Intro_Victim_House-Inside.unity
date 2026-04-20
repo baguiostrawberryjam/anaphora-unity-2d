@@ -168,6 +168,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   continueButton: {fileID: 550642783}
   interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Divider
   dialogues:
   - Oh?!...  A Sewing Kit?! Man, this takes me back to when I had to sew things by
     myself then
@@ -505,6 +507,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   continueButton: {fileID: 550642783}
   interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Desk
   dialogues:
   - "Hmm\u2026 There looks like there\u2019s particularly nothing to note on"
   typingSpeed: 0.03
@@ -821,6 +825,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   continueButton: {fileID: 550642783}
   interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F -Small Box
   dialogues:
   - Whoa. There are a lot of boxes here, huh?... Is the Victim planning to move out
     or something?
@@ -942,10 +948,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 22.27624, y: 26.473509}
-      - {x: -22.286581, y: 26.397667}
-      - {x: -22.286583, y: -15.342562}
-      - {x: 21.869286, y: -15.342564}
+    - - {x: 27.13944, y: 0.8016883}
+      - {x: 36.60974, y: 0.73764515}
+      - {x: 36.592224, y: 19.267582}
+      - {x: -8.034506, y: 19.251293}
+      - {x: -8.034509, y: -6.7669106}
+      - {x: 27.110643, y: -6.7877016}
   m_UseDelaunayMesh: 1
 --- !u!4 &446843017
 Transform:
@@ -6881,6 +6889,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   continueButton: {fileID: 550642783}
   interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Picture Frame
   dialogues:
   - A picture frame lies down on the floor. Something made it fall.
   - Underneath it... a small key, covered in dust. Someone hid this here.
@@ -6890,7 +6900,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
-  setHasKey: 0
+  setHasKey: 1
 --- !u!61 &612122503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7214,6 +7224,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   continueButton: {fileID: 550642783}
   interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Light Switch
   dialogues:
   - There's a light switch here.
   - Nothing happened, I need to find another source of light.
@@ -7455,6 +7467,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   continueButton: {fileID: 550642783}
   interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Boxes
   dialogues:
   - "Hmm\u2026 There looks like there\u2019s particularly nothing to note on"
   typingSpeed: 0.03
@@ -8118,7 +8132,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 580, y: 0}
-  m_SizeDelta: {x: 250, y: 50}
+  m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028194055
 MonoBehaviour:
@@ -9142,6 +9156,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   continueButton: {fileID: 550642783}
   interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Ref
   dialogues:
   - Ughh!!!... It smells so bad ughh!!!...
   typingSpeed: 0.03
@@ -9869,7 +9885,7 @@ MonoBehaviour:
   dialogues:
   - The door is locked
   - I need to find the key
-  delayBeforeShow: 1
+  delayBeforeShow: 0
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
@@ -9900,7 +9916,7 @@ Transform:
   m_GameObject: {fileID: 1797656236}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003, y: -2.034, z: 0}
+  m_LocalPosition: {x: 0.003, y: -1.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9929,7 +9945,7 @@ MonoBehaviour:
 '
   - At this point, I can't start the investigation. I can only barely see around
     this darkness. There must be a light switch somewhere near here, right?
-  delayBeforeShow: 1
+  delayBeforeShow: 0
   typingSpeed: 0.03
   useAutoTrigger: 1
   isRepeatable: 0
@@ -9967,7 +9983,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.050199747}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9977,7 +9993,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.03412, y: 0.233284}
+  m_Size: {x: 6.03412, y: 0.07013464}
   m_EdgeRadius: 0
 --- !u!1 &1866894481
 GameObject:
@@ -10009,7 +10025,7 @@ Transform:
   m_GameObject: {fileID: 1866894481}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.46, y: -0.247, z: -10}
+  m_LocalPosition: {x: -1.2549734, y: -0.24699, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11721,7 +11737,7 @@ MonoBehaviour:
   dialogues:
   - I cannot enter here right now...
   - I need to look for the switch or maybe a flashlight.
-  delayBeforeShow: 1
+  delayBeforeShow: 0
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
@@ -11835,7 +11851,7 @@ MonoBehaviour:
   dialogues:
   - I cannot enter here right now...
   - I need to look for the switch.
-  delayBeforeShow: 1
+  delayBeforeShow: 0
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1

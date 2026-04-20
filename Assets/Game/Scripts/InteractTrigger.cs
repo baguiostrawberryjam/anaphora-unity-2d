@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class InteractTrigger : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class InteractTrigger : MonoBehaviour
     public Text dialogueText;
     public Button continueButton;
     public Button interactButton;
+    public TMP_Text interactButtonText;
+
+    [Header("Interact Label")]
+    public string interactLabel = "Interact"; // set this per object in Inspector
 
     [TextArea(2, 5)]
     public string[] dialogues;
@@ -47,7 +52,6 @@ public class InteractTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-
 
         if (!nearbyTriggers.Contains(this))
             nearbyTriggers.Add(this);
@@ -105,10 +109,15 @@ public class InteractTrigger : MonoBehaviour
 
     void RefreshInteractButton()
     {
-        interactButton.gameObject.SetActive(
-            nearbyTriggers.Count > 0 &&
-            !dialoguePanel.activeSelf
-        );
+        bool hasNearby = nearbyTriggers.Count > 0 && !dialoguePanel.activeSelf;
+        interactButton.gameObject.SetActive(hasNearby);
+
+        if (hasNearby)
+        {
+            InteractTrigger nearest = GetNearestTrigger();
+            if (nearest != null && interactButtonText != null)
+                interactButtonText.text = nearest.interactLabel;
+        }
     }
 
     void OpenDialogue()
