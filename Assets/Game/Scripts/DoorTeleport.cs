@@ -59,7 +59,7 @@ public class DoorTeleport : MonoBehaviour
 
     private void TeleportPlayer(GameObject playerObj)
     {
-        Vector2 destination = (Vector2)linkedDoor.transform.position + linkedDoor.spawnOffset;
+        Vector2 destination = (Vector2)linkedDoor.transform.position + spawnOffset;
 
         Rigidbody2D rb = playerObj.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -72,10 +72,14 @@ public class DoorTeleport : MonoBehaviour
             playerObj.transform.position = new Vector3(destination.x, destination.y, playerObj.transform.position.z);
         }
 
+        Cinemachine.CinemachineVirtualCamera vcam = Object.FindFirstObjectByType<Cinemachine.CinemachineVirtualCamera>();
+        if (vcam != null)
+        {
+            vcam.OnTargetObjectWarped(playerObj.transform, (Vector3)destination - playerObj.transform.position);
+        }
+
         linkedDoor.StartCooldown();
         StartCooldown();
-
-        Debug.Log($"[DoorTeleport] Player teleported from '{gameObject.name}' to '{linkedDoor.gameObject.name}'.");
     }
 
     public void StartCooldown()
@@ -107,7 +111,7 @@ public class DoorTeleport : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, 0.3f);
 
         Gizmos.color = Color.green;
-        Vector3 spawnPoint = linkedDoor.transform.position + new Vector3(linkedDoor.spawnOffset.x, linkedDoor.spawnOffset.y, 0f);
+        Vector3 spawnPoint = linkedDoor.transform.position + new Vector3(spawnOffset.x, spawnOffset.y, 0f);
         Gizmos.DrawWireSphere(spawnPoint, 0.25f);
     }
 }

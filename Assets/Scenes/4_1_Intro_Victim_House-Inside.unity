@@ -176,6 +176,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
+  setHasKey: 0
 --- !u!61 &11734302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -210,7 +211,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.01244235, y: -0.018248558}
+  m_Offset: {x: -0.01244247, y: -0.0626837}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -220,7 +221,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.76125765, y: 1.6633043}
+  m_Size: {x: 0.81204057, y: 1.3882306}
   m_EdgeRadius: 0
 --- !u!1001 &83626862
 PrefabInstance:
@@ -252,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 1904845682}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.x
-      value: 0.5
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.y
@@ -511,6 +512,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
+  setHasKey: 0
 --- !u!61 &277756957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -545,7 +547,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.026317716, y: -0.31299978}
+  m_Offset: {x: -0.026317716, y: -0.32146356}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -555,7 +557,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.52236986, y: 0.78932035}
+  m_Size: {x: 0.52236986, y: 0.7046823}
   m_EdgeRadius: 0
 --- !u!1 &318710295
 GameObject:
@@ -666,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 1517518792}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.x
-      value: 0.5
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.y
@@ -830,6 +832,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
+  setHasKey: 0
 --- !u!61 &420801280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6887,6 +6890,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
+  setHasKey: 0
 --- !u!61 &612122503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7114,7 +7118,7 @@ PrefabInstance:
       objectReference: {fileID: 1369447372}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.x
-      value: 0.5
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.y
@@ -7218,6 +7222,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 1
+  setHasKey: 0
 --- !u!61 &843085531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7252,7 +7257,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.014670193, y: 0.030428112}
+  m_Offset: {x: -0.021789342, y: -0.040426195}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7262,7 +7267,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6428571, y: 0.9391438}
+  m_Size: {x: 0.22472543, y: 0.62380683}
   m_EdgeRadius: 0
 --- !u!1 &845202857
 GameObject:
@@ -7457,6 +7462,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
+  setHasKey: 0
 --- !u!61 &905977220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8516,7 +8522,7 @@ PrefabInstance:
       objectReference: {fileID: 776422674}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.x
-      value: -0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.y
@@ -8849,7 +8855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.x
-      value: -0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.y
@@ -9011,6 +9017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dynamic Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 8135886327475159576, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9139,6 +9149,7 @@ MonoBehaviour:
   joystick: {fileID: 2010444497}
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
+  setHasKey: 0
 --- !u!61 &1639744477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9889,7 +9900,7 @@ Transform:
   m_GameObject: {fileID: 1797656236}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.495, y: -1.93, z: 0}
+  m_LocalPosition: {x: 0.003, y: -2.034, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9956,7 +9967,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.48820662, y: -0.052174926}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11612,7 +11623,7 @@ PrefabInstance:
       objectReference: {fileID: 83626863}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.x
-      value: -0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.y
@@ -12531,7 +12542,7 @@ PrefabInstance:
       objectReference: {fileID: 4711314183932514344}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.y
-      value: -0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: requireFlashlight
@@ -12662,7 +12673,7 @@ PrefabInstance:
       objectReference: {fileID: 2046197639257204179}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.y
-      value: 0.5
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4942151508706662109, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: m_Name
