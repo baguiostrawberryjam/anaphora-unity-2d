@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   displayTime: 3
-  fadeDuration: 1
+  fadeDuration: 1.5
 --- !u!225 &1579370900
 CanvasGroup:
   m_ObjectHideFlags: 0
