@@ -305,6 +305,12 @@ MonoBehaviour:
   sceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
   spawnPointName: SP_MC_Apartment_Inside
   teleportDelay: 3
+  requireFlashlight: 0
+  requireInteractedSwitch: 0
+  requireKey: 0
+  requiredInteractedDrawer: 0
+  requiredInteractedRef: 0
+  blockedDialogueTrigger: {fileID: 0}
 --- !u!212 &106020196
 SpriteRenderer:
   serializedVersion: 2
@@ -9441,6 +9447,36 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 11, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 33
+      m_TileSpriteIndex: 35
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 12, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 34
+      m_TileSpriteIndex: 34
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 13, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 35
+      m_TileSpriteIndex: 33
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -9509,6 +9545,12 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 7ee26c987485aa547a7834710e744181, type: 2}
   - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: a800cf23e2d38cf45a09d7b15f42600a, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 6bb523110044957489c90c29eff54881, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 62f2e681a6a9b2d4fbea25e9de668eb0, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: bbbe88002a605eb49bf6cafae850e4e2, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 342058190, guid: 7cc80aca705285345b5bc0f2888891cc, type: 3}
@@ -9576,8 +9618,14 @@ Tilemap:
     m_Data: {fileID: 1708904436, guid: 215340ff156e9f249b40d026c22a006e, type: 3}
   - m_RefCount: 21
     m_Data: {fileID: 2069370214, guid: 215340ff156e9f249b40d026c22a006e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1311266772, guid: 7cc80aca705285345b5bc0f2888891cc, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -792786560, guid: 7cc80aca705285345b5bc0f2888891cc, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1193148468, guid: 7cc80aca705285345b5bc0f2888891cc, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 73
+  - m_RefCount: 76
     m_Data:
       e00: 1
       e01: 0
@@ -9596,7 +9644,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 73
+  - m_RefCount: 76
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -9671,6 +9719,12 @@ MonoBehaviour:
   sceneAsset: {fileID: 102900000, guid: f8c342683ac8dea4493dd3d8d66eafd7, type: 3}
   spawnPointName: SP_Agency_Outside_Exit
   teleportDelay: 3
+  requireFlashlight: 0
+  requireInteractedSwitch: 0
+  requireKey: 0
+  requiredInteractedDrawer: 0
+  requiredInteractedRef: 0
+  blockedDialogueTrigger: {fileID: 0}
 --- !u!212 &1895083830
 SpriteRenderer:
   serializedVersion: 2
