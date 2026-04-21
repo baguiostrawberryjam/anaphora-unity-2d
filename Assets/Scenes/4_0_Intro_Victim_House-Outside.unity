@@ -5178,6 +5178,10 @@ PrefabInstance:
       value: 3.9528737
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Victim's House Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1875963962}
@@ -5185,6 +5189,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1875963964}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: continueButton
       value: 
@@ -5229,7 +5237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
-      value: Near the Victim's House
+      value: Victim's House Dialogue
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
@@ -13877,6 +13885,10 @@ PrefabInstance:
       value: 1.5434809
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Talk to NPC Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1875963962}
@@ -13884,6 +13896,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1875963964}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: continueButton
       value: 
@@ -13912,7 +13928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
-      value: Remind Asking to Investigate
+      value: Talk to NPC Dialogue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

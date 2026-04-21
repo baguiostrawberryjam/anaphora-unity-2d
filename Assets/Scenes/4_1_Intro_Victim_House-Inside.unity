@@ -179,6 +179,8 @@ MonoBehaviour:
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
   setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
 --- !u!61 &11734302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -517,6 +519,8 @@ MonoBehaviour:
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
   setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
 --- !u!61 &277756957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -771,6 +775,8 @@ MonoBehaviour:
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
   setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
 --- !u!61 &420801280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6649,6 +6655,8 @@ MonoBehaviour:
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
   setHasKey: 1
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
 --- !u!61 &612122503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7124,6 +7132,8 @@ MonoBehaviour:
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
   setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
 --- !u!61 &905977220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7218,6 +7228,12 @@ MonoBehaviour:
   sceneAsset: {fileID: 102900000, guid: e754b632e3061c34586d4c866ca33493, type: 3}
   spawnPointName: SP_Victim_House_Entrance
   teleportDelay: 1.5
+  requireFlashlight: 0
+  requireInteractedSwitch: 0
+  requireKey: 0
+  requiredInteractedDrawer: 0
+  requiredInteractedRef: 0
+  blockedDialogueTrigger: {fileID: 0}
 --- !u!61 &979250425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8640,6 +8656,8 @@ MonoBehaviour:
   setHasFlashlight: 0
   setHasInteractedSwitch: 0
   setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
 --- !u!61 &1639744477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9363,6 +9381,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
+  saveTriggered: 0
+  triggerID: 
 --- !u!4 &1797656237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
@@ -11114,6 +11134,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
+  saveTriggered: 0
+  triggerID: 
 --- !u!1 &1987455762
 GameObject:
   m_ObjectHideFlags: 0
@@ -11228,6 +11250,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
+  saveTriggered: 0
+  triggerID: 
 --- !u!1 &2128613197
 GameObject:
   m_ObjectHideFlags: 0
@@ -12218,6 +12242,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Living Room Enter Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 318710297}
@@ -12225,6 +12253,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1274409837}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: continueButton
       value: 
@@ -12235,7 +12267,7 @@ PrefabInstance:
       objectReference: {fileID: 1693070272}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
-      value: Living Room Enter Trigger
+      value: Living Room Enter Dialogue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

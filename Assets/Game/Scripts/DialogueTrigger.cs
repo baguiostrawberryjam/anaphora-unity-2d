@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -14,11 +15,19 @@ public class DialogueTrigger : MonoBehaviour
 
     public float delayBeforeShow = 1f;
     public float typingSpeed = 0.03f;
+
     public bool useAutoTrigger = true;
     public bool isRepeatable = false;
 
+    [Header("Trigger Once Per Session (Even on Scene Changes)")]
+    public bool saveTriggered = false;
+    public string triggerID = "";
+
+    private static HashSet<string> sessionTriggers = new HashSet<string>();
+
     private bool hasTriggered = false;
     private bool isTyping = false;
+
     private int currentIndex = 0;
     private Coroutine typingCoroutine;
 
@@ -32,15 +41,34 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (!useAutoTrigger) return;
         if (!other.CompareTag("Player")) return;
+
         TriggerDialogue();
     }
 
     public void TriggerDialogue()
     {
-        if (!isRepeatable && hasTriggered) return;
         if (isTyping || dialoguePanel.activeSelf) return;
 
-        hasTriggered = true;
+        if (!isRepeatable)
+        {
+            if (saveTriggered)
+            {
+                if (string.IsNullOrEmpty(triggerID)) return;
+
+                if (sessionTriggers.Contains(triggerID))
+                    return;
+
+                sessionTriggers.Add(triggerID);
+            }
+            else
+            {
+                if (hasTriggered)
+                    return;
+
+                hasTriggered = true;
+            }
+        }
+
         StartCoroutine(ShowDialogue());
     }
 
@@ -49,6 +77,7 @@ public class DialogueTrigger : MonoBehaviour
         yield return new WaitForSeconds(delayBeforeShow);
 
         currentIndex = 0;
+
         dialoguePanel.SetActive(true);
         dialogueText.text = "";
 
@@ -76,8 +105,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         isTyping = true;
 
-        yield return new WaitForEndOfFrame();
-
         dialogueText.text = "";
 
         foreach (char letter in line)
@@ -99,6 +126,7 @@ public class DialogueTrigger : MonoBehaviour
                 StopCoroutine(typingCoroutine);
                 typingCoroutine = null;
             }
+
             dialogueText.text = dialogues[currentIndex];
             isTyping = false;
             return;
@@ -125,6 +153,7 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         continueButton.onClick.RemoveAllListeners();
+
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
         isTyping = false;

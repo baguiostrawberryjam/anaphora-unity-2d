@@ -14,6 +14,7 @@ public class DoorTeleport : MonoBehaviour
     public bool requireKey = false;
     public bool requiredInteractedDrawer = false;
     public bool requiredInteractedRef = false;
+    public bool requireCheckedBulletinBoard = false;
 
     [Header("Blocked Dialogue")]
     public DialogueTrigger blockedDialogueTrigger;

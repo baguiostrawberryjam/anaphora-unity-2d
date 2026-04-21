@@ -25,6 +25,7 @@ public class Teleport : MonoBehaviour
     public bool requireKey = false;
     public bool requiredInteractedDrawer = false;
     public bool requiredInteractedRef = false;
+    public bool requiredInteractedBulletinBoard = false;
 
     [Header("Blocked Dialogue")]
     public DialogueTrigger blockedDialogueTrigger;
@@ -74,6 +75,7 @@ public class Teleport : MonoBehaviour
         if (requireKey && !player.hasKey) return false;
         if (requiredInteractedDrawer && !player.hasInteractedDrawer) return false;
         if (requiredInteractedRef && !player.hasInteractedRef) return false;
+        if (requiredInteractedBulletinBoard && !player.hasCheckedBulletinBoard) return false;
 
         return true;
     }

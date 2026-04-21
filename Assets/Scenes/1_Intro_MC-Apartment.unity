@@ -2995,6 +2995,10 @@ PrefabInstance:
       value: -0.5187372
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Bedroom Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 344950013}
@@ -3002,6 +3006,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 76823708}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: continueButton
       value: 
@@ -9022,7 +9030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.43
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9065,6 +9073,10 @@ PrefabInstance:
       value: -1.0156963
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Living Room Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 344950013}
@@ -9072,6 +9084,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 76823708}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: continueButton
       value: 
@@ -10700,6 +10716,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
+  saveTriggered: 0
+  triggerID: 
 --- !u!1 &2030574398
 GameObject:
   m_ObjectHideFlags: 0
@@ -10876,6 +10894,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
+  saveTriggered: 0
+  triggerID: 
 --- !u!4 &2080607855
 Transform:
   m_ObjectHideFlags: 0
