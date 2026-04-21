@@ -12,6 +12,7 @@ public class DoorTeleport : MonoBehaviour
     public bool requireFlashlight = false;
     public bool requireInteractedSwitch = false;
     public bool requireKey = false;
+    public bool requiredInteractedDrawer = false;
 
     [Header("Blocked Dialogue")]
     public DialogueTrigger blockedDialogueTrigger;
@@ -53,6 +54,7 @@ public class DoorTeleport : MonoBehaviour
         if (requireFlashlight && !player.hasFlashlight) return false;
         if (requireInteractedSwitch && !player.hasInteractedSwitch) return false;
         if (requireKey && !player.hasKey) return false;
+        if (requiredInteractedDrawer && !player.hasInteractedDrawer) return false;
 
         return true;
     }

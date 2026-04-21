@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -629560249
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1615097546, guid: d79924e0000de364b8fd8314a320950f, type: 3}
@@ -179,8 +179,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0015479733, y: 0.077335685}
-  m_Size: {x: 0.40088034, y: 0.081439875}
+  m_Offset: {x: -0.0008125538, y: 0.05527082}
+  m_Size: {x: 0.34057084, y: 0.1255698}
   m_Direction: 1
 --- !u!58 &8197737959455620813
 CircleCollider2D:
@@ -231,5 +231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 1.5
-  isKeyCollected: 0
+  hasFlashlight: 0
+  hasInteractedSwitch: 0
+  hasKey: 0
+  hasInteractedDrawer: 0
+  canMove: 1
   joystick: {fileID: 0}
