@@ -360,11 +360,21 @@ Transform:
   - {fileID: 843085529}
   - {fileID: 11734300}
   - {fileID: 1639744475}
+  - {fileID: 756587769}
+  - {fileID: 990864169}
+  - {fileID: 871837399}
+  - {fileID: 1121065512}
+  - {fileID: 1811572330}
+  - {fileID: 313613355}
+  - {fileID: 1307436371}
+  - {fileID: 851671106}
   - {fileID: 420801278}
   - {fileID: 905977218}
   - {fileID: 277756955}
   - {fileID: 612122501}
   - {fileID: 1797656237}
+  - {fileID: 1319559824}
+  - {fileID: 1130334883}
   m_Father: {fileID: 1793261078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &215544576 stripped
@@ -567,6 +577,115 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.52236986, y: 0.7046823}
   m_EdgeRadius: 0
+--- !u!1 &313613354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313613355}
+  - component: {fileID: 313613357}
+  - component: {fileID: 313613356}
+  m_Layer: 0
+  m_Name: Sink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &313613355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313613354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.5, y: 9.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &313613356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313613354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Sink
+  dialogues:
+  - "Earlier, I could barely see anything at all\u2026. Now, with a light, I can
+    properly investigate now"
+  - "Hmmm\u2026. Looks like the water in this house still works"
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &313613357
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313613354}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.5015631, y: -0.18617642}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.8595829, y: 1.3064921}
+  m_EdgeRadius: 0
 --- !u!114 &318710297 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1777705843936397065, guid: eda40c3fe261572478df2853fbcaec2d, type: 3}
@@ -605,7 +724,7 @@ PrefabInstance:
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: linkedDoor
       value: 
-      objectReference: {fileID: 1517518792}
+      objectReference: {fileID: 0}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: spawnOffset.x
       value: -0.4
@@ -974,6 +1093,174 @@ Transform:
   - {fileID: 1693070271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &512480026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512480027}
+  - component: {fileID: 512480030}
+  - component: {fileID: 512480029}
+  - component: {fileID: 512480028}
+  m_Layer: 0
+  m_Name: Bed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &512480027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512480026}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.513, y: 12.012, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1987455763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &512480028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512480026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: Bed
+  dialogues:
+  - "For an abandoned house\u2026. It is baffling how well the Bed is made\u2026.
+    And it is also very fluffy"
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &512480029
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512480026}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.31, y: 2.67}
+    newSize: {x: 1.31, y: 2.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.31, y: 2.67}
+  m_EdgeRadius: 0
+--- !u!212 &512480030
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512480026}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 1791995813
+  m_SortingLayer: 5
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -269311408914968385, guid: 013d07b37f9ecb84ba2eaa903260b3a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.31, y: 2.67}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1001 &518996077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1126,8 +1413,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1501864945
-  m_SortingLayer: 4
+  m_SortingLayerID: 1791995813
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -5316,16 +5603,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 11, y: 12, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 12, y: 12, z: 0}
     second:
       serializedVersion: 2
@@ -6206,7 +6483,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fbb8dd05257c8f442b17f885366b4b6e, type: 2}
   - m_RefCount: 416
     m_Data: {fileID: 11400000, guid: 9eb5a5061ccbf2840ae24a73f7cfac1a, type: 2}
-  - m_RefCount: 22
+  - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: 0e0754b3b2467ce4eb6c9314020fbd4c, type: 2}
   - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: b324ade175a0b114bba818cb256114b8, type: 2}
@@ -6231,7 +6508,7 @@ Tilemap:
     m_Data: {fileID: 1708465580, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 22
     m_Data: {fileID: 3237562185928774440, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
-  - m_RefCount: 22
+  - m_RefCount: 21
     m_Data: {fileID: -339718288, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -7800907335025530588, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
@@ -6240,7 +6517,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -60176606, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 505
+  - m_RefCount: 504
     m_Data:
       e00: 1
       e01: 0
@@ -6259,7 +6536,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 505
+  - m_RefCount: 504
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -6646,9 +6923,12 @@ MonoBehaviour:
   interactButtonText: {fileID: 845202859}
   interactLabel: F - Picture Frame
   dialogues:
-  - A picture frame lies down on the floor. Something made it fall.
-  - Underneath it... a small key, covered in dust. Someone hid this here.
-  - You collected a Room Key
+  - "A picture frame?.... Even if the faces are scratched, I could still tell that
+    this is a family of three\u2026. A husband\u2026. A wife\u2026. And a son"
+  - "Looks like a family picture of the Victim\u2026. Judging by its broken state,
+    someone purposely broke and thrashed it"
+  - "Looks like something fell behind the frame\u2026. What??!!.... A key?"
+  - Can I use this to unlock this room?
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -6780,6 +7060,117 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.7885294}
+  m_EdgeRadius: 0
+--- !u!1 &756587768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 756587769}
+  - component: {fileID: 756587771}
+  - component: {fileID: 756587770}
+  m_Layer: 0
+  m_Name: Drawer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &756587769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756587768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.504, y: 12.228, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &756587770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756587768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Drawer
+  dialogues:
+  - "Hmmm\u2026. Based on the content of this closet\u2026. The clothes\u2026. The
+    sizes\u2026. And the Polo Shirt that clearly looks like a school uniform\u2026.
+    This must be the son\u2019s room from the picture frame"
+  - "The Polo Shirt barely has any buttons left\u2026. Looks like they are forcefully
+    pulled out"
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &756587771
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756587768}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.01711011, y: -0.018248558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.94797564, y: 1.6633043}
   m_EdgeRadius: 0
 --- !u!1 &771177500
 GameObject:
@@ -7073,6 +7464,229 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845202857}
   m_CullTransparentMesh: 1
+--- !u!1 &851671105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851671106}
+  - component: {fileID: 851671108}
+  - component: {fileID: 851671107}
+  m_Layer: 0
+  m_Name: Bathtub
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851671106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851671105}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.898, y: 6.081, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &851671107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851671105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Bathtub
+  dialogues:
+  - "huh?!.... Looks like this was used recently\u2026. Don\u2019t tell me that there\u2019s
+    really someone still living here or what?!"
+  - I really need to wrap this up quickly and leave!
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &851671108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851671105}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 1.0900364, y: -0.36469626}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.6222115, y: 1.0872579}
+  m_EdgeRadius: 0
+--- !u!1 &871837398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 871837399}
+  - component: {fileID: 871837401}
+  - component: {fileID: 871837400}
+  m_Layer: 0
+  m_Name: Wall Hole (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &871837399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871837398}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.51, y: 11.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &871837400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871837398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Desk
+  dialogues:
+  - "Oh??!!.... There\u2018s a Pincushion with Needles & Tiny Button inside the drawer/desk\u2026.
+    Other than that, there\u2019s also what seems to be an empty roll of thread beside
+    them"
+  - "Probably the Victim is trying to sew something\u2026. Maybe the Polo Shirt?!....
+    But you wouldn't normally use an entire roll of thread for a few missing buttons,
+    right?!"
+  - "Well, it looks like I\u2019ve finished investigating this room\u2026. I think?....
+    I didn\u2019t miss anything, right?!...."
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &871837401
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871837398}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.022089005, y: 0.109136105}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.59046364, y: 0.8837538}
+  m_EdgeRadius: 0
 --- !u!1 &905977217
 GameObject:
   m_ObjectHideFlags: 0
@@ -7233,6 +7847,7 @@ MonoBehaviour:
   requireKey: 0
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
+  requiredInteractedBulletinBoard: 0
   blockedDialogueTrigger: {fileID: 0}
 --- !u!61 &979250425
 BoxCollider2D:
@@ -7618,6 +8233,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 11, y: 12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 9
@@ -7626,6 +8251,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 0da616f9cea51d24dae0b985b704c3c7, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: e39ff1d468777ed449ebf44b440357d0, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 0e0754b3b2467ce4eb6c9314020fbd4c, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 9
     m_Data: {fileID: -1789626561288699567, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
@@ -7633,8 +8260,10 @@ Tilemap:
     m_Data: {fileID: -1162901271478537970, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 3364837093308890842, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -339718288, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 24
+  - m_RefCount: 25
     m_Data:
       e00: 1
       e01: 0
@@ -7653,13 +8282,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 24
+  - m_RefCount: 25
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -1, y: -3, z: 0}
-  m_Size: {x: 28, y: 15, z: 1}
+  m_Size: {x: 28, y: 16, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -7679,6 +8308,117 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &990864168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990864169}
+  - component: {fileID: 990864171}
+  - component: {fileID: 990864170}
+  m_Layer: 0
+  m_Name: Wall Hole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990864169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990864168}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.533, y: 12.228, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990864170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990864168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Wall Hole
+  dialogues:
+  - "Clearly, someone was pushed here so forcefully that it broke the wall\u2026.
+    While I can\u2019t draw a conclusion yet, but\u2026. Someone is being abused
+    in this home\u2026. might it be the Victim?"
+  - "The Polo Shirt barely has any buttons left\u2026. Looks like they are forcefully
+    pulled out"
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &990864171
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990864168}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.048934937, y: 0.16474628}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.39103317, y: 0.99497414}
+  m_EdgeRadius: 0
 --- !u!1 &1028194053
 GameObject:
   m_ObjectHideFlags: 0
@@ -7831,6 +8571,114 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1387285392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1121065511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1121065512}
+  - component: {fileID: 1121065514}
+  - component: {fileID: 1121065513}
+  m_Layer: 0
+  m_Name: Stove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1121065512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121065511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.494, y: 1.131, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1121065513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121065511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Stove
+  dialogues:
+  - "Hmmm\u2026. The stove looks untouched, like the Victim is living off the food
+    left in the fridge"
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &1121065514
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121065511}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.01711011, y: -0.19141555}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.94797564, y: 1.3169703}
+  m_EdgeRadius: 0
 --- !u!1 &1124711667
 GameObject:
   m_ObjectHideFlags: 0
@@ -7863,6 +8711,128 @@ Transform:
   - {fileID: 446843017}
   m_Father: {fileID: 462824401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1130334882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 137830402}
+    m_Modifications:
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.x
+      value: 0.048632145
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5315037
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.2333167
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0044822693
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Bedroom Enter Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 318710297}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: isRepeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1274409837}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 550642783}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1693070272}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: "Even with the broken walls and cracked flooring, the room is eerily
+        'preserved,' with perfectly smooth sheets and a neat desk\u2026. The atmosphere
+        here is kinda suffocating."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[1]'
+      value: "At this point, I can\u2019t start the investigation. I can only barely
+        see around this darkness. There must be a light switch somewhere near here,
+        right?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Name
+      value: Bedroom Enter Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+--- !u!4 &1130334883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+  m_PrefabInstance: {fileID: 1130334882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1175720702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7954,7 +8924,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000037bc245a12a35310b4f728647ac79da0f5c7ba6233560aba5afcf6a
+  m_ApplyToSortingLayers: 00000000037bc245a12a35310b4f72860f5c7ba6a5afcf6a47ac79dab3fbf07429a17eea233560ab
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -7995,6 +8965,234 @@ GameObject:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2969819799260370972, guid: eda40c3fe261572478df2853fbcaec2d, type: 3}
   m_PrefabInstance: {fileID: 8441104455964664383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1307436370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1307436371}
+  - component: {fileID: 1307436373}
+  - component: {fileID: 1307436372}
+  m_Layer: 0
+  m_Name: Toilet Bowl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1307436371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307436370}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.38, y: 9.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1307436372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307436370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Toilet Bowl
+  dialogues:
+  - "Ughh!!.... Even with working water\u2026. This\u2026. Thing\u2026. Is sure filthy"
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &1307436373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307436370}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 1.099433, y: -0.18617642}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.66384315, y: 1.3064921}
+  m_EdgeRadius: 0
+--- !u!1001 &1319559823
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 137830402}
+    m_Modifications:
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.x
+      value: 5.9927125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.y
+      value: 0.11918926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.5122402
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.025672436
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Living Room Enter Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 318710297}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: isRepeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1274409837}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 550642783}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1693070272}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: "Whoa\u2026. It\u2019s really dark around here, must be because the
+        house is built in a secluded area\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[1]'
+      value: "At this point, I can\u2019t start the investigation. I can only barely
+        see around this darkness. There must be a light switch somewhere near here,
+        right?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Name
+      value: Living Room Enter Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+--- !u!4 &1319559824 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+  m_PrefabInstance: {fileID: 1319559823}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1369447371
 PrefabInstance:
@@ -8402,17 +9600,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 47938692244301926, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
   m_PrefabInstance: {fileID: 1517518790}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1517518792 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
-  m_PrefabInstance: {fileID: 1517518790}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 341095d05f0ab02498382cdb471cd4dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorTeleport
 --- !u!1001 &1528727200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8649,7 +9836,10 @@ MonoBehaviour:
   interactButtonText: {fileID: 845202859}
   interactLabel: F - Ref
   dialogues:
-  - Ughh!!!... It smells so bad ughh!!!...
+  - "Well\u2026. That\u2019s odd\u2026. Though not fresh, some food here is still
+    in perfect condition"
+  - "This just means that the house still has power recently\u2026. And someone is
+    clearly living it\u2026. Well, with all this food around after all\r\n"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -9088,6 +10278,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 11, y: 12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 25
+      m_TileSpriteIndex: 25
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -9135,11 +10335,13 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 08671f51a33f36f46a4e13c4d160fdd7, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 98ea410699ec1244cb33b4daa7923e05, type: 2}
+    m_Data: {fileID: 11400000, guid: 10ab21d165d74c44cb10d5ce3ffb2a17, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 54f26734d96ff454889d9e4c3501d4c3, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d78b9228765008e468d7d5eb4d33b66b, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 00ab5812c85f908499de029b1ed5da1e, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 1760705488, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
@@ -9186,13 +10388,15 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -1733071992, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1033109750, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
+    m_Data: {fileID: 1388903118, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -8143765423326196316, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 890794996027640012, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -3543170829145854669, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 28
+  - m_RefCount: 29
     m_Data:
       e00: 1
       e01: 0
@@ -9211,13 +10415,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 28
+  - m_RefCount: 29
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -3, y: -3, z: 0}
-  m_Size: {x: 30, y: 15, z: 1}
+  m_Size: {x: 30, y: 16, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -9388,6 +10592,118 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
   m_PrefabInstance: {fileID: 6476588792255561070}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1811572329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1811572330}
+  - component: {fileID: 1811572332}
+  - component: {fileID: 1811572331}
+  m_Layer: 0
+  m_Name: Countertop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1811572330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811572329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.46, y: 1.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137830402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1811572331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811572329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001571540c70ae4bbce33713cc245f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  dialoguePanel: {fileID: 1274409837}
+  dialogueText: {fileID: 318710297}
+  continueButton: {fileID: 550642783}
+  interactButton: {fileID: 1028194055}
+  interactButtonText: {fileID: 845202859}
+  interactLabel: F - Countertop
+  dialogues:
+  - "Well, looks like there's really nothing to note in the sink/countertop\u2026."
+  - Other than the misplaced Scis-
+  - "Wha\u2026. What the heck was that??!!.... Is anyone there??!!.... Hello??!!...."
+  - "Sigh~ That almost took a life out of me\u2026. I even grab the Scissor out of
+    the sudden, might as well keep it for now\u2026. Thankfully looks like something
+    just fell down"
+  typingSpeed: 0.03
+  playerMovementScript: {fileID: 1693070272}
+  joystick: {fileID: 2010444497}
+  setHasFlashlight: 0
+  setHasInteractedSwitch: 0
+  setHasKey: 0
+  setHasInteractedDrawer: 0
+  setHasInteractedRef: 0
+--- !u!61 &1811572332
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811572329}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.5015631, y: -0.18617642}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.8595829, y: 1.3064921}
+  m_EdgeRadius: 0
 --- !u!1 &1866894481
 GameObject:
   m_ObjectHideFlags: 0
@@ -11166,6 +12482,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1183758250}
+  - {fileID: 512480027}
   - {fileID: 771177502}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11685,7 +13002,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11705,7 +13022,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11716,16 +13033,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 1
       m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 11, y: 12, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 19
-      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11801,19 +13108,21 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 466052c2a73e9104cb9604bf9a3643b1, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d1a06bb32fecbd34ca7d0a584bbdcf82, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 00f6a7b82f36d8049beeeabe081c7565, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 1ce02b519fa6575488ff5b878faf81ae, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3bdba3ec2f8450744a8190c319463158, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 8
     m_Data: {fileID: -1789626561288699567, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 886810366704717133, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -168108093732753657, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -4242595038623915641, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 2
@@ -11842,18 +13151,20 @@ Tilemap:
     m_Data: {fileID: 6950145841252579604, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1837425116, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 8142462157292697291, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1450453487977473307, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -4468028684877902609, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
+    m_Data: {fileID: -168108093732753657, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 3822193499413199262, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -278389880, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 8142462157292697291, guid: 9b5c6446979ffa248985dac6fc8c588a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 41
+  - m_RefCount: 40
     m_Data:
       e00: 1
       e01: 0
@@ -11872,7 +13183,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 41
+  - m_RefCount: 40
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -12203,11 +13514,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.003
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: 14.96
       objectReference: {fileID: 0}
     - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12241,39 +13552,121 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.x
+      value: 2.011676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.y
+      value: 0.11918926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.4782784
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.025672436
+      objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: triggerID
-      value: Living Room Enter Dialogue
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 318710297}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: isRepeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1274409837}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: saveTriggered
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 550642783}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: playerMovementScript
       value: 
       objectReference: {fileID: 1693070272}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: I really should get there right now
+      objectReference: {fileID: 0}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
-      value: Living Room Enter Dialogue
+      value: Hallway Dialogue Trigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 6476588792255561072}
   m_SourcePrefab: {fileID: 100100000, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+--- !u!1 &6476588792255561071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+  m_PrefabInstance: {fileID: 6476588792255561070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &6476588792255561072
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476588792255561071}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.4966737, y: 0.49054146}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.9933472, y: 0.55851173}
+  m_EdgeRadius: 0
 --- !u!4 &7379893877115653335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 47938692244301926, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
