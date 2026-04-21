@@ -27,6 +27,7 @@ public class InteractTrigger : MonoBehaviour
     public bool setHasFlashlight = false;
     public bool setHasInteractedSwitch = false;
     public bool setHasKey = false;
+    public bool setHasInteractedDrawer = false;
 
     private static List<InteractTrigger> nearbyTriggers = new List<InteractTrigger>();
 
@@ -206,5 +207,8 @@ public class InteractTrigger : MonoBehaviour
 
         if (setHasKey)
             playerMovementScript.hasKey = true;
+
+        if (setHasInteractedDrawer)
+            playerMovementScript.hasInteractedDrawer = true;
     }
 }
