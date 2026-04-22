@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Tilemaps;
 
 public class RoomInvestigationManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class RoomInvestigationManager : MonoBehaviour
 
     [Header("=== BED VISUAL ===")]
     public GameObject fixedBed;
+    public GameObject destroyedBed;
 
     [Header("=== BEAR PUZZLE ITEMS ===")]
     [Header("Room Items")]
@@ -33,6 +35,9 @@ public class RoomInvestigationManager : MonoBehaviour
     [Header("Bear Final Interact")]
     public InteractTrigger bearFinalTrigger;
 
+    [Header("=== WALL FIX ===")]
+    public GameObject objectsWallTilemap;
+
     // Room investigation state
     private bool closetDone = false;
     private bool holeDone = false;
@@ -49,8 +54,6 @@ public class RoomInvestigationManager : MonoBehaviour
 
     private void Start()
     {
-        if (fixedBed != null)
-            fixedBed.SetActive(true);
 
         if (bedSecondInteract != null)
             bedSecondInteract.gameObject.SetActive(false);
@@ -174,11 +177,25 @@ public class RoomInvestigationManager : MonoBehaviour
     public void SetBedFoamCollected()
     {
         bedFoamCollected = true;
-
-        if (fixedBed != null)
-            fixedBed.SetActive(false);
-
+        StartCoroutine(SwapBedVisual());
         CheckBearPuzzleDone();
+    }
+
+    IEnumerator SwapBedVisual()
+    {
+        yield return null; // wait one frame
+
+        fixedBed.SetActive(false);
+        destroyedBed.SetActive(true);
+
+        yield return null; // wait another frame after swap
+
+        // Force the wall layer back on after bed swap
+        if (objectsWallTilemap != null)
+        {
+            objectsWallTilemap.SetActive(false);
+            objectsWallTilemap.SetActive(true);
+        }
     }
 
     void CheckBearPuzzleDone()
