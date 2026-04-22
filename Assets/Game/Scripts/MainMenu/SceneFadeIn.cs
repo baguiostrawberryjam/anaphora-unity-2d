@@ -38,4 +38,23 @@ public class SceneFadeIn : MonoBehaviour
         fadeGroup.alpha = 0f;
         fadeGroup.blocksRaycasts = false;
     }
+
+    // NEW: Call this to fade back to black before leaving the scene
+    public IEnumerator FadeOutToBlack(float duration)
+    {
+        fadeGroup.blocksRaycasts = true; // Block clicks while fading
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            // Fades from 0 to 1
+            fadeGroup.alpha = Mathf.Clamp01(elapsedTime / duration);
+            yield return null;
+        }
+
+        // Failsafe
+        fadeGroup.alpha = 1f;
+    }
 }

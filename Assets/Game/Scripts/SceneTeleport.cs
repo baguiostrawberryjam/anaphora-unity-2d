@@ -63,6 +63,14 @@ public class Teleport : MonoBehaviour
 
         Debug.Log($"Teleporting to scene '{sceneToLoad}', spawn point '{spawnPointName}'");
 
+        // NEW: Find the fader in the scene and trigger the fade out
+        SceneFadeIn fader = FindObjectOfType<SceneFadeIn>();
+        if (fader != null)
+        {
+            fader.StartCoroutine(fader.FadeOutToBlack(teleportDelay));
+        }
+
+        // Keep existing invoke logic
         Invoke(nameof(LoadScene), teleportDelay);
     }
 
