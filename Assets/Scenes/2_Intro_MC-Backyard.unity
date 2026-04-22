@@ -312,6 +312,9 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+  requireTalkedMarie: 0
+  requireTalkedSimon: 0
+  requireTalkedJohnuelle: 0
   blockedDialogueTrigger: {fileID: 0}
 --- !u!212 &106020196
 SpriteRenderer:
@@ -3745,55 +3748,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 232687584}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1378920532
-GameObject:
+--- !u!1001 &1441405016
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1378920534}
-  - component: {fileID: 1378920533}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1378920533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378920532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: feed5a33151f1644ba6927ceb9b44b69, type: 2}
---- !u!4 &1378920534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378920532}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3864725361630517707, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_Name
+      value: Global Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.83663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815764480204138691, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4d22c2449e829849916ffc7305d2f89, type: 3}
 --- !u!1 &1468625773
 GameObject:
   m_ObjectHideFlags: 0
@@ -9679,7 +9690,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1961950131
-  m_SortingLayer: 7
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -10706,6 +10717,9 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+  requireTalkedMarie: 0
+  requireTalkedSimon: 0
+  requireTalkedJohnuelle: 0
   blockedDialogueTrigger: {fileID: 0}
 --- !u!212 &1895083830
 SpriteRenderer:
@@ -11608,7 +11622,7 @@ SceneRoots:
   - {fileID: 2029971158}
   - {fileID: 166535599}
   - {fileID: 232687584}
-  - {fileID: 1378920534}
   - {fileID: 272210460}
   - {fileID: 334371148}
   - {fileID: 1291004298}
+  - {fileID: 1441405016}
