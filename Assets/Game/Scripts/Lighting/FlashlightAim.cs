@@ -28,6 +28,12 @@ public class FlashlightAim : MonoBehaviour
 
         if (flashlight != null) flashlight.enabled = true;
 
+        // FIX: If the player cannot move (e.g., in dialogue), stop reading input so the flashlight stays frozen.
+        if (!playerController.canMove)
+        {
+            return;
+        }
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 

@@ -44,7 +44,7 @@ public class CutsceneManager : MonoBehaviour
             cutsceneText.gameObject.SetActive(true);
 
             // Line 1
-            cutsceneText.text = "You have escaped the anger of the entity...";
+            cutsceneText.text = "You have survived an encounter with the entity..";
             yield return new WaitForSeconds(3f);
 
             // Line 2
