@@ -59,6 +59,9 @@ public class InteractTrigger : MonoBehaviour
         if (!nearbyTriggers.Contains(this))
             nearbyTriggers.Add(this);
 
+        interactButton.onClick.RemoveAllListeners();
+        interactButton.onClick.AddListener(OpenNearestDialogue);
+
         RefreshInteractButton();
     }
 
@@ -67,6 +70,9 @@ public class InteractTrigger : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         nearbyTriggers.Remove(this);
+
+        if (nearbyTriggers.Count == 0)
+            interactButton.onClick.RemoveAllListeners();
 
         RefreshInteractButton();
     }

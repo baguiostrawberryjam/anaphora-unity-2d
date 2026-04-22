@@ -186,8 +186,7 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Divider
   dialogues:
-  - Oh!  A Sewing Kit?! Man, this takes me back to when I had to sew things by myself
-    then
+  - Oh?! A sewing kit?! Man, this takes me back to when I had to sew things by myself.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -301,6 +300,130 @@ MonoBehaviour:
   isRepeatable: 0
   saveTriggered: 1
   triggerID: Bear Final Trigger
+--- !u!1001 &69784375
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 137830402}
+    m_Modifications:
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.x
+      value: 0.13706636
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3177109
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.77022576
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.25603104
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Bedroom Unlocking Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 318710297}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: isRepeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1274409837}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 550642783}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1693070272}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: This door is sure hard to open... The door has a strange physical resistance
+        to it as it creaks slowly inward.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[1]'
+      value: "I\u2019ve been avoiding investigating the 'Hallways' because they are
+        darker than the other areas... "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[2]'
+      value: The darkness really makes them seem 'endless.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Name
+      value: Bedroom Unlocking Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+--- !u!4 &69784376 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+  m_PrefabInstance: {fileID: 69784375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &83626862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,6 +561,8 @@ Transform:
   - {fileID: 1259164409}
   - {fileID: 612122501}
   - {fileID: 1797656237}
+  - {fileID: 558859222}
+  - {fileID: 69784376}
   - {fileID: 1319559824}
   - {fileID: 1130334883}
   m_Father: {fileID: 1793261078}
@@ -751,7 +876,7 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Desk
   dialogues:
-  - "Hmm\u2026 There looks like there\u2019s particularly nothing to note on"
+  - "Hmmm... It looks like there\u2019s particularly nothing to note here."
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1066,9 +1191,9 @@ MonoBehaviour:
   interactLabel: F - Divider
   dialogues:
   - '*picks up the Sewing Kit*'
-  - "Now, even with both eyes in place, the Bear still looks lifeless\u2026. Might
-    as well add the Ribbon that I saw lying around beside the boxes\u2026"
-  - It might improve the looks of the Teddy Bear
+  - 'Now, even with both eyes in place, the bear still looks lifeless...  '
+  - Might as well add the ribbon that I saw lying around beside the boxes...
+  - It might improve the look of the teddy bear.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1180,9 +1305,10 @@ MonoBehaviour:
   interactLabel: F - Sink
   dialogues:
   - Oh... here it is a flashligh!
-  - "Earlier, I could barely see anything at all\u2026 Now, with a light, I can properly
-    investigate now"
-  - "Hmm\u2026 Looks like the water in this house still works"
+  - Finally... With this, I can investigate the other areas properly.
+  - Earlier, I could barely see anything at all... Now, with a light, I can properly
+    investigate now.
+  - Hmmm... Looks like the water in this house still works.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1438,15 +1564,9 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F -Small Box
   dialogues:
-  - Whoa. There are a lot of boxes here, huh? Is the Victim planning to move out
-    or something?
-  - "Well, I can\u2019t really tell what for, but it looks like the Victim is packing
-    their things, and it is clear that they aren't done yet, there\u2019s even a
-    Robbon lying around the boxes"
-  - "Well, I can\u2019t really tell what for, but it looks like the Victim is packing
-    their things"
-  - "And it is clear that they aren't done yet, there\u2019s even a Robbon/Lasso
-    lying around the boxes"
+  - "Well, I can\u2019t really tell what for, but it looks like the victim is packing
+    their things, and it is clear that they aren't done yet. "
+  - "There\u2019s even a ribbon lying around the boxes."
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1554,16 +1674,15 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Under Bed
   dialogues:
-  - "Hmm... It looks like I saw something sparkling under the bed\u2026 Oh yeah!
-    Now thinking about it, I haven't check what's under the bed yet."
-  - Oh?!.... It looks like there's something down here
-  - Okay!! Here it goes!!!!.... Hmmm?! A Teddy Bear?!.... This isn't what I expected!!
-  - "Hmmm?!.... Is that the bears' eyes?!.... Well\u2026. They are barely hanging
-    on after all\u2026. "
-  - "Now you look at it, other than the missing eyes, the bear looks\u2026. Limp\u2026.
-    Scarred\u2026. Worn & beat-down\u2026. It\u2026. Its broken"
-  - "Seeing this teddy bear in this state\u2026. I really can't help but feel bad\u2026.
-    I\u2026. I feel I have to do something about it"
+  - Oh?! It looks like there's something down here.
+  - "Okay!! Here it goes!!!! Hmmm?! A Teddy Bear?! This isn\u2019t what I expected!!"
+  - '*plucked*'
+  - "Hmmm?! Is that the bear\u2019s eyes?! Well... they were barely hanging on after
+    all... "
+  - "Now that I look at it, other than the missing eyes, the bear looks... limp...
+    scarred... worn and beat-down... It... it\u2019s broken."
+  - "Seeing this teddy bear in this state... I really can\u2019t help but feel bad..."
+  - ' I... I feel like I have to do something about it.'
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1975,8 +2094,8 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Bed
   dialogues:
-  - "For an abandoned house\u2026. It is baffling how well the Bed is made\u2026.
-    And it is also very fluffy"
+  - For an abandoned house... it is baffling how well the bed is made... and it is
+    also very fluffy.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -7385,6 +7504,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1001 &558859221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 137830402}
+    m_Modifications:
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.x
+      value: 2.011676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Size.y
+      value: 0.11918926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.4782784
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.025672436
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: triggerID
+      value: Hallway Enter Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 318710297}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: isRepeatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1274409837}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: saveTriggered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 550642783}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1693070272}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: "Looks like I\u2019m pretty much done with the basic areas. Now here
+        comes the hard part... The 'Hallways."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[1]'
+      value: "I\u2019ve been avoiding investigating the 'Hallways' because they are
+        darker than the other areas... "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: 'dialogues.Array.data[2]'
+      value: The darkness really makes them seem 'endless.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+      propertyPath: m_Name
+      value: Hallway Enter Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+--- !u!4 &558859222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+  m_PrefabInstance: {fileID: 558859221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &566319653
 GameObject:
   m_ObjectHideFlags: 0
@@ -7523,8 +7766,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - There you go! All well and stitched up!
-  delayBeforeShow: 1
+  - There you go!! All well and stitched up!!
+  delayBeforeShow: 0
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 0
@@ -7772,8 +8015,8 @@ MonoBehaviour:
   interactLabel: F - Closet
   dialogues:
   - '*pulls a button off the Polo Shirt*'
-  - "What use of a needle without a thread\u2026. I think I saw a Sewing Kit before
-    in the living room"
+  - What use is a needle without thread... I think I saw a sewing kit before in the
+    living room.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -7884,12 +8127,13 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Picture Frame
   dialogues:
-  - "A picture frame... Even if the faces are scratched, I could still tell that
-    this is a family of three\u2026 A husband\u2026 A wife\u2026 And a son"
-  - "Looks like a family picture of the Victim\u2026 Judging by its broken state,
-    someone purposely broke and thrashed it..."
-  - "Looks like something fell behind the frame\u2026 What? A key?"
-  - Can I use this to unlock this room?
+  - A picture frame? Even if the faces are scratched, I can still tell that this
+    is a family of three... A husband... A wife... and a son.
+  - Looks like a family picture of the victim. Judging by its broken state, someone
+    purposely broke and thrashed it.
+  - Looks like something fell behind the frame... What??!! A key?
+  - This... This key is quite convenient with these locked doors and all. Might as
+    well try it on one of them.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -8091,10 +8335,10 @@ MonoBehaviour:
   interactLabel: F -Small Box
   dialogues:
   - '*picks up the Ribbon*'
-  - "Meh\u2026. Even with the ribbon\u2026 You really can\u2019t call it a Teddy
-    Bear while it looks very limp\u2026 Hmm..."
-  - "I might have an idea\u2026. Let\u2019s go back to the room and give the Bed
-    a check"
+  - Meh... Even with the ribbon... You really can't call it a teddy bear while it
+    looks so limp.
+  - "Hmmm... I might have an idea... Let\u2019s go back to the room and check the
+    bed."
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -8274,11 +8518,12 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Closet
   dialogues:
-  - "Hmm\u2026 Based on the content of this closet\u2026 The clothes\u2026 The sizes\u2026 "
-  - "And the Polo Shirt that clearly looks like a school uniform\u2026 This must
-    be the son\u2019s room from the picture frame"
-  - "The Polo Shirt barely has any buttons left\u2026. Looks like they are forcefully
-    pulled out"
+  - 'Hmmm... Based on the content of this closet... '
+  - 'The clothes... The sizes... And the Polo Shirt that clearly looks like a school
+    uniform... '
+  - "This must be the son\u2019s room from the picture frame."
+  - The Polo Shirt barely has any buttons left... Looks like they were forcefully
+    pulled out.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -8609,7 +8854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803768681}
   m_Layer: 0
-  m_Name: 'Door 1 '
+  m_Name: Bedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8838,8 +9083,8 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Bathtub
   dialogues:
-  - "Huh? Looks like this was used recently\u2026 Don\u2019t tell me that there\u2019s
-    really someone still living here or what?"
+  - "Huh?!... Looks like this was used recently... Don\u2019t tell me that there\u2019s
+    really someone still living here or what?!"
   - I really need to wrap this up quickly and leave!
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
@@ -8963,11 +9208,11 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Desk
   dialogues:
-  - "Oh!!! There\u2018s a Pincushion with Needles & Tiny Button inside the desk\u2026
-    Other than that, there\u2019s also what seems to be an empty roll of thread beside
-    them"
-  - "Probably the Victim is trying to sew something\u2026. Maybe the Polo Shirt?!....
-    But you wouldn't normally use an entire roll of thread for a few missing buttons,
+  - "\"Oh??!! There\u2019s a Pin Cushion with Needles & Tiny Buttons inside the drawer/desk... "
+  - "Other than that, there\u2019s also what seems to be an empty roll of thread
+    beside them."
+  - Probably the victim was trying to sew something... Maybe the Polo Shirt?!
+  - But you wouldn't normally use an entire roll of thread for a few missing buttons,
     right?!"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
@@ -9079,7 +9324,8 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Boxes
   dialogues:
-  - "Hmm\u2026 There looks like there\u2019s particularly nothing to note on"
+  - Whoa... There are a lot of boxes here, huh? Is the victim planning to move out
+    or something?!
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -9723,9 +9969,9 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Wall Hole
   dialogues:
-  - "Clearly, someone was pushed here so forcefully that it broke the wall\u2026"
-  - "While I can\u2019t draw a conclusion yet, but\u2026 clearly someone is being
-    abused in this home\u2026 who might it be?"
+  - Clearly, someone was pushed here so forcefully that it broke the wall...
+  - "While I can\u2019t draw a conclusion yet... someone is being abused in this
+    home... Might it be the victim?"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -9988,8 +10234,8 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Stove
   dialogues:
-  - "Hmm\u2026 The stove looks untouched, like the Victim is living off the food
-    left in the fridge"
+  - Hmmm... The stove looks untouched, like the victim is living off the food left
+    in the fridge.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -10167,7 +10413,7 @@ PrefabInstance:
       objectReference: {fileID: 550642783}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogues.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: playerMovementScript
@@ -10175,15 +10421,12 @@ PrefabInstance:
       objectReference: {fileID: 1693070272}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "Even with the broken walls and cracked flooring, the room is eerily
-        'preserved,' with perfectly smooth sheets and a neat desk\u2026 The atmosphere
-        here is kinda suffocating."
+      value: 'Even with the broken walls and cracked flooring, the room is eerily
+        ''preserved,'' with perfectly smooth sheets and a neat desk... '
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
-      value: "At this point, I can\u2019t start the investigation. I can only barely
-        see around this darkness. There must be a light switch somewhere near here,
-        right?"
+      value: The atmosphere here is kinda suffocating.
       objectReference: {fileID: 0}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
@@ -10521,11 +10764,11 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - "Wait a second! The items that I saw earlier while investigating\u2026 I might
-    be able to work around on something"
-  - "Hmm\u2026 I think I remember seeing a Pincushion with Needles & Tiny Button
-    in the desk, I could probably use those to stitch up the beard and use the buttons
-    as eyes"
+  - Wait a second!... The items that I saw earlier while investigating... I might
+    be able to work something out.
+  - Hmmm... I think I remember seeing a pin cushion with needles and a tiny button
+    in the desk...
+  - ' I could probably use those to stitch up the bear and use the buttons as eyes.'
   delayBeforeShow: 1
   typingSpeed: 0.03
   useAutoTrigger: 0
@@ -10690,7 +10933,7 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Toilet Bowl
   dialogues:
-  - "Ughh! Even with working water\u2026 This\u2026 Thing\u2026 Is sure filthy"
+  - Ugh!!... Even with working water... This... thing... is sure filthy.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -10844,14 +11087,13 @@ PrefabInstance:
       objectReference: {fileID: 1693070272}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "Whoa\u2026 It\u2019s really dark around here, must be because the house
-        is built in a secluded area\r\n"
+      value: "Whoa... It\u2019s really dark around here. It must be because the house
+        is built in a secluded area."
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
       value: "At this point, I can\u2019t start the investigation. I can only barely
-        see around this darkness. There must be a light switch somewhere near here,
-        right?"
+        see in this darkness. There must be a light switch somewhere near here, right?"
       objectReference: {fileID: 0}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
@@ -11255,8 +11497,10 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - "Well, it looks like I've finished investigating this room\u2026 I think...?
-    I didn't miss anything, right?"
+  - "Well, it looks like I\u2019ve finished investigating this room... I think? I
+    didn\u2019t miss anything, right?!"
+  - 'Hmmm?! It looks like I saw something sparkling under the bed... '
+  - Oh yeah!! Now that I think about it, I haven't checked what's under the bed yet.
   delayBeforeShow: 1
   typingSpeed: 0.03
   useAutoTrigger: 0
@@ -11721,10 +11965,10 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Ref
   dialogues:
-  - "Well\u2026 That\u2019s odd\u2026 Though not fresh, some food here is still in
-    perfect condition"
-  - "This just means that the house still has power recently\u2026 And someone is
-    clearly living it\u2026 Well, with all this food around after all\r\n"
+  - "Well... That\u2019s odd... Though not fresh, some food here is still in perfect
+    condition."
+  - This just means that the house had power recently... and someone is clearly living
+    in it. Well, with all this food around, after all.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -12788,12 +13032,13 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Countertop
   dialogues:
-  - "Well, looks like there's really nothing to note in the sink/countertop\u2026."
-  - Other than the misplaced Scis-
-  - "Wha\u2026 What the heck was that? Is anyone there? Hello?!?"
-  - "Sigh~ That almost took a life out of me\u2026 I even grab the scissor out of
-    the sudden, might as well keep it for now\u2026 Thankfully looks like something
-    just fell down"
+  - Well, looks like there's really nothing to note on the sink...
+  - "Other than the misplaced scis\u2014"
+  - Wha... What the heck was that??!! Is anyone there??!! Hello??!!
+  - Sigh... That almost took the life out of me... I even grabbed the scissors all
+    of a sudden.
+  - Might as well keep them for now... Thankfully, it looks like something just fell
+    down.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -14861,9 +15106,9 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Desk
   dialogues:
-  - '*picks up the Pincushion with Needles & Tiny Button*'
-  - "Now with the first eye, now I need another one\u2026 Maybe the Polo Shirt in
-    the cabinet might work?"
+  - '*picks up the Pin Cushion with Needles & Tiny Button*'
+  - Now with the first eye... now I need another one. Maybe the polo shirt in the
+    cabinet might work?
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -16067,9 +16312,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 845202859}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: playerMovementScript
       value: 
       objectReference: {fileID: 1693070272}
+    - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: 'What the??!! The switch does not work at all!!!! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
+      propertyPath: 'dialogues.Array.data[1]'
+      value: Sigh... What did I expect from an abandoned house...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
+      propertyPath: 'dialogues.Array.data[2]'
+      value: "There\u2019s a flashlight lying around somewhere... probably."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
