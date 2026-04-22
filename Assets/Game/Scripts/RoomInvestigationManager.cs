@@ -239,9 +239,18 @@ public class RoomInvestigationManager : MonoBehaviour
     void CheckBearPuzzleDone()
     {
         if (IsDone(STEP_BEAR_PUZZLE)) return;
-        if (!IsDone(STEP_PINCUSHION) || !IsDone(STEP_POLO) ||
-            !IsDone(STEP_SEWING) || !IsDone(STEP_RIBBON) || !IsDone(STEP_BEDFOAM)) return;
 
+        // Print the exact state of all 5 items to the console
+        Debug.Log($"Checking Puzzle State -> Pincushion: {IsDone(STEP_PINCUSHION)} | Polo: {IsDone(STEP_POLO)} | Sewing: {IsDone(STEP_SEWING)} | Ribbon: {IsDone(STEP_RIBBON)} | Foam: {IsDone(STEP_BEDFOAM)}");
+
+        if (!IsDone(STEP_PINCUSHION) || !IsDone(STEP_POLO) ||
+            !IsDone(STEP_SEWING) || !IsDone(STEP_RIBBON) || !IsDone(STEP_BEDFOAM))
+        {
+            Debug.LogWarning("Bear puzzle NOT done. Missing items.");
+            return;
+        }
+
+        Debug.Log("All 5 items collected! Triggering BearFixedSequence...");
         MarkDone(STEP_BEAR_PUZZLE);
         StartCoroutine(BearFixedSequence());
     }

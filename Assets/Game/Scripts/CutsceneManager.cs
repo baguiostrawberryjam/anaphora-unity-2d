@@ -1,19 +1,50 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
+
+#if UNITY_EDITOR 
+using UnityEditor;
+#endif
 
 public class CutsceneManager : MonoBehaviour
 {
     [Header("References")]
     public GameObject cutsceneCanvas;
+    public CanvasGroup cutsceneCanvasGroup;
     public VideoPlayer videoPlayer;
 
-    [Header("Cutscene Text")]
-    public Text cutsceneText; 
+    [Header("Settings")]
+    public float fadeDuration = 1.5f;
+
+    [Header("Scene Transition")]
+#if UNITY_EDITOR
+    public SceneAsset sceneAsset;
+#endif
+    [SerializeField, HideInInspector]
+    private string sceneToLoad;
 
     private System.Action onFinished;
     private bool videoEnded;
+
+    void OnValidate()
+    {
+#if UNITY_EDITOR
+        if (sceneAsset != null)
+            sceneToLoad = sceneAsset.name;
+#endif
+    }
+
+    private void Awake()
+    {
+        // 1. Hide the canvas when the game starts
+        if (cutsceneCanvas != null)
+            cutsceneCanvas.SetActive(false);
+
+        if (cutsceneCanvasGroup != null)
+            cutsceneCanvasGroup.alpha = 0f;
+    }
 
     public void PlayCutscene(System.Action callback)
     {
@@ -24,7 +55,11 @@ public class CutsceneManager : MonoBehaviour
     IEnumerator PlayRoutine()
     {
         cutsceneCanvas.SetActive(true);
+        if (cutsceneCanvasGroup != null)
+            cutsceneCanvasGroup.alpha = 0f;
 
+        // Ensure the video player is active 
+        videoPlayer.gameObject.SetActive(true);
         videoEnded = false;
 
         videoPlayer.Stop();
@@ -34,40 +69,38 @@ public class CutsceneManager : MonoBehaviour
 
         videoPlayer.loopPointReached += OnVideoEnded;
 
+        // 2. Play the video
         videoPlayer.Play();
-        StartCoroutine(PlayCutsceneText());
 
-        IEnumerator PlayCutsceneText()
+        // 3. Fade in
+        if (cutsceneCanvasGroup != null)
         {
-            if (cutsceneText == null) yield break;
-
-            cutsceneText.gameObject.SetActive(true);
-
-            // Line 1
-            cutsceneText.text = "You have survived an encounter with the entity..";
-            yield return new WaitForSeconds(3f);
-
-            // Line 2
-            cutsceneText.text = "You win...";
-            yield return new WaitForSeconds(2f);
-
-            // Line 3
-            cutsceneText.text = "FOR NOW!";
-            yield return new WaitForSeconds(2f);
+            float elapsedTime = 0f;
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                cutsceneCanvasGroup.alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
+                yield return null;
+            }
+            cutsceneCanvasGroup.alpha = 1f;
         }
 
-        yield return new WaitUntil(() =>
-            videoEnded || !videoPlayer.isPlaying
-        );
+        // 4. Wait for the video to finish playing
+        yield return new WaitUntil(() => videoEnded || !videoPlayer.isPlaying);
 
+        // 5. Clean up
         videoPlayer.loopPointReached -= OnVideoEnded;
-
-        if (cutsceneText != null)
-            cutsceneText.gameObject.SetActive(false);
-
-        cutsceneCanvas.SetActive(false);
-
         onFinished?.Invoke();
+
+        // 6. Load the next scene immediately!
+        if (!string.IsNullOrEmpty(sceneToLoad))
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
+        else
+        {
+            Debug.LogWarning("Scene to load is empty! Please assign a SceneAsset in the CutsceneManager inspector.");
+        }
     }
 
     private void OnVideoEnded(VideoPlayer vp)
