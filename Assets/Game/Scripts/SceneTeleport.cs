@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -7,7 +8,6 @@ using UnityEditor;
 
 public class Teleport : MonoBehaviour
 {
-
 #if UNITY_EDITOR
     public SceneAsset sceneAsset;
 #endif
@@ -27,24 +27,26 @@ public class Teleport : MonoBehaviour
     public bool requiredInteractedDrawer = false;
     public bool requiredInteractedRef = false;
     public bool requiredInteractedBulletinBoard = false;
+    public bool requiredCheckedCaseFiles = false;
     public bool requireTalkedMarie = false;
     public bool requireTalkedSimon = false;
     public bool requireTalkedJohnuelle = false;
 
-
-
     [Header("Blocked Dialogue")]
     public DialogueTrigger blockedDialogueTrigger;
 
+    [Header("One-Time Condition Check")]
+    public bool checkOnlyOnce = false;
+    public string conditionID = "";
+
+    private static HashSet<string> passedConditions = new HashSet<string>();
     private bool isTeleporting = false;
 
     void OnValidate()
     {
 #if UNITY_EDITOR
         if (sceneAsset != null)
-        {
             sceneToLoad = sceneAsset.name;
-        }
 #endif
     }
 
@@ -55,6 +57,12 @@ public class Teleport : MonoBehaviour
 
         PlayerController player = other.GetComponent<PlayerController>();
 
+        if (checkOnlyOnce && !string.IsNullOrEmpty(conditionID) && passedConditions.Contains(conditionID))
+        {
+            ExecuteTeleport();
+            return;
+        }
+
         if (!MeetsConditions(player))
         {
             if (blockedDialogueTrigger != null)
@@ -62,22 +70,10 @@ public class Teleport : MonoBehaviour
             return;
         }
 
-        isTeleporting = true;
+        if (checkOnlyOnce && !string.IsNullOrEmpty(conditionID))
+            passedConditions.Add(conditionID);
 
-        PlayerPrefs.SetString("SpawnPoint", spawnPointName);
-        PlayerPrefs.Save();
-
-        Debug.Log($"Teleporting to scene '{sceneToLoad}', spawn point '{spawnPointName}'");
-
-        // NEW: Find the fader in the scene and trigger the fade out
-        SceneFadeIn fader = Object.FindFirstObjectByType<SceneFadeIn>();
-        if (fader != null)
-        {
-            fader.StartCoroutine(fader.FadeOutToBlack(teleportDelay));
-        }
-
-        // Keep existing invoke logic
-        Invoke(nameof(LoadScene), teleportDelay);
+        ExecuteTeleport();
     }
 
     private bool MeetsConditions(PlayerController player)
@@ -90,11 +86,28 @@ public class Teleport : MonoBehaviour
         if (requiredInteractedDrawer && !player.hasInteractedDrawer) return false;
         if (requiredInteractedRef && !player.hasInteractedRef) return false;
         if (requiredInteractedBulletinBoard && !player.hasCheckedBulletinBoard) return false;
+        if (requiredCheckedCaseFiles && !player.hasCheckedCaseFiles) return false;
         if (requireTalkedMarie && !NPCInteract.hasTalkedMarie) return false;
         if (requireTalkedSimon && !NPCInteract.hasTalkedSimon) return false;
-        if (requireTalkedJohnuelle && !NPCInteract.hasTalkedJohnuelle) return false;    
+        if (requireTalkedJohnuelle && !NPCInteract.hasTalkedJohnuelle) return false;
 
         return true;
+    }
+
+    private void ExecuteTeleport()
+    {
+        isTeleporting = true;
+
+        PlayerPrefs.SetString("SpawnPoint", spawnPointName);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Teleporting to scene '{sceneToLoad}', spawn point '{spawnPointName}'");
+
+        SceneFadeIn fader = Object.FindFirstObjectByType<SceneFadeIn>();
+        if (fader != null)
+            fader.StartCoroutine(fader.FadeOutToBlack(teleportDelay));
+
+        Invoke(nameof(LoadScene), teleportDelay);
     }
 
     private void LoadScene()

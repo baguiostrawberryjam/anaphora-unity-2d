@@ -7163,8 +7163,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 1
   isRepeatable: 1
-  saveTriggered: 0
-  triggerID: 
+  saveTriggered: 1
+  triggerID: Blocked Agency Dialogue
 --- !u!1 &131337174
 GameObject:
   m_ObjectHideFlags: 0
@@ -12715,6 +12715,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 334371148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1770531316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1770531317}
+  - component: {fileID: 1770531318}
+  m_Layer: 0
+  m_Name: Blocked Victim's House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1770531317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770531316}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2124689, y: 3.6014369, z: 0}
+  m_LocalScale: {x: 1.0085253, y: 0.15870145, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962172524}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1770531318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770531316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9266c3ab3f5ce84284f42e59abe2f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialoguePanel: {fileID: 1318971283}
+  continueButton: {fileID: 1499173718}
+  dialogueText: {fileID: 1208366844}
+  playerMovementScript: {fileID: 2090641712}
+  dialogues:
+  - I need to check the case files first
+  delayBeforeShow: 0
+  typingSpeed: 0.03
+  useAutoTrigger: 1
+  isRepeatable: 1
+  saveTriggered: 1
+  triggerID: Blocked Victim's House
 --- !u!1001 &1771151665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12954,10 +13010,13 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 1
+  requiredCheckedCaseFiles: 0
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
   blockedDialogueTrigger: {fileID: 122502444}
+  checkOnlyOnce: 1
+  conditionID: TP Agency Inside
 --- !u!212 &1895083830
 SpriteRenderer:
   serializedVersion: 2
@@ -13094,7 +13153,8 @@ Transform:
   m_LocalPosition: {x: 5.38, y: -1.36, z: 0}
   m_LocalScale: {x: 1.3291886, y: 1.9980915, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1770531317}
   m_Father: {fileID: 117601625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1962172525
@@ -13119,10 +13179,13 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+  requiredCheckedCaseFiles: 1
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
-  blockedDialogueTrigger: {fileID: 0}
+  blockedDialogueTrigger: {fileID: 1770531318}
+  checkOnlyOnce: 1
+  conditionID: TP Victim's House
 --- !u!212 &1962172526
 SpriteRenderer:
   serializedVersion: 2

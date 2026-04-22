@@ -9,6 +9,7 @@ public class CutsceneManager : MonoBehaviour
     public VideoPlayer videoPlayer;
 
     private System.Action onFinished;
+    private bool videoEnded;
 
     public void PlayCutscene(System.Action callback)
     {
@@ -20,6 +21,9 @@ public class CutsceneManager : MonoBehaviour
     {
         cutsceneCanvas.SetActive(true);
 
+        videoEnded = false;
+        videoPlayer.loopPointReached += OnVideoEnded;
+
         videoPlayer.Stop();
         videoPlayer.Prepare();
 
@@ -27,11 +31,16 @@ public class CutsceneManager : MonoBehaviour
 
         videoPlayer.Play();
 
-        yield return new WaitUntil(() => videoPlayer.isPlaying);
-        yield return new WaitUntil(() => !videoPlayer.isPlaying);
+        yield return new WaitUntil(() => videoEnded);
 
+        videoPlayer.loopPointReached -= OnVideoEnded;
         cutsceneCanvas.SetActive(false);
 
         onFinished?.Invoke();
+    }
+
+    private void OnVideoEnded(VideoPlayer vp)
+    {
+        videoEnded = true;
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.Tilemaps;
+using System.Collections.Generic;
 
 public class RoomInvestigationManager : MonoBehaviour
 {
@@ -35,65 +35,107 @@ public class RoomInvestigationManager : MonoBehaviour
     [Header("=== CUTSCENE ===")]
     public CutsceneManager cutsceneManager;
     public DialogueTrigger bearFinalDialogue;
-    public InteractTrigger bearFinalTrigger;
 
     [Header("=== WALL FIX ===")]
     public GameObject objectsWallTilemap;
 
-    // Room investigation state
-    private bool closetDone = false;
-    private bool holeDone = false;
-    private bool bedDone = false;
-    private bool drawerDone = false;
-    private bool allRoomDoneTriggered = false;
+    // =====================
+    // SESSION STATE
+    // =====================
+    private static HashSet<string> completedSteps = new HashSet<string>();
 
-    // Bear puzzle item state
-    private bool pincushionCollected = false;
-    private bool poloShirtCollected = false;
-    private bool sewingKitCollected = false;
-    private bool ribbonCollected = false;
-    private bool bedFoamCollected = false;
+    private const string STEP_CLOSET = "closetDone";
+    private const string STEP_HOLE = "holeDone";
+    private const string STEP_BED = "bedDone";
+    private const string STEP_DRAWER = "drawerDone";
+    private const string STEP_ALL_ROOM = "allRoomDone";
+    private const string STEP_BED_SECOND = "bedSecondDone";
+    private const string STEP_PINCUSHION = "pincushionCollected";
+    private const string STEP_POLO = "poloShirtCollected";
+    private const string STEP_SEWING = "sewingKitCollected";
+    private const string STEP_RIBBON = "ribbonCollected";
+    private const string STEP_BEDFOAM = "bedFoamCollected";
+    private const string STEP_BEAR_PUZZLE = "bearPuzzleDone";
+
+    private bool IsDone(string step) => completedSteps.Contains(step);
+    private void MarkDone(string step) => completedSteps.Add(step);
 
     private void Start()
     {
+        RestoreState();
+    }
 
-        if (bedSecondInteract != null)
-            bedSecondInteract.gameObject.SetActive(false);
+    void RestoreState()
+    {
+        if (IsDone(STEP_BEDFOAM))
+        {
+            if (fixedBed != null) fixedBed.SetActive(false);
+            if (destroyedBed != null) destroyedBed.SetActive(true);
+        }
 
-        if (bedFoamTrigger != null)
-            bedFoamTrigger.gameObject.SetActive(false);
+        if (IsDone(STEP_BEAR_PUZZLE))
+        {
+            // Bear puzzle already completed — trigger the final dialogue immediately
+            // (or skip if you only want it to play once per session)
+            HideCollectedItems();
+            return;
+        }
 
-        if (bearFinalTrigger != null)
-            bearFinalTrigger.gameObject.SetActive(false);
+        if (IsDone(STEP_BED_SECOND))
+        {
+            if (pincushionTrigger != null)
+                pincushionTrigger.gameObject.SetActive(!IsDone(STEP_PINCUSHION));
+            if (poloShirtTrigger != null)
+                poloShirtTrigger.gameObject.SetActive(!IsDone(STEP_POLO));
+            if (sewingKitTrigger != null)
+                sewingKitTrigger.gameObject.SetActive(!IsDone(STEP_SEWING));
+            if (ribbonTrigger != null)
+                ribbonTrigger.gameObject.SetActive(!IsDone(STEP_RIBBON));
+            if (bedFoamTrigger != null)
+                bedFoamTrigger.gameObject.SetActive(IsDone(STEP_RIBBON) && !IsDone(STEP_BEDFOAM));
+            return;
+        }
 
-        if (pincushionTrigger != null)
-            pincushionTrigger.gameObject.SetActive(false);
+        if (IsDone(STEP_ALL_ROOM))
+        {
+            if (bedSecondInteract != null) bedSecondInteract.gameObject.SetActive(true);
+            return;
+        }
 
-        if (poloShirtTrigger != null)
-            poloShirtTrigger.gameObject.SetActive(false);
+        if (bedSecondInteract != null) bedSecondInteract.gameObject.SetActive(false);
+        if (bedFoamTrigger != null) bedFoamTrigger.gameObject.SetActive(false);
+        if (pincushionTrigger != null) pincushionTrigger.gameObject.SetActive(false);
+        if (poloShirtTrigger != null) poloShirtTrigger.gameObject.SetActive(false);
+        if (sewingKitTrigger != null) sewingKitTrigger.gameObject.SetActive(false);
+        if (ribbonTrigger != null) ribbonTrigger.gameObject.SetActive(false);
+    }
 
-        if (sewingKitTrigger != null)
-            sewingKitTrigger.gameObject.SetActive(false);
-
-        if (ribbonTrigger != null)
-            ribbonTrigger.gameObject.SetActive(false);
+    void HideCollectedItems()
+    {
+        if (pincushionTrigger != null) pincushionTrigger.gameObject.SetActive(false);
+        if (poloShirtTrigger != null) poloShirtTrigger.gameObject.SetActive(false);
+        if (sewingKitTrigger != null) sewingKitTrigger.gameObject.SetActive(false);
+        if (ribbonTrigger != null) ribbonTrigger.gameObject.SetActive(false);
+        if (bedFoamTrigger != null) bedFoamTrigger.gameObject.SetActive(false);
+        if (bedSecondInteract != null) bedSecondInteract.gameObject.SetActive(false);
     }
 
     // =====================
     // ROOM INVESTIGATION
     // =====================
 
-    public void SetClosetDone() { closetDone = true; CheckAllRoomDone(); }
-    public void SetHoleDone() { holeDone = true; CheckAllRoomDone(); }
-    public void SetBedDone() { bedDone = true; CheckAllRoomDone(); }
-    public void SetDrawerDone() { drawerDone = true; CheckAllRoomDone(); }
+    public void SetClosetDone() { MarkDone(STEP_CLOSET); CheckAllRoomDone(); }
+    public void SetHoleDone() { MarkDone(STEP_HOLE); CheckAllRoomDone(); }
+    public void SetBedDone() { MarkDone(STEP_BED); CheckAllRoomDone(); }
+    public void SetDrawerDone() { MarkDone(STEP_DRAWER); CheckAllRoomDone(); }
 
     void CheckAllRoomDone()
     {
-        if (allRoomDoneTriggered) return;
-        if (!closetDone || !holeDone || !bedDone || !drawerDone) return;
+        if (IsDone(STEP_ALL_ROOM)) return;
+        if (!IsDone(STEP_CLOSET) || !IsDone(STEP_HOLE) ||
+            !IsDone(STEP_BED) || !IsDone(STEP_DRAWER)) return;
 
-        allRoomDoneTriggered = true;
+        MarkDone(STEP_ALL_ROOM);
         StartCoroutine(AllRoomDoneSequence());
     }
 
@@ -115,6 +157,7 @@ public class RoomInvestigationManager : MonoBehaviour
 
     public void SetBedSecondDone()
     {
+        MarkDone(STEP_BED_SECOND);
         StartCoroutine(BearFoundSequence());
     }
 
@@ -131,17 +174,10 @@ public class RoomInvestigationManager : MonoBehaviour
         yield return new WaitUntil(() =>
             dialogue44 == null || !dialogue44.dialoguePanel.activeSelf);
 
-        if (pincushionTrigger != null)
-            pincushionTrigger.gameObject.SetActive(true);
-
-        if (poloShirtTrigger != null)
-            poloShirtTrigger.gameObject.SetActive(true);
-
-        if (sewingKitTrigger != null)
-            sewingKitTrigger.gameObject.SetActive(true);
-
-        if (ribbonTrigger != null)
-            ribbonTrigger.gameObject.SetActive(true);
+        if (pincushionTrigger != null) pincushionTrigger.gameObject.SetActive(true);
+        if (poloShirtTrigger != null) poloShirtTrigger.gameObject.SetActive(true);
+        if (sewingKitTrigger != null) sewingKitTrigger.gameObject.SetActive(true);
+        if (ribbonTrigger != null) ribbonTrigger.gameObject.SetActive(true);
     }
 
     // =====================
@@ -150,49 +186,50 @@ public class RoomInvestigationManager : MonoBehaviour
 
     public void SetPincushionCollected()
     {
-        pincushionCollected = true;
+        MarkDone(STEP_PINCUSHION);
+        if (pincushionTrigger != null) pincushionTrigger.gameObject.SetActive(false);
         CheckBearPuzzleDone();
     }
 
     public void SetPoloShirtCollected()
     {
-        poloShirtCollected = true;
+        MarkDone(STEP_POLO);
+        if (poloShirtTrigger != null) poloShirtTrigger.gameObject.SetActive(false);
         CheckBearPuzzleDone();
     }
 
     public void SetSewingKitCollected()
     {
-        sewingKitCollected = true;
+        MarkDone(STEP_SEWING);
+        if (sewingKitTrigger != null) sewingKitTrigger.gameObject.SetActive(false);
         CheckBearPuzzleDone();
     }
 
     public void SetRibbonCollected()
     {
-        ribbonCollected = true;
-
-        if (bedFoamTrigger != null)
-            bedFoamTrigger.gameObject.SetActive(true);
-
+        MarkDone(STEP_RIBBON);
+        if (ribbonTrigger != null) ribbonTrigger.gameObject.SetActive(false);
+        if (bedFoamTrigger != null) bedFoamTrigger.gameObject.SetActive(true);
         CheckBearPuzzleDone();
     }
 
     public void SetBedFoamCollected()
     {
-        bedFoamCollected = true;
+        MarkDone(STEP_BEDFOAM);
+        if (bedFoamTrigger != null) bedFoamTrigger.gameObject.SetActive(false);
         StartCoroutine(SwapBedVisual());
         CheckBearPuzzleDone();
     }
 
     IEnumerator SwapBedVisual()
     {
-        yield return null; // wait one frame
+        yield return null;
 
-        fixedBed.SetActive(false);
-        destroyedBed.SetActive(true);
+        if (fixedBed != null) fixedBed.SetActive(false);
+        if (destroyedBed != null) destroyedBed.SetActive(true);
 
-        yield return null; // wait another frame after swap
+        yield return null;
 
-        // Force the wall layer back on after bed swap
         if (objectsWallTilemap != null)
         {
             objectsWallTilemap.SetActive(false);
@@ -202,30 +239,12 @@ public class RoomInvestigationManager : MonoBehaviour
 
     void CheckBearPuzzleDone()
     {
-        if (!pincushionCollected || !poloShirtCollected ||
-            !sewingKitCollected || !ribbonCollected || !bedFoamCollected) return;
+        if (IsDone(STEP_BEAR_PUZZLE)) return;
+        if (!IsDone(STEP_PINCUSHION) || !IsDone(STEP_POLO) ||
+            !IsDone(STEP_SEWING) || !IsDone(STEP_RIBBON) || !IsDone(STEP_BEDFOAM)) return;
 
+        MarkDone(STEP_BEAR_PUZZLE);
         StartCoroutine(BearFixedSequence());
-    }
-
-    public void OnBearFinalInteracted()
-    {
-        StartCoroutine(BearEndingSequence());
-    }
-
-    IEnumerator BearEndingSequence()
-    {
-        // Lock player
-        if (cutsceneManager != null)
-        {
-            bool cutsceneDone = false;
-            cutsceneManager.PlayCutscene(() => cutsceneDone = true);
-            yield return new WaitUntil(() => cutsceneDone);
-        }
-
-        // Now show the ending dialogue
-        if (bearFinalDialogue != null)
-            bearFinalDialogue.TriggerDialogue();
     }
 
     IEnumerator BearFixedSequence()
@@ -238,7 +257,23 @@ public class RoomInvestigationManager : MonoBehaviour
         yield return new WaitUntil(() =>
             dialogue50 == null || !dialogue50.dialoguePanel.activeSelf);
 
-        if (bearFinalTrigger != null)
-            bearFinalTrigger.gameObject.SetActive(true);
+        StartCoroutine(BearEndingSequence());
+    }
+
+    // =====================
+    // BEAR ENDING
+    // =====================
+
+    IEnumerator BearEndingSequence()
+    {
+        if (cutsceneManager != null)
+        {
+            bool cutsceneDone = false;
+            cutsceneManager.PlayCutscene(() => cutsceneDone = true);
+            yield return new WaitUntil(() => cutsceneDone);
+        }
+
+        if (bearFinalDialogue != null)
+            bearFinalDialogue.TriggerDialogue();
     }
 }

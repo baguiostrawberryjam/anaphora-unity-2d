@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public bool hasInteractedDrawer = false;
     public bool hasInteractedRef = false;
     public bool hasCheckedBulletinBoard = false;
+    public bool hasCheckedCaseFiles = false;
     public bool canMove = true;
 
     public JoystickController joystick;

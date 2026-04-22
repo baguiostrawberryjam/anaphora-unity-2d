@@ -33,6 +33,7 @@ public class InteractTrigger : MonoBehaviour
     public bool setHasKey = false;
     public bool setHasInteractedDrawer = false;
     public bool setHasInteractedRef = false;
+    public bool setHasCheckedCaseFiles = false;
 
     private static List<InteractTrigger> nearbyTriggers = new List<InteractTrigger>();
 
@@ -142,9 +143,6 @@ public class InteractTrigger : MonoBehaviour
 
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(OnContinuePressed);
-
-        SetPlayerBools();
-
         StartTyping(dialogues[currentIndex]);
     }
 
@@ -197,6 +195,8 @@ public class InteractTrigger : MonoBehaviour
         if (playerMovementScript != null)
             playerMovementScript.canMove = true;
 
+        SetPlayerBools(); // ← Moved here so it fires after dialogue closes
+
         RefreshInteractButton();
         onDialogueClose?.Invoke();
     }
@@ -219,5 +219,8 @@ public class InteractTrigger : MonoBehaviour
 
         if(setHasInteractedRef)
             playerMovementScript.hasInteractedRef = true;
+
+        if (setHasCheckedCaseFiles)
+            playerMovementScript.hasCheckedCaseFiles = true;
     }
 }

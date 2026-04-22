@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DoorTeleport : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class DoorTeleport : MonoBehaviour
     public bool requiredInteractedDrawer = false;
     public bool requiredInteractedRef = false;
     public bool requireCheckedBulletinBoard = false;
+    public bool requireTalkedToBien = false;
+    public bool requireTalkedToJam = false;
 
     [Header("Blocked Dialogue")]
     public DialogueTrigger blockedDialogueTrigger;
@@ -22,12 +25,25 @@ public class DoorTeleport : MonoBehaviour
     [Header("Warning Collider (optional)")]
     public Collider2D warningCollider;
 
+    [Header("Session Trigger")]
+    public bool triggerOncePerSession = false;
+    public string triggerID = "";
+
+    private static HashSet<string> triggeredDoors = new HashSet<string>();
+
     private bool isOnCooldown = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
         if (isOnCooldown) return;
+
+        if (triggerOncePerSession &&
+            !string.IsNullOrEmpty(triggerID) &&
+            triggeredDoors.Contains(triggerID))
+        {
+            return;
+        }
 
         if (linkedDoor == null)
         {
@@ -44,6 +60,9 @@ public class DoorTeleport : MonoBehaviour
             return;
         }
 
+        if (triggerOncePerSession && !string.IsNullOrEmpty(triggerID))
+            triggeredDoors.Add(triggerID);
+
         TeleportPlayer(other.gameObject);
     }
 
@@ -58,6 +77,8 @@ public class DoorTeleport : MonoBehaviour
         if (requireKey && !player.hasKey) return false;
         if (requiredInteractedDrawer && !player.hasInteractedDrawer) return false;
         if (requiredInteractedRef && !player.hasInteractedRef) return false;
+        if (requireTalkedToBien && !NPCInteract.hasTalkedBien) return false;
+        if (requireTalkedToJam && !NPCInteract.hasTalkedJam) return false;
 
         return true;
     }

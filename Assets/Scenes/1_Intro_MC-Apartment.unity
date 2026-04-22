@@ -835,10 +835,13 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 1
   requiredInteractedBulletinBoard: 0
+  requiredCheckedCaseFiles: 0
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
   blockedDialogueTrigger: {fileID: 1950223406}
+  checkOnlyOnce: 1
+  conditionID: Teleport Outside Apartment
 --- !u!61 &119742787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -993,12 +996,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      propertyPath: triggerID
+      value: Bedroom to Living Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: linkedDoor
       value: 
       objectReference: {fileID: 1096564550}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: spawnOffset.y
       value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      propertyPath: triggerOncePerSession
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: blockedDialogueTrigger
@@ -11192,8 +11203,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
-  saveTriggered: 0
-  triggerID: 
+  saveTriggered: 1
+  triggerID: Blocked DIalogue Bedroom
 --- !u!4 &2080607855
 Transform:
   m_ObjectHideFlags: 0

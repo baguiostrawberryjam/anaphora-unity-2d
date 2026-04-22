@@ -9,6 +9,7 @@ public class NPCDialogueEntry
 {
     public string characterName;
     public Sprite characterImage;
+
     [TextArea(2, 5)]
     public string[] lines;
 }
@@ -24,15 +25,18 @@ public class NPCInteract : MonoBehaviour
     public Button interactButton;
     public TMP_Text interactButtonText;
 
-
     [Header("Talk State")]
     public bool setHasTalkedMarie = false;
     public bool setHasTalkedSimon = false;
     public bool setHasTalkedJohnuelle = false;
+    public bool setHasTalkedJam = false;
+    public bool setHasTalkedBien = false;
 
     public static bool hasTalkedMarie = false;
     public static bool hasTalkedSimon = false;
     public static bool hasTalkedJohnuelle = false;
+    public static bool hasTalkedJam = false;
+    public static bool hasTalkedBien = false;
 
     [Header("NPC Settings")]
     public string interactLabel = "Talk";
@@ -55,29 +59,37 @@ public class NPCInteract : MonoBehaviour
         dialoguePanel.SetActive(false);
         interactButton.gameObject.SetActive(false);
 
-        interactButton.onClick.RemoveAllListeners();
+        // FIXED: removed RemoveAllListeners()
         interactButton.onClick.AddListener(OpenNearestDialogue);
     }
 
     private void OnDestroy()
     {
         nearbyNPCs.Remove(this);
+
+        if (interactButton != null)
+            interactButton.onClick.RemoveListener(OpenNearestDialogue);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
         if (interactButton == null || dialoguePanel == null) return;
+
         if (!nearbyNPCs.Contains(this))
             nearbyNPCs.Add(this);
+
         RefreshInteractButton();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
+
         nearbyNPCs.Remove(this);
+
         if (interactButton == null || dialoguePanel == null) return;
+
         RefreshInteractButton();
     }
 
@@ -90,7 +102,9 @@ public class NPCInteract : MonoBehaviour
     void OpenNearestDialogue()
     {
         if (dialoguePanel.activeSelf) return;
+
         NPCInteract nearest = GetNearestNPC();
+
         if (nearest != null)
             nearest.OpenDialogue();
     }
@@ -106,6 +120,7 @@ public class NPCInteract : MonoBehaviour
         foreach (NPCInteract npc in nearbyNPCs)
         {
             float dist = Vector2.Distance(player.transform.position, npc.transform.position);
+
             if (dist < closest)
             {
                 closest = dist;
@@ -121,11 +136,13 @@ public class NPCInteract : MonoBehaviour
         if (interactButton == null || dialoguePanel == null) return;
 
         bool hasNearby = nearbyNPCs.Count > 0 && !dialoguePanel.activeSelf;
+
         interactButton.gameObject.SetActive(hasNearby);
 
         if (hasNearby)
         {
             NPCInteract nearest = GetNearestNPC();
+
             if (nearest != null && interactButtonText != null)
                 interactButtonText.text = nearest.interactLabel;
         }
@@ -134,17 +151,19 @@ public class NPCInteract : MonoBehaviour
     void OpenDialogue()
     {
         if (activeNPC != null && activeNPC != this) return;
+
         activeNPC = this;
 
         entryIndex = 0;
         lineIndex = 0;
 
-        if (joystick != null) joystick.ForceReset();
+        if (joystick != null)
+            joystick.ForceReset();
 
         interactButton.gameObject.SetActive(false);
         dialoguePanel.SetActive(true);
 
-        continueButton.onClick.RemoveAllListeners();
+        continueButton.onClick.RemoveListener(OnContinuePressed);
         continueButton.onClick.AddListener(OnContinuePressed);
 
         LockPlayer();
@@ -176,6 +195,7 @@ public class NPCInteract : MonoBehaviour
     {
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
+
         typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
@@ -206,6 +226,7 @@ public class NPCInteract : MonoBehaviour
                 StopCoroutine(typingCoroutine);
                 typingCoroutine = null;
             }
+
             dialogueText.text = dialogueEntries[entryIndex].lines[lineIndex];
             isTyping = false;
             return;
@@ -213,14 +234,12 @@ public class NPCInteract : MonoBehaviour
 
         lineIndex++;
 
-        // If more lines in this entry, continue
         if (lineIndex < dialogueEntries[entryIndex].lines.Length)
         {
             StartTyping(dialogueEntries[entryIndex].lines[lineIndex]);
             return;
         }
 
-        // Move to next entry
         entryIndex++;
         lineIndex = 0;
 
@@ -242,11 +261,14 @@ public class NPCInteract : MonoBehaviour
             typingCoroutine = null;
         }
 
-        if (setHasTalkedMarie) NPCInteract.hasTalkedMarie = true;
-        if (setHasTalkedSimon) NPCInteract.hasTalkedSimon = true;
-        if (setHasTalkedJohnuelle) NPCInteract.hasTalkedJohnuelle = true;
+        if (setHasTalkedMarie) hasTalkedMarie = true;
+        if (setHasTalkedSimon) hasTalkedSimon = true;
+        if (setHasTalkedJohnuelle) hasTalkedJohnuelle = true;
+        if (setHasTalkedJam) hasTalkedJam = true;
+        if (setHasTalkedBien) hasTalkedBien = true;
 
-        continueButton.onClick.RemoveAllListeners();
+        continueButton.onClick.RemoveListener(OnContinuePressed);
+
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
         isTyping = false;

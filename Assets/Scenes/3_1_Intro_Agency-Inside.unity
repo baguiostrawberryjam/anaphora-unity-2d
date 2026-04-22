@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 119742788}
   - component: {fileID: 119742786}
   m_Layer: 0
-  m_Name: Teleport
+  m_Name: TP Outside Agency
   m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,7 +596,8 @@ Transform:
   m_LocalPosition: {x: -0.4953, y: -2.659, z: 0}
   m_LocalScale: {x: 0.97329485, y: 0.41220403, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1356768855}
   m_Father: {fileID: 1671438265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &119742786
@@ -621,10 +622,13 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+  requiredCheckedCaseFiles: 1
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
-  blockedDialogueTrigger: {fileID: 0}
+  blockedDialogueTrigger: {fileID: 1356768856}
+  checkOnlyOnce: 1
+  conditionID: TP Outside Agency
 --- !u!61 &119742787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4097,11 +4101,6 @@ Transform:
   - {fileID: 2088846249}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &587706941 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-  m_PrefabInstance: {fileID: 1955555085}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612588038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4401,6 +4400,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1148090347}
+    - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 59659228}
@@ -4410,7 +4413,7 @@ PrefabInstance:
       objectReference: {fileID: 59659230}
     - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
       propertyPath: interactLabel
-      value: Talk to Geoff
+      value: Talk to Bien
       objectReference: {fileID: 0}
     - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
       propertyPath: characterImage
@@ -4425,6 +4428,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1161615709}
     - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
+      propertyPath: setHasTalkedJam
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
+      propertyPath: setHasTalkedBien
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
       propertyPath: characterNameText
       value: 
       objectReference: {fileID: 59659229}
@@ -4432,6 +4443,10 @@ PrefabInstance:
       propertyPath: interactButtonText
       value: 
       objectReference: {fileID: 1412500810}
+    - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
+      propertyPath: playerMovementScript
+      value: 
+      objectReference: {fileID: 1455371406}
     - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
       propertyPath: dialogueEntries.Array.size
       value: 1
@@ -4612,6 +4627,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      propertyPath: triggerID
+      value: First Floor to Second Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: linkedDoor
       value: 
       objectReference: {fileID: 1948406265}
@@ -4623,6 +4642,22 @@ PrefabInstance:
       propertyPath: spawnOffset.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      propertyPath: requireTalkedToJam
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      propertyPath: requireTalkedToBien
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      propertyPath: triggerOncePerSession
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155743501440578328, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      propertyPath: blockedDialogueTrigger
+      value: 
+      objectReference: {fileID: 2036109312}
     - target: {fileID: 4942151508706662109, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
       propertyPath: m_Name
       value: First Floor to Second Floor
@@ -4641,7 +4676,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 47938692244301926, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036109311}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f79f3551484a7541b4e4489bc97913d, type: 3}
 --- !u!1001 &914400629
@@ -5912,6 +5950,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.2868588
       objectReference: {fileID: 0}
+    - target: {fileID: 3377472430486136507, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5966128035333675731, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.811
@@ -5966,7 +6008,7 @@ PrefabInstance:
       objectReference: {fileID: 914400633}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: interactLabel
-      value: F - Make Coffee
+      value: Make Coffee
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: continueButton
@@ -6160,6 +6202,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1251638547770111542, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
   m_PrefabInstance: {fileID: 757738792}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1356768854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356768855}
+  - component: {fileID: 1356768856}
+  m_Layer: 0
+  m_Name: BlockedDialogue_OutsideAgency
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356768855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356768854}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0048289634, y: 26.076895, z: 0}
+  m_LocalScale: {x: 1.0274379, y: 2.4259832, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 119742785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356768856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356768854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9266c3ab3f5ce84284f42e59abe2f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialoguePanel: {fileID: 914400633}
+  continueButton: {fileID: 914400631}
+  dialogueText: {fileID: 914400632}
+  playerMovementScript: {fileID: 1455371406}
+  dialogues:
+  - I need to check the case files first before I leave...
+  delayBeforeShow: 0
+  typingSpeed: 0.03
+  useAutoTrigger: 1
+  isRepeatable: 1
+  saveTriggered: 1
+  triggerID: BlockedDialogue_OutsideAgency
 --- !u!1 &1412500808
 GameObject:
   m_ObjectHideFlags: 0
@@ -6537,7 +6635,7 @@ PrefabInstance:
       objectReference: {fileID: 1148090347}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: setHasKey
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: dialogueText
@@ -6571,6 +6669,10 @@ PrefabInstance:
       propertyPath: playerMovementScript
       value: 
       objectReference: {fileID: 1455371406}
+    - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
+      propertyPath: setHasCheckedCaseFiles
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: setHasInteractedSwitch
       value: 0
@@ -9969,7 +10071,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1228340829}
-  - {fileID: 587706941}
   - {fileID: 1483994932}
   - {fileID: 941537915}
   m_Father: {fileID: 1664021433}
@@ -10335,111 +10436,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341095d05f0ab02498382cdb471cd4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorTeleport
---- !u!1001 &1955555085
-PrefabInstance:
+--- !u!1 &2036109310
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036109311}
+  - component: {fileID: 2036109312}
+  m_Layer: 0
+  m_Name: BlockedDialogue_Office
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2036109311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036109310}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1694679668}
-    m_Modifications:
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_Size.x
-      value: 1.4591568
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_Size.y
-      value: 0.43638897
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_Offset.x
-      value: 1.1479532
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.3875618
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: triggerID
-      value: Proceed to Office Dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 914400632}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: dialoguePanel
-      value: 
-      objectReference: {fileID: 914400633}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: saveTriggered
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 914400631}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: dialogues.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: playerMovementScript
-      value: 
-      objectReference: {fileID: 1455371406}
-    - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: 'dialogues.Array.data[0]'
-      value: "Now that\u2019s out of the way, let's go to the office and start working"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
-      propertyPath: m_Name
-      value: Proceed to Office Dialogue
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 438094122}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036109312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036109310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9266c3ab3f5ce84284f42e59abe2f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialoguePanel: {fileID: 914400633}
+  continueButton: {fileID: 914400631}
+  dialogueText: {fileID: 914400632}
+  playerMovementScript: {fileID: 1455371406}
+  dialogues:
+  - "Before we start working... Let\u2019s start the day with smiles and greetings
+    to my coworkers."
+  delayBeforeShow: 0
+  typingSpeed: 0.03
+  useAutoTrigger: 1
+  isRepeatable: 1
+  saveTriggered: 1
+  triggerID: BlockedDialogue_Office
 --- !u!1 &2083299990
 GameObject:
   m_ObjectHideFlags: 0
@@ -10561,6 +10614,10 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 1161615709}
+    - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
+      propertyPath: setHasTalkedJam
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: characterNameText
       value: 

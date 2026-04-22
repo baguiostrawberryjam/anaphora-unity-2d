@@ -44,8 +44,6 @@ public class ImageInteractable : MonoBehaviour
     {
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         if (zoomImagePanel != null) zoomImagePanel.SetActive(false);
-        // Do NOT register on interactButton here — it is shared with NPCInteract.
-        // The listener is registered only while the player is inside this trigger zone.
     }
 
     private void OnDestroy()

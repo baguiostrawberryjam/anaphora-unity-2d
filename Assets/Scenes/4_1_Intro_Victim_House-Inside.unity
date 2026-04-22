@@ -548,8 +548,7 @@ MonoBehaviour:
   dialogue44: {fileID: 1196602703}
   dialogue50: {fileID: 587278279}
   cutsceneManager: {fileID: 1234921607}
-  bearFinalDialogue: {fileID: 0}
-  bearFinalTrigger: {fileID: 0}
+  bearFinalDialogue: {fileID: 45760508}
   objectsWallTilemap: {fileID: 2128613197}
 --- !u!1 &203961848
 GameObject:
@@ -649,6 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniversalFlashlightAim
   aimJoystick: {fileID: 2010444497}
+  playerController: {fileID: 1693070272}
   angleOffset: -90
 --- !u!224 &215544576 stripped
 RectTransform:
@@ -9226,6 +9226,8 @@ MonoBehaviour:
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
   blockedDialogueTrigger: {fileID: 0}
+  checkOnlyOnce: 0
+  conditionID: 
 --- !u!61 &979250425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12724,8 +12726,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
-  saveTriggered: 0
-  triggerID: 
+  saveTriggered: 1
+  triggerID: BlockedDialogue_Bedroom
 --- !u!4 &1797656237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
@@ -14791,8 +14793,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
-  saveTriggered: 0
-  triggerID: 
+  saveTriggered: 1
+  triggerID: BlockedDialogue_Hallway
 --- !u!1 &1987344683
 GameObject:
   m_ObjectHideFlags: 0
@@ -15031,8 +15033,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
-  saveTriggered: 0
-  triggerID: 
+  saveTriggered: 1
+  triggerID: BlockedDialogue_Kitchen
 --- !u!1 &2128613197
 GameObject:
   m_ObjectHideFlags: 0
@@ -15734,7 +15736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: requireFlashlight
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4894351561793049042, guid: a70c65d616931ce4b82f733a24a2b152, type: 3}
       propertyPath: blockedDialogueTrigger
