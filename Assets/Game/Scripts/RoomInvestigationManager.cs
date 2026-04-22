@@ -32,7 +32,9 @@ public class RoomInvestigationManager : MonoBehaviour
     public DialogueTrigger dialogue44;
     public DialogueTrigger dialogue50;
 
-    [Header("Bear Final Interact")]
+    [Header("=== CUTSCENE ===")]
+    public CutsceneManager cutsceneManager;
+    public DialogueTrigger bearFinalDialogue;
     public InteractTrigger bearFinalTrigger;
 
     [Header("=== WALL FIX ===")]
@@ -204,6 +206,26 @@ public class RoomInvestigationManager : MonoBehaviour
             !sewingKitCollected || !ribbonCollected || !bedFoamCollected) return;
 
         StartCoroutine(BearFixedSequence());
+    }
+
+    public void OnBearFinalInteracted()
+    {
+        StartCoroutine(BearEndingSequence());
+    }
+
+    IEnumerator BearEndingSequence()
+    {
+        // Lock player
+        if (cutsceneManager != null)
+        {
+            bool cutsceneDone = false;
+            cutsceneManager.PlayCutscene(() => cutsceneDone = true);
+            yield return new WaitUntil(() => cutsceneDone);
+        }
+
+        // Now show the ending dialogue
+        if (bearFinalDialogue != null)
+            bearFinalDialogue.TriggerDialogue();
     }
 
     IEnumerator BearFixedSequence()

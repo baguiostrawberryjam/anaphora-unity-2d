@@ -11014,8 +11014,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 0
   isRepeatable: 1
-  saveTriggered: 0
-  triggerID: 
+  saveTriggered: 1
+  triggerID: Blocked DIalogue Living Room
 --- !u!1 &2030574398
 GameObject:
   m_ObjectHideFlags: 0
