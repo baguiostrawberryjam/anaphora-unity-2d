@@ -5937,7 +5937,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.77057
+      value: 2.095
       objectReference: {fileID: 0}
     - target: {fileID: 889101856324826564, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5981,7 +5981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Size.y
-      value: 2.6729107
+      value: 4.0530014
       objectReference: {fileID: 0}
     - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Offset.x
@@ -5989,7 +5989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2973801848949749267, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Offset.y
-      value: -0.5346346
+      value: 0.15541077
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: dialogueText
@@ -6013,8 +6013,8 @@ PrefabInstance:
       objectReference: {fileID: 1455371406}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "My day started with a stack of papers\u2026.  And it looks like it
-        would also end with a stack of papers\u2026. Sigh~"
+      value: "My day started with a stack of papers\u2026  And it looks like it would
+        also end with a stack of papers\u2026. Sigh~"
       objectReference: {fileID: 0}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
@@ -6452,40 +6452,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "Theft\u2026. fraud\u2026. arson\u2026.. It\u2019s just another mountain
-        of files to climb today\u2026. It never really ends, does it?"
+      value: "Theft\u2026 fraud\u2026 arson\u2026. It\u2019s just another mountain
+        of files to climb today\u2026 It never really ends, doesn't it?"
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
-      value: "Oh??!!.... \"What\u2019s this doing here? It\u2019s so thin\u2026.
-        No label, just this nonsensical scribbling all over the cove\u2026. That\u2019s\u2026.
-        actually quite unnerving\u2026."
+      value: "Oh... What\u2019s this doing here? It\u2019s so thin\u2026 No label,
+        just this nonsensical scribbling all over the cove\u2026 That\u2019s\u2026
+        actually quite unnerving\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[2]'
-      value: "Why does it feel so heavy in my hands??.... It\u2019s like the paper
-        itself is weighted down by something I can't see."
+      value: "Why does it feel so heavy in my hands? It\u2019s like the paper itself
+        is weighted down by something I can't see."
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[3]'
-      value: "A murder case\u2026. This must be the one I saw from outside\u2026.
-        Hmmm\u2026. As I said before, I usually go out of my way to avoid these\u2026. "
+      value: "A murder case\u2026 This must be the one I saw from outside... Hmmm\u2026
+        As I said before, I usually go out of my way to avoid these\u2026 "
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[4]'
-      value: "But look at this\u2026. The details are so precise, so clean\u2026.
-        It\u2019s almost\u2026. Too neat. Why does this feel so eerily familiar to
-        me??!!...."
+      value: "But look at this, the details are so precise, so clean\u2026 It\u2019s
+        almost\u2026 Too neat. Why does this feel so eerily familiar to me?"
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[5]'
-      value: "This\u2026. Case\u2026. It really caught my interest\u2026. Coincidentally,
-        I\u2019m also quite familiar with the area\u2026. Hmmm\u2026."
+      value: "This... case\u2026 it really caught my interest\u2026 Coincidentally,
+        I\u2019m also quite familiar with the area\u2026 Hmmm..."
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[6]'
-      value: " I must investigate this immediately\u2026. Starting by going to that
-        neighborhood\u2026."
+      value: "I must investigate this immediately\u2026 starting by going to that
+        neighborhood\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[7]'

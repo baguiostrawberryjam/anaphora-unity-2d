@@ -7266,7 +7266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166535598}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8059,7 +8059,7 @@ PrefabInstance:
       objectReference: {fileID: 2090641712}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: Wait, it looks like there are some freshly pinned notices. Let's check
+      value: Wait, it looks like there are some freshly pinned notices, let's check
         them before we go in!
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
@@ -11338,11 +11338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2857235645205837973, guid: ed1626dd6be01424c9898d47677825bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.53
+      value: 9.02
       objectReference: {fileID: 0}
     - target: {fileID: 2857235645205837973, guid: ed1626dd6be01424c9898d47677825bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.68
+      value: 5.26
       objectReference: {fileID: 0}
     - target: {fileID: 2857235645205837973, guid: ed1626dd6be01424c9898d47677825bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11375,6 +11375,10 @@ PrefabInstance:
     - target: {fileID: 2857235645205837973, guid: ed1626dd6be01424c9898d47677825bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260109273643459971, guid: ed1626dd6be01424c9898d47677825bc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6629096660913576444, guid: ed1626dd6be01424c9898d47677825bc, type: 3}
       propertyPath: m_SortingLayer
@@ -11883,6 +11887,10 @@ PrefabInstance:
     - target: {fileID: 6600550335227136483, guid: 9d5b11a738b7a81479c746124fec548f, type: 3}
       propertyPath: 'dialogueEntries.Array.data[6].lines.Array.data[2]'
       value: Be careful if you're heading there, Graham.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956352970366229595, guid: 9d5b11a738b7a81479c746124fec548f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7324224701343987329, guid: 9d5b11a738b7a81479c746124fec548f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12694,6 +12702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Character
       objectReference: {fileID: 0}
+    - target: {fileID: 3885553557748280335, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 2054278420}
     - target: {fileID: 7034748052371394579, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -15732,6 +15744,6 @@ SceneRoots:
   - {fileID: 272210460}
   - {fileID: 334371148}
   - {fileID: 1291004298}
-  - {fileID: 166535599}
   - {fileID: 1415641441}
+  - {fileID: 166535599}
   - {fileID: 1595252559}

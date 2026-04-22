@@ -186,8 +186,8 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Divider
   dialogues:
-  - Oh?!...  A Sewing Kit?! Man, this takes me back to when I had to sew things by
-    myself then
+  - Oh!  A Sewing Kit?! Man, this takes me back to when I had to sew things by myself
+    then
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -663,10 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc709b598a875046858ec17abe1a101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniversalFlashlightAim
-  keyboardHorizontalAxis: Horizontal
-  keyboardVerticalAxis: Vertical
   aimJoystick: {fileID: 2010444497}
-  deadzone: 0.1
   angleOffset: -90
 --- !u!224 &215544576 stripped
 RectTransform:
@@ -1131,8 +1128,8 @@ MonoBehaviour:
   dialogues:
   - '*picks up the Sewing Kit*'
   - "Now, even with both eyes in place, the Bear still looks lifeless\u2026. Might
-    as well add the Ribbon/Lasso that I saw lying around beside the boxes\u2026.
-    It might improve the looks of the Teddy Bear"
+    as well add the Ribbon that I saw lying around beside the boxes\u2026"
+  - It might improve the looks of the Teddy Bear
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1242,9 +1239,9 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Sink
   dialogues:
-  - "Earlier, I could barely see anything at all\u2026. Now, with a light, I can
-    properly investigate now"
-  - "Hmmm\u2026. Looks like the water in this house still works"
+  - "Earlier, I could barely see anything at all\u2026 Now, with a light, I can properly
+    investigate now"
+  - "Hmm\u2026 Looks like the water in this house still works"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1499,11 +1496,15 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F -Small Box
   dialogues:
-  - Whoa. There are a lot of boxes here, huh?... Is the Victim planning to move out
+  - Whoa. There are a lot of boxes here, huh? Is the Victim planning to move out
     or something?
   - "Well, I can\u2019t really tell what for, but it looks like the Victim is packing
     their things, and it is clear that they aren't done yet, there\u2019s even a
-    Robbon/Lasso lying around the boxes"
+    Robbon lying around the boxes"
+  - "Well, I can\u2019t really tell what for, but it looks like the Victim is packing
+    their things"
+  - "And it is clear that they aren't done yet, there\u2019s even a Robbon/Lasso
+    lying around the boxes"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -7576,7 +7577,7 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - "There you go!!\u2026. All well and stitched up!!"
+  - There you go! All well and stitched up!
   delayBeforeShow: 1
   typingSpeed: 0.03
   useAutoTrigger: 0
@@ -7934,11 +7935,11 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Picture Frame
   dialogues:
-  - "A picture frame?.... Even if the faces are scratched, I could still tell that
-    this is a family of three\u2026. A husband\u2026. A wife\u2026. And a son"
-  - "Looks like a family picture of the Victim\u2026. Judging by its broken state,
-    someone purposely broke and thrashed it"
-  - "Looks like something fell behind the frame\u2026. What??!!.... A key?"
+  - "A picture frame... Even if the faces are scratched, I could still tell that
+    this is a family of three\u2026 A husband\u2026 A wife\u2026 And a son"
+  - "Looks like a family picture of the Victim\u2026 Judging by its broken state,
+    someone purposely broke and thrashed it..."
+  - "Looks like something fell behind the frame\u2026 What? A key?"
   - Can I use this to unlock this room?
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
@@ -8139,10 +8140,11 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F -Small Box
   dialogues:
-  - '*picks up the Ribbon/Lasso*'
-  - "Meh\u2026. Even with the ribbon\u2026. You really can\u2019t call it a Teddy
-    Bear while it looks very limp\u2026. Hmmm.... I might have an idea\u2026. Let\u2019s
-    go back to the room and give the Bed a check"
+  - '*picks up the Ribbon*'
+  - "Meh\u2026. Even with the ribbon\u2026 You really can\u2019t call it a Teddy
+    Bear while it looks very limp\u2026 Hmm..."
+  - "I might have an idea\u2026. Let\u2019s go back to the room and give the Bed
+    a check"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -8321,9 +8323,9 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Closet
   dialogues:
-  - "Hmmm\u2026. Based on the content of this closet\u2026. The clothes\u2026. The
-    sizes\u2026. And the Polo Shirt that clearly looks like a school uniform\u2026.
-    This must be the son\u2019s room from the picture frame"
+  - "Hmm\u2026 Based on the content of this closet\u2026 The clothes\u2026 The sizes\u2026 "
+  - "And the Polo Shirt that clearly looks like a school uniform\u2026 This must
+    be the son\u2019s room from the picture frame"
   - "The Polo Shirt barely has any buttons left\u2026. Looks like they are forcefully
     pulled out"
   typingSpeed: 0.03
@@ -8770,8 +8772,8 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Bathtub
   dialogues:
-  - "huh?!.... Looks like this was used recently\u2026. Don\u2019t tell me that there\u2019s
-    really someone still living here or what?!"
+  - "Huh? Looks like this was used recently\u2026 Don\u2019t tell me that there\u2019s
+    really someone still living here or what?"
   - I really need to wrap this up quickly and leave!
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
@@ -8894,7 +8896,7 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Desk
   dialogues:
-  - "Oh??!!.... There\u2018s a Pincushion with Needles & Tiny Button inside the drawer/desk\u2026.
+  - "Oh!!! There\u2018s a Pincushion with Needles & Tiny Button inside the desk\u2026
     Other than that, there\u2019s also what seems to be an empty roll of thread beside
     them"
   - "Probably the Victim is trying to sew something\u2026. Maybe the Polo Shirt?!....
@@ -9648,9 +9650,9 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Wall Hole
   dialogues:
-  - "Clearly, someone was pushed here so forcefully that it broke the wall\u2026.
-    While I can\u2019t draw a conclusion yet, but\u2026. Someone is being abused
-    in this home\u2026. might it be the Victim?"
+  - "Clearly, someone was pushed here so forcefully that it broke the wall\u2026"
+  - "While I can\u2019t draw a conclusion yet, but\u2026 clearly someone is being
+    abused in this home\u2026 who might it be?"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -9912,7 +9914,7 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Stove
   dialogues:
-  - "Hmmm\u2026. The stove looks untouched, like the Victim is living off the food
+  - "Hmm\u2026 The stove looks untouched, like the Victim is living off the food
     left in the fridge"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
@@ -10099,7 +10101,7 @@ PrefabInstance:
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
       value: "Even with the broken walls and cracked flooring, the room is eerily
-        'preserved,' with perfectly smooth sheets and a neat desk\u2026. The atmosphere
+        'preserved,' with perfectly smooth sheets and a neat desk\u2026 The atmosphere
         here is kinda suffocating."
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
@@ -10329,11 +10331,11 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - "Wait a second!.... The items that I saw earlier while investigating\u2026. I
-    might be able to work around on something"
-  - "Hmmm\u2026. I think I remember seeing a Pincushion with Needles & Tiny Button
-    in the drawer/desk\u2026. I could probably use those to stitch up the beard and
-    use the buttons as eyes"
+  - "Wait a second! The items that I saw earlier while investigating\u2026 I might
+    be able to work around on something"
+  - "Hmm\u2026 I think I remember seeing a Pincushion with Needles & Tiny Button
+    in the desk, I could probably use those to stitch up the beard and use the buttons
+    as eyes"
   delayBeforeShow: 1
   typingSpeed: 0.03
   useAutoTrigger: 0
@@ -10443,7 +10445,7 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Toilet Bowl
   dialogues:
-  - "Ughh!!.... Even with working water\u2026. This\u2026. Thing\u2026. Is sure filthy"
+  - "Ughh! Even with working water\u2026 This\u2026 Thing\u2026 Is sure filthy"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -10596,8 +10598,8 @@ PrefabInstance:
       objectReference: {fileID: 1693070272}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "Whoa\u2026. It\u2019s really dark around here, must be because the
-        house is built in a secluded area\r\n"
+      value: "Whoa\u2026 It\u2019s really dark around here, must be because the house
+        is built in a secluded area\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
@@ -11007,8 +11009,8 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - "Well, it looks like I've finished investigating this room\u2026. I think?....
-    I didn't miss anything, right?!...."
+  - "Well, it looks like I've finished investigating this room\u2026 I think...?
+    I didn't miss anything, right?"
   delayBeforeShow: 1
   typingSpeed: 0.03
   useAutoTrigger: 0
@@ -11468,10 +11470,10 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Ref
   dialogues:
-  - "Well\u2026. That\u2019s odd\u2026. Though not fresh, some food here is still
-    in perfect condition"
-  - "This just means that the house still has power recently\u2026. And someone is
-    clearly living it\u2026. Well, with all this food around after all\r\n"
+  - "Well\u2026 That\u2019s odd\u2026 Though not fresh, some food here is still in
+    perfect condition"
+  - "This just means that the house still has power recently\u2026 And someone is
+    clearly living it\u2026 Well, with all this food around after all\r\n"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -12422,9 +12424,9 @@ MonoBehaviour:
   dialogues:
   - "Well, looks like there's really nothing to note in the sink/countertop\u2026."
   - Other than the misplaced Scis-
-  - "Wha\u2026. What the heck was that??!!.... Is anyone there??!!.... Hello??!!...."
-  - "Sigh~ That almost took a life out of me\u2026. I even grab the Scissor out of
-    the sudden, might as well keep it for now\u2026. Thankfully looks like something
+  - "Wha\u2026 What the heck was that? Is anyone there? Hello?!?"
+  - "Sigh~ That almost took a life out of me\u2026 I even grab the scissor out of
+    the sudden, might as well keep it for now\u2026 Thankfully looks like something
     just fell down"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
@@ -14480,7 +14482,7 @@ MonoBehaviour:
   interactLabel: F - Desk
   dialogues:
   - '*picks up the Pincushion with Needles & Tiny Button*'
-  - "Now with the first eye, now I need another one\u2026. Maybe the Polo Shirt in
+  - "Now with the first eye, now I need another one\u2026 Maybe the Polo Shirt in
     the cabinet might work?"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}

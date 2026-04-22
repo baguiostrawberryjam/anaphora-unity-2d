@@ -672,8 +672,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: Heh!!.... Now this is what a professional looks like!!!!.... Now I can
-        comfortably go outside
+      value: Now this is what a professional looks like! I can comfortably go outside
+        now
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
@@ -723,7 +723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7034748052371394579, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.39
+      value: 19.535
       objectReference: {fileID: 0}
     - target: {fileID: 7034748052371394579, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1752,7 +1752,7 @@ PrefabInstance:
       objectReference: {fileID: 76823708}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: interactLabel
-      value: F - Pile of Paper
+      value: F - Certificates
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: continueButton
@@ -1784,13 +1784,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "A 'good detective' huh?!.... People actually look up to me for the
-        cases I\u2019ve closed\u2026.. It\u2019s a lot to live up to\u2026."
+      value: "A 'good detective' huh... People actually look up to me for the cases
+        I\u2019ve closed\u2026.. It\u2019s a lot to live up to\u2026."
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
-      value: ' but I suppose those achievements are the only things keeping me grounded
-        these days.'
+      value: but I suppose those achievements are the only things keeping me grounded
+        these days.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1984,7 +1984,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3920996, y: 19.386, z: -10}
+  m_LocalPosition: {x: 1.3904462, y: 19.531, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3073,8 +3073,8 @@ PrefabInstance:
       objectReference: {fileID: 94748045}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "There it is again. That restless rustling of papers... It\u2019s funny,
-        isn't it?..."
+      value: "There it is again, that restless rustling of papers... It\u2019s funny,
+        isn't it?"
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
@@ -3086,8 +3086,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[3]'
-      value: "Heh!!\u2026 It\u2019s a bit of a sharp contrast to how I\u2019m feeling
-        at the moment\u2026 No matter\u2026 I have to stay focused\u2026"
+      value: "It\u2019s a bit... of a contrast to how I\u2019m feeling at the moment\u2026
+        No matter\u2026 I have to stay focused\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[4]'
@@ -3514,7 +3514,7 @@ PrefabInstance:
       objectReference: {fileID: 76823708}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: interactLabel
-      value: F - Ref
+      value: F - Refrigerator
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: continueButton
@@ -3546,8 +3546,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "Sigh~ this again\u2026. I'm getting tired of the food here\u2026. I\u2026.
-        I want something fresh for a change"
+      value: "Sigh~ this again\u2026 I'm getting tired of the food here, I want something
+        fresh for a change"
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
@@ -7879,7 +7879,7 @@ PrefabInstance:
       objectReference: {fileID: 76823708}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: interactLabel
-      value: F - Pile of Paper
+      value: F - Papers
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: continueButton
@@ -7911,8 +7911,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "Hmmm!!.... Like I SAID\u2026. A professional doesn't let these things
-        get in the way."
+      value: "Hmp! Like I SAID\u2026 A professional doesn't let these things get
+        in the way."
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
@@ -10731,7 +10731,7 @@ Transform:
   m_GameObject: {fileID: 1914035571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 19.39, z: -10}
+  m_LocalPosition: {x: 2.5, y: 19.535, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10877,8 +10877,8 @@ MonoBehaviour:
   dialogueText: {fileID: 344950013}
   playerMovementScript: {fileID: 94748045}
   dialogues:
-  - "Whoa!!.... I can\u2019t work with an empty stomach\u2026. I have to eat first\u2026.
-    Let's go to the kitchen and check the fridge"
+  - "I can\u2019t work with an empty stomach... I have to eat first\u2026 Let's go
+    to the kitchen and check the fridge"
   delayBeforeShow: 1
   typingSpeed: 0.03
   useAutoTrigger: 0

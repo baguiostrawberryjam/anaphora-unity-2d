@@ -2701,6 +2701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Character
       objectReference: {fileID: 0}
+    - target: {fileID: 3885553557748280335, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 2066620821}
     - target: {fileID: 7034748052371394579, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

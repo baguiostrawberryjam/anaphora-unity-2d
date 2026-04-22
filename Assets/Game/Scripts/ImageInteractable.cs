@@ -44,12 +44,8 @@ public class ImageInteractable : MonoBehaviour
     {
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         if (zoomImagePanel != null) zoomImagePanel.SetActive(false);
-        if (interactButton != null)
-        {
-            interactButton.gameObject.SetActive(false);
-            interactButton.onClick.RemoveAllListeners();
-            interactButton.onClick.AddListener(OpenNearestObject);
-        }
+        // Do NOT register on interactButton here — it is shared with NPCInteract.
+        // The listener is registered only while the player is inside this trigger zone.
     }
 
     private void OnDestroy()
@@ -64,6 +60,13 @@ public class ImageInteractable : MonoBehaviour
         if (!nearbyObjects.Contains(this))
             nearbyObjects.Add(this);
 
+        // Claim the shared interact button for ImageInteractable while player is nearby
+        if (interactButton != null)
+        {
+            interactButton.onClick.RemoveAllListeners();
+            interactButton.onClick.AddListener(OpenNearestObject);
+        }
+
         RefreshInteractButton();
     }
 
@@ -72,6 +75,11 @@ public class ImageInteractable : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         nearbyObjects.Remove(this);
+
+        // Release the listener so NPCInteract can re-register when needed
+        if (interactButton != null && nearbyObjects.Count == 0)
+            interactButton.onClick.RemoveAllListeners();
+
         RefreshInteractButton();
     }
 

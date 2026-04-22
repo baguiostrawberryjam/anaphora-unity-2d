@@ -5566,12 +5566,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
-      value: 'The walls. The windows. The way the light hits the door. I''ve never
+      value: 'The walls, the windows, the way the light hits the door... I''ve never
         been here before. So why does it feel like I have? '
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[2]'
-      value: 'It''s unsettling. Cold. And yet... '
+      value: 'It''s unsettling, cold, and yet... '
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[3]'
@@ -14076,7 +14076,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1875963962}
   playerMovementScript: {fileID: 1764362860}
   dialogues:
-  - Talk to the NPCs first before investigating the house
+  - Talk to the townfolks first before investigating the house
   delayBeforeShow: 1
   typingSpeed: 0.03
   useAutoTrigger: 1
