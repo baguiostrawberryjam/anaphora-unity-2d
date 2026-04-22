@@ -1239,13 +1239,14 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Sink
   dialogues:
+  - Oh... here it is a flashligh!
   - "Earlier, I could barely see anything at all\u2026 Now, with a light, I can properly
     investigate now"
   - "Hmm\u2026 Looks like the water in this house still works"
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
-  setHasFlashlight: 0
+  setHasFlashlight: 1
   setHasInteractedSwitch: 0
   setHasKey: 0
   setHasInteractedDrawer: 0
