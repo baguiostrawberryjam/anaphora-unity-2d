@@ -119,7 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1001 &17744356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222,7 +221,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3687320668716540434, guid: 228aa52b8c23338438772239a5075ec3, type: 3}
   m_PrefabInstance: {fileID: 17744356}
   m_PrefabAsset: {fileID: 0}
-=======
 --- !u!1 &75223956
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +299,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.23990536, y: 20.985266}
   m_EdgeRadius: 0
->>>>>>> Stashed changes
 --- !u!1 &192260922
 GameObject:
   m_ObjectHideFlags: 0
@@ -13853,12 +13850,9 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
-<<<<<<< Updated upstream
-=======
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
->>>>>>> Stashed changes
   blockedDialogueTrigger: {fileID: 0}
 --- !u!212 &1767002068
 SpriteRenderer:
