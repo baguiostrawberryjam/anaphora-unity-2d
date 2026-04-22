@@ -26,6 +26,11 @@ public class Teleport : MonoBehaviour
     public bool requiredInteractedDrawer = false;
     public bool requiredInteractedRef = false;
     public bool requiredInteractedBulletinBoard = false;
+    public bool requireTalkedMarie = false;
+    public bool requireTalkedSimon = false;
+    public bool requireTalkedJohnuelle = false;
+
+
 
     [Header("Blocked Dialogue")]
     public DialogueTrigger blockedDialogueTrigger;
@@ -84,6 +89,9 @@ public class Teleport : MonoBehaviour
         if (requiredInteractedDrawer && !player.hasInteractedDrawer) return false;
         if (requiredInteractedRef && !player.hasInteractedRef) return false;
         if (requiredInteractedBulletinBoard && !player.hasCheckedBulletinBoard) return false;
+        if (requireTalkedMarie && !NPCInteract.hasTalkedMarie) return false;
+        if (requireTalkedSimon && !NPCInteract.hasTalkedSimon) return false;
+        if (requireTalkedJohnuelle && !NPCInteract.hasTalkedJohnuelle) return false;    
 
         return true;
     }

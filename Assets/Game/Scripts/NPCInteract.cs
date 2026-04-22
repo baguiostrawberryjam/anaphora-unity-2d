@@ -24,6 +24,16 @@ public class NPCInteract : MonoBehaviour
     public Button interactButton;
     public TMP_Text interactButtonText;
 
+
+    [Header("Talk State")]
+    public bool setHasTalkedMarie = false;
+    public bool setHasTalkedSimon = false;
+    public bool setHasTalkedJohnuelle = false;
+
+    public static bool hasTalkedMarie = false;
+    public static bool hasTalkedSimon = false;
+    public static bool hasTalkedJohnuelle = false;
+
     [Header("NPC Settings")]
     public string interactLabel = "Talk";
     public NPCDialogueEntry[] dialogueEntries;
@@ -231,6 +241,10 @@ public class NPCInteract : MonoBehaviour
             StopCoroutine(typingCoroutine);
             typingCoroutine = null;
         }
+
+        if (setHasTalkedMarie) NPCInteract.hasTalkedMarie = true;
+        if (setHasTalkedSimon) NPCInteract.hasTalkedSimon = true;
+        if (setHasTalkedJohnuelle) NPCInteract.hasTalkedJohnuelle = true;
 
         continueButton.onClick.RemoveAllListeners();
         dialoguePanel.SetActive(false);

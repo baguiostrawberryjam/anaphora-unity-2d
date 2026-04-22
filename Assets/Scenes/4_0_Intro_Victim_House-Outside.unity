@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &17744356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,6 +222,86 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3687320668716540434, guid: 228aa52b8c23338438772239a5075ec3, type: 3}
   m_PrefabInstance: {fileID: 17744356}
   m_PrefabAsset: {fileID: 0}
+=======
+--- !u!1 &75223956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75223957}
+  - component: {fileID: 75223958}
+  m_Layer: 0
+  m_Name: Out of Bounds Collider (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &75223957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75223956}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.14, y: 6.69, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300224168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &75223958
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75223956}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.14997053, y: -0.33280087}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.23990536, y: 20.985266}
+  m_EdgeRadius: 0
+>>>>>>> Stashed changes
 --- !u!1 &192260922
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +497,10 @@ PrefabInstance:
       propertyPath: playerMovementScript
       value: 
       objectReference: {fileID: 1764362860}
+    - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
+      propertyPath: setHasTalkedJohnuelle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: dialogueEntries.Array.size
       value: 10
@@ -796,6 +881,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8713716778295249055, guid: 40bae7911af10c84da7b0b15ef2b829a, type: 3}
   m_PrefabInstance: {fileID: 4786520955858720900}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &244070732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244070733}
+  - component: {fileID: 244070734}
+  m_Layer: 0
+  m_Name: Out of Bounds Collider (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &244070733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244070732}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.73, y: -2.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300224168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &244070734
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244070732}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 36.998306, y: 0.21861732}
+  m_EdgeRadius: 0
 --- !u!1 &266819950
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +1037,41 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.0153556, y: 5.082086}
   m_EdgeRadius: 0
+--- !u!1 &300224167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300224168}
+  m_Layer: 0
+  m_Name: Out of Bounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &300224168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300224167}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.79589, y: -1.93717, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1200875723}
+  - {fileID: 244070733}
+  - {fileID: 75223957}
+  - {fileID: 1679185602}
+  m_Father: {fileID: 659412818}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &305238405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1462,6 +1660,7 @@ Transform:
   - {fileID: 533460421}
   - {fileID: 2060001294}
   - {fileID: 266819951}
+  - {fileID: 300224168}
   m_Father: {fileID: 615688992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &759376746
@@ -5449,6 +5648,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4460876340046442058, guid: c782a36abea9ccf498fce2f2abdedd61, type: 3}
   m_PrefabInstance: {fileID: 1169644781}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1200875722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200875723}
+  - component: {fileID: 1200875724}
+  m_Layer: 0
+  m_Name: Out of Bounds Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1200875723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200875722}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7600002, y: 14.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300224168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1200875724
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200875722}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 5.901739, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 37.239857, y: 0.21861732}
+  m_EdgeRadius: 0
 --- !u!1 &1268300299
 GameObject:
   m_ObjectHideFlags: 0
@@ -12886,6 +13163,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 305238410}
     - target: {fileID: 5235789835049905532, guid: 8346fe5d68fd76c46aed91a31b55a2ad, type: 3}
+      propertyPath: setHasTalkedMarie
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235789835049905532, guid: 8346fe5d68fd76c46aed91a31b55a2ad, type: 3}
       propertyPath: interactButtonText
       value: 
       objectReference: {fileID: 878547429785728114}
@@ -13058,6 +13339,22 @@ PrefabInstance:
       propertyPath: spawnPointName
       value: SP_Victim_House_Inside
       objectReference: {fileID: 0}
+    - target: {fileID: 4297520071082605391, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
+      propertyPath: requireTalkedMarie
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297520071082605391, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
+      propertyPath: requireTalkedSimon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297520071082605391, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
+      propertyPath: blockedDialogueTrigger
+      value: 
+      objectReference: {fileID: 1856786104}
+    - target: {fileID: 4297520071082605391, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
+      propertyPath: requireTalkedJohnuelle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4358962421137360930, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.68539405
@@ -13128,7 +13425,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4358962421137360930, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1856786103}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57e1f5ca2b5b7214cbe7295969c6565e, type: 3}
 --- !u!4 &1331022570 stripped
@@ -13331,6 +13631,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1343381964}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1679185601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1679185602}
+  - component: {fileID: 1679185603}
+  m_Layer: 0
+  m_Name: Out of Bounds Collider (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1679185602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679185601}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.2, y: 5.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300224168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1679185603
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679185601}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.14997053, y: -0.33280087}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.23990536, y: 20.985266}
+  m_EdgeRadius: 0
 --- !u!1001 &1764362858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13475,6 +13853,12 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+<<<<<<< Updated upstream
+=======
+  requireTalkedMarie: 0
+  requireTalkedSimon: 0
+  requireTalkedJohnuelle: 0
+>>>>>>> Stashed changes
   blockedDialogueTrigger: {fileID: 0}
 --- !u!212 &1767002068
 SpriteRenderer:
@@ -13592,6 +13976,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6bd03b816571347ade72c569b24b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JoystickController
+--- !u!1 &1856786102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856786103}
+  - component: {fileID: 1856786104}
+  m_Layer: 0
+  m_Name: Blocked Victim House Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1856786103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856786102}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1331022570}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1856786104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856786102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9266c3ab3f5ce84284f42e59abe2f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialoguePanel: {fileID: 1875963964}
+  continueButton: {fileID: 1875963963}
+  dialogueText: {fileID: 1875963962}
+  playerMovementScript: {fileID: 1764362860}
+  dialogues:
+  - Talk to the NPCs first before investigating the house
+  delayBeforeShow: 1
+  typingSpeed: 0.03
+  useAutoTrigger: 1
+  isRepeatable: 1
+  saveTriggered: 0
+  triggerID: 
 --- !u!4 &1865417528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8070227257658977139, guid: 2afc961f812c3714ba2a86803ab17241, type: 3}
@@ -14095,6 +14535,10 @@ PrefabInstance:
       propertyPath: characterNameText
       value: 
       objectReference: {fileID: 305238410}
+    - target: {fileID: 6600550335227136483, guid: 9d5b11a738b7a81479c746124fec548f, type: 3}
+      propertyPath: setHasTalkedSimon
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6600550335227136483, guid: 9d5b11a738b7a81479c746124fec548f, type: 3}
       propertyPath: interactButtonText
       value: 

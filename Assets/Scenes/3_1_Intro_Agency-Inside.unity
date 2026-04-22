@@ -10395,7 +10395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: 'dialogueEntries.Array.data[0].lines.Array.data[0]'
-      value: Graham! You're here, finally.
+      value: Sir! You're here, finally.
       objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: 'dialogueEntries.Array.data[0].lines.Array.data[1]'

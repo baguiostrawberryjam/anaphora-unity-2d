@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Events;
 
 public class InteractTrigger : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class InteractTrigger : MonoBehaviour
     public Button continueButton;
     public Button interactButton;
     public TMP_Text interactButtonText;
+
+    [Header("On Dialogue Close Event")]
+    public UnityEvent onDialogueClose;
 
     [Header("Interact Label")]
     public string interactLabel = "Interact"; // set this per object in Inspector
@@ -194,6 +198,7 @@ public class InteractTrigger : MonoBehaviour
             playerMovementScript.canMove = true;
 
         RefreshInteractButton();
+        onDialogueClose?.Invoke();
     }
 
     void SetPlayerBools()

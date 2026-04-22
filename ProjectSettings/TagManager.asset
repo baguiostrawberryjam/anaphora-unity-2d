@@ -57,6 +57,9 @@ TagManager:
   - name: Object - Walls
     uniqueID: 1791995813
     locked: 0
+  - name: Bed
+    uniqueID: 1522468765
+    locked: 0
   - name: Entities
     uniqueID: 3665407047
     locked: 0
