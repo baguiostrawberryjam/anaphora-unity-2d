@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: abfcc39a757e49747a4d87696a1ef42e, type: 3}
+  sceneToLoad: 2_Intro_MC-Backyard
   spawnPointName: SP_MC_Apartment_Outside
   teleportDelay: 1.5
   requireFlashlight: 0
@@ -1865,6 +1866,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2048,6 +2050,20 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e498e52abc6ecf4cbbea0844d1e7420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
+  targetAspectX: 16
+  targetAspectY: 9
 --- !u!1 &519590297
 GameObject:
   m_ObjectHideFlags: 0

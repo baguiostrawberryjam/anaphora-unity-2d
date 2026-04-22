@@ -9115,6 +9115,7 @@ GameObject:
   - component: {fileID: 1284357204}
   - component: {fileID: 1284357203}
   - component: {fileID: 1284357207}
+  - component: {fileID: 1284357208}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9298,6 +9299,20 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1284357208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284357200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e498e52abc6ecf4cbbea0844d1e7420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
+  targetAspectX: 16
+  targetAspectY: 9
 --- !u!1 &1291004297
 GameObject:
   m_ObjectHideFlags: 0
@@ -12930,6 +12945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: 8324adbe49612254c8612d08b4171573, type: 3}
+  sceneToLoad: 3_1_Intro_Agency-Inside
   spawnPointName: SP_Agency_Inside
   teleportDelay: 3
   requireFlashlight: 0
@@ -13094,6 +13110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: e754b632e3061c34586d4c866ca33493, type: 3}
+  sceneToLoad: 4_0_Intro_Victim_House-Outside
   spawnPointName: SP_Victim_House_Outside
   teleportDelay: 3
   requireFlashlight: 0

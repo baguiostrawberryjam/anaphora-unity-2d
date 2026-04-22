@@ -7755,7 +7755,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1419758301
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &610157173
@@ -9228,6 +9228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: e754b632e3061c34586d4c866ca33493, type: 3}
+  sceneToLoad: 4_0_Intro_Victim_House-Outside
   spawnPointName: SP_Victim_House_Entrance
   teleportDelay: 1.5
   requireFlashlight: 0
@@ -12762,6 +12763,7 @@ GameObject:
   - component: {fileID: 1866894485}
   - component: {fileID: 1866894484}
   - component: {fileID: 1866894483}
+  - component: {fileID: 1866894488}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12945,6 +12947,20 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1866894488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866894481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e498e52abc6ecf4cbbea0844d1e7420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
+  targetAspectX: 16
+  targetAspectY: 9
 --- !u!1 &1881271551
 GameObject:
   m_ObjectHideFlags: 0
@@ -15969,6 +15985,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9041912887092209876, guid: 34159fc1e9ddb6540852c2a9e5bab6ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -327.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15987,6 +16007,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 609883714}
     m_Modifications:
+    - target: {fileID: 469691461002532967, guid: eda40c3fe261572478df2853fbcaec2d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -327.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1293444167193568568, guid: eda40c3fe261572478df2853fbcaec2d, type: 3}
       propertyPath: m_Name
       value: Dialogue Panel

@@ -12,6 +12,7 @@ public class Teleport : MonoBehaviour
     public SceneAsset sceneAsset;
 #endif
 
+    [SerializeField, HideInInspector]
     private string sceneToLoad;
 
     [Tooltip("The name of the spawn point GameObject in the TARGET scene where the player should appear")]

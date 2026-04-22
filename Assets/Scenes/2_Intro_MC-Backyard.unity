@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+  sceneToLoad: 1_Intro_MC-Apartment
   spawnPointName: SP_MC_Apartment_Inside
   teleportDelay: 3
   requireFlashlight: 0
@@ -3408,6 +3409,7 @@ GameObject:
   - component: {fileID: 1284357204}
   - component: {fileID: 1284357203}
   - component: {fileID: 1284357202}
+  - component: {fileID: 1284357207}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3424,7 +3426,7 @@ Transform:
   m_GameObject: {fileID: 1284357200}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.38214132, y: -1.97, z: -10}
+  m_LocalPosition: {x: 1.212182, y: -1.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3575,7 +3577,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3591,6 +3593,20 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1284357207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284357200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e498e52abc6ecf4cbbea0844d1e7420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
+  targetAspectX: 16
+  targetAspectY: 9
 --- !u!1 &1291004297
 GameObject:
   m_ObjectHideFlags: 0
@@ -10719,6 +10735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: f8c342683ac8dea4493dd3d8d66eafd7, type: 3}
+  sceneToLoad: 3_0_Intro_Agency-Outside
   spawnPointName: SP_Agency_Outside_Exit
   teleportDelay: 3
   requireFlashlight: 0
@@ -11586,7 +11603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8070227257658977139, guid: 2afc961f812c3714ba2a86803ab17241, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.38214132
+      value: 1.212182
       objectReference: {fileID: 0}
     - target: {fileID: 8070227257658977139, guid: 2afc961f812c3714ba2a86803ab17241, type: 3}
       propertyPath: m_LocalPosition.y

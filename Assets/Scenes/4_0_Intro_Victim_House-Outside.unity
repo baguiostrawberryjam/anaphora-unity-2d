@@ -1516,7 +1516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8070227257658977139, guid: 2afc961f812c3714ba2a86803ab17241, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.84585905
+      value: 1.6791925
       objectReference: {fileID: 0}
     - target: {fileID: 8070227257658977139, guid: 2afc961f812c3714ba2a86803ab17241, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14013,6 +14013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneAsset: {fileID: 102900000, guid: f8c342683ac8dea4493dd3d8d66eafd7, type: 3}
+  sceneToLoad: 3_0_Intro_Agency-Outside
   spawnPointName: SP_Agency_Outside_Exit
   teleportDelay: 3
   requireFlashlight: 0
@@ -14345,6 +14346,7 @@ GameObject:
   - component: {fileID: 1931479092}
   - component: {fileID: 1931479091}
   - component: {fileID: 1931479090}
+  - component: {fileID: 1931479095}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14361,7 +14363,7 @@ Transform:
   m_GameObject: {fileID: 1931479088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84585905, y: 1.3979838, z: -10}
+  m_LocalPosition: {x: 1.6791925, y: 1.3979838, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14528,6 +14530,20 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1931479095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931479088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e498e52abc6ecf4cbbea0844d1e7420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
+  targetAspectX: 16
+  targetAspectY: 9
 --- !u!1001 &1947002089
 PrefabInstance:
   m_ObjectHideFlags: 0

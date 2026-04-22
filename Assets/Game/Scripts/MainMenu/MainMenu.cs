@@ -8,17 +8,19 @@ public class MainMenu : MonoBehaviour
 #if UNITY_EDITOR
     public UnityEditor.SceneAsset gameSceneAsset;
 #endif
+
+    [SerializeField, HideInInspector]
     private string gameSceneName;
     private string spawnPointName = "DefaultSpawn";
 
     [Header("UI & Audio Sources")]
     public CanvasGroup fadeGroup;
-    public AudioSource bgmSource;  // Your looping music speaker
-    public AudioSource sfxSource;  // Your sound effect speaker
+    public AudioSource bgmSource;
+    public AudioSource sfxSource;
 
     [Header("Sound Effect Clips")]
-    public AudioClip genericClickSound; // The quiet tick when clicking anywhere
-    public AudioClip startGameSound;    // The heavy thud when clicking New/Continue
+    public AudioClip genericClickSound;
+    public AudioClip startGameSound;
 
     public float transitionDuration = 1.5f;
 
@@ -36,18 +38,19 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        // 1. GLOBAL CLICK DETECTOR
         bool clicked = false;
 
 #if ENABLE_INPUT_SYSTEM
         if (UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
             clicked = true;
-#else
-        if (Input.GetMouseButtonDown(0))
+        else if (UnityEngine.InputSystem.Touchscreen.current != null && UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             clicked = true;
+#else
+    // Check for Mouse OR at least one touch starting this frame
+    if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
+        clicked = true;
 #endif
 
-        // 2. Play the generic click sound (only if we aren't transitioning to the game)
         if (clicked && sfxSource != null && genericClickSound != null && !isTransitioning)
         {
             sfxSource.PlayOneShot(genericClickSound);
