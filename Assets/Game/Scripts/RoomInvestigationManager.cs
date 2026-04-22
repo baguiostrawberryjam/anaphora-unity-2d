@@ -34,7 +34,6 @@ public class RoomInvestigationManager : MonoBehaviour
 
     [Header("=== CUTSCENE ===")]
     public CutsceneManager cutsceneManager;
-    public DialogueTrigger bearFinalDialogue;
 
     [Header("=== WALL FIX ===")]
     public GameObject objectsWallTilemap;
@@ -269,11 +268,10 @@ public class RoomInvestigationManager : MonoBehaviour
         if (cutsceneManager != null)
         {
             bool cutsceneDone = false;
+            cutsceneManager.gameObject.SetActive(true);
+            yield return null; // wait one frame
             cutsceneManager.PlayCutscene(() => cutsceneDone = true);
             yield return new WaitUntil(() => cutsceneDone);
         }
-
-        if (bearFinalDialogue != null)
-            bearFinalDialogue.TriggerDialogue();
     }
 }

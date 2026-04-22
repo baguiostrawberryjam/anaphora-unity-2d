@@ -196,6 +196,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &11734302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,7 +252,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45760505}
-  - component: {fileID: 45760507}
   - component: {fileID: 45760508}
   m_Layer: 0
   m_Name: Bear Final Trigger
@@ -275,52 +275,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1142570655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &45760507
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45760504}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.01711011, y: -0.018248558}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.94797564, y: 1.6633043}
-  m_EdgeRadius: 0
 --- !u!114 &45760508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +502,6 @@ MonoBehaviour:
   dialogue44: {fileID: 1196602703}
   dialogue50: {fileID: 587278279}
   cutsceneManager: {fileID: 1234921607}
-  bearFinalDialogue: {fileID: 45760508}
   objectsWallTilemap: {fileID: 2128613197}
 --- !u!1 &203961848
 GameObject:
@@ -807,6 +760,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &277756957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1123,6 +1077,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &302779578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1236,6 +1191,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &313613357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1499,6 +1455,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &420801280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1615,6 +1572,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &438027672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1903,6 +1861,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &502857378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2026,6 +1985,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &512480029
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7821,6 +7781,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &610157176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7936,6 +7897,7 @@ MonoBehaviour:
   setHasKey: 1
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &612122503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8140,6 +8102,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &733020284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8323,6 +8286,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &756587771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8884,6 +8848,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &851671108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9011,6 +8976,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &871837401
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9121,6 +9087,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &905977220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9222,6 +9189,7 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+  requiredCheckedCaseFiles: 0
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
@@ -9765,6 +9733,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &990864171
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10028,6 +9997,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &1121065514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10254,19 +10224,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141557589}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1691172979}
   m_Father: {fileID: 1234921608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1141557591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10328,7 +10298,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!1 &1142570654
 GameObject:
@@ -10579,6 +10549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneManager
   cutsceneCanvas: {fileID: 1141557589}
   videoPlayer: {fileID: 1691172976}
+  cutsceneText: {fileID: 1289991797}
 --- !u!224 &1234921608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10588,11 +10559,12 @@ RectTransform:
   m_GameObject: {fileID: 1234921606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.0055555557, y: 0.0055555557, z: 0.0055555557}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 1289991796}
   - {fileID: 1141557590}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1600590549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10647,6 +10619,85 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2969819799260370972, guid: eda40c3fe261572478df2853fbcaec2d, type: 3}
   m_PrefabInstance: {fileID: 8441104455964664383}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1289991795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289991796}
+  - component: {fileID: 1289991798}
+  - component: {fileID: 1289991797}
+  m_Layer: 5
+  m_Name: Cutscene Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1289991796
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289991795}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1234921608}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1289991797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289991795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1289991798
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289991795}
+  m_CullTransparentMesh: 1
 --- !u!1 &1307436370
 GameObject:
   m_ObjectHideFlags: 0
@@ -10711,6 +10762,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &1307436373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11535,6 +11587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1234921608}
   - {fileID: 1426163198}
   - {fileID: 609883714}
   m_Father: {fileID: 0}
@@ -11739,6 +11792,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &1639744477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12377,7 +12431,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691172975}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f19c3da0fc2faf54ab1bf758330c5d9b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 1c98e089d06fda242874463ad34886d0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -12419,7 +12473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12802,6 +12856,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &1811572332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13208,8 +13263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e498e52abc6ecf4cbbea0844d1e7420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
-  targetAspectX: 16
-  targetAspectY: 9
 --- !u!1 &1881271551
 GameObject:
   m_ObjectHideFlags: 0
@@ -14873,6 +14926,7 @@ MonoBehaviour:
   setHasKey: 0
   setHasInteractedDrawer: 0
   setHasInteractedRef: 0
+  setHasCheckedCaseFiles: 0
 --- !u!61 &1987344686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16353,7 +16407,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1234921608}
   - {fileID: 1600590549}
   - {fileID: 1793261078}
   - {fileID: 1387285392}
