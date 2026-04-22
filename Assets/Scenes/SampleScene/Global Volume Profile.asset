@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   scale:
     m_OverrideState: 1
-    m_Value: 1.05
+    m_Value: 0.97
 --- !u!114 &-1608215928212496044
 MonoBehaviour:
   m_ObjectHideFlags: 3
