@@ -319,10 +319,13 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+  requiredCheckedCaseFiles: 0
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
   blockedDialogueTrigger: {fileID: 0}
+  checkOnlyOnce: 0
+  conditionID: 
 --- !u!212 &106020196
 SpriteRenderer:
   serializedVersion: 2
@@ -3426,7 +3429,7 @@ Transform:
   m_GameObject: {fileID: 1284357200}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.212182, y: -1.97, z: -10}
+  m_LocalPosition: {x: 0.38214132, y: -1.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3577,7 +3580,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10744,10 +10747,13 @@ MonoBehaviour:
   requiredInteractedDrawer: 0
   requiredInteractedRef: 0
   requiredInteractedBulletinBoard: 0
+  requiredCheckedCaseFiles: 0
   requireTalkedMarie: 0
   requireTalkedSimon: 0
   requireTalkedJohnuelle: 0
   blockedDialogueTrigger: {fileID: 0}
+  checkOnlyOnce: 0
+  conditionID: 
 --- !u!212 &1895083830
 SpriteRenderer:
   serializedVersion: 2
@@ -11603,7 +11609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8070227257658977139, guid: 2afc961f812c3714ba2a86803ab17241, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.212182
+      value: 0.38214132
       objectReference: {fileID: 0}
     - target: {fileID: 8070227257658977139, guid: 2afc961f812c3714ba2a86803ab17241, type: 3}
       propertyPath: m_LocalPosition.y

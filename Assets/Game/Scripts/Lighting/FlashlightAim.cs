@@ -19,8 +19,7 @@ public class FlashlightAim : MonoBehaviour
 
     void Update()
     {
-        // Hide/show Light2D based on hasFlashlight
-        if (playerController == null || !playerController.hasFlashlight)
+        if (playerController == null || !PlayerController.hasFlashlight)
         {
             if (flashlight != null) flashlight.enabled = false;
             return;
@@ -28,11 +27,8 @@ public class FlashlightAim : MonoBehaviour
 
         if (flashlight != null) flashlight.enabled = true;
 
-        // FIX: If the player cannot move (e.g., in dialogue), stop reading input so the flashlight stays frozen.
         if (!playerController.canMove)
-        {
             return;
-        }
 
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");

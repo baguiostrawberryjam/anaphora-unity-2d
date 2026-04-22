@@ -7163,8 +7163,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 1
   isRepeatable: 1
-  saveTriggered: 1
-  triggerID: Blocked Agency Dialogue
+  saveTriggered: 0
+  triggerID: 
 --- !u!1 &131337174
 GameObject:
   m_ObjectHideFlags: 0
@@ -9311,8 +9311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e498e52abc6ecf4cbbea0844d1e7420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
-  targetAspectX: 16
-  targetAspectY: 9
 --- !u!1 &1291004297
 GameObject:
   m_ObjectHideFlags: 0
@@ -12769,8 +12767,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 1
   isRepeatable: 1
-  saveTriggered: 1
-  triggerID: Blocked Victim's House
+  saveTriggered: 0
+  triggerID: 
 --- !u!1001 &1771151665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12896,6 +12894,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2054278420}
+    - target: {fileID: 3885553557748280335, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
+      propertyPath: hasCheckedCaseFiles
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7034748052371394579, guid: c7052498a779e6b46ac2aa3146287712, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

@@ -6256,8 +6256,8 @@ MonoBehaviour:
   typingSpeed: 0.03
   useAutoTrigger: 1
   isRepeatable: 1
-  saveTriggered: 1
-  triggerID: BlockedDialogue_OutsideAgency
+  saveTriggered: 0
+  triggerID: 
 --- !u!1 &1412500808
 GameObject:
   m_ObjectHideFlags: 0

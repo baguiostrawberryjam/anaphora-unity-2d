@@ -3,13 +3,13 @@
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 3f;
-    public bool hasFlashlight = false;
-    public bool hasInteractedSwitch = false;
-    public bool hasKey = false;
-    public bool hasInteractedDrawer = false;
-    public bool hasInteractedRef = false;
-    public bool hasCheckedBulletinBoard = false;
-    public bool hasCheckedCaseFiles = false;
+    public static bool hasFlashlight = false;
+    public static bool hasInteractedSwitch = false;
+    public static bool hasKey = false;
+    public static bool hasInteractedDrawer = false;
+    public static bool hasInteractedRef = false;
+    public static bool hasCheckedBulletinBoard = false;
+    public static bool hasCheckedCaseFiles = false;
     public bool canMove = true;
 
     public JoystickController joystick;

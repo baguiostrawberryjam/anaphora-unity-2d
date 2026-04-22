@@ -136,10 +136,8 @@ public class ImageInteractable : MonoBehaviour
 
     void SetPlayerBools()
     {
-        if (playerMovementScript == null) return;
-
         if (setHasCheckedBulletinBoard)
-            playerMovementScript.hasCheckedBulletinBoard = true;
+            PlayerController.hasCheckedBulletinBoard = true;
     }
 
     void OpenObject()

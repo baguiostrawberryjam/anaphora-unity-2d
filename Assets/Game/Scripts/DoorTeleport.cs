@@ -70,13 +70,13 @@ public class DoorTeleport : MonoBehaviour
     {
         if (player == null) return false;
 
-        Debug.Log($"hasFlashlight: {player.hasFlashlight} | hasInteractedSwitch: {player.hasInteractedSwitch}");
+        Debug.Log($"hasFlashlight: {PlayerController.hasFlashlight} | hasInteractedSwitch: {PlayerController.hasInteractedSwitch}");
 
-        if (requireFlashlight && !player.hasFlashlight) return false;
-        if (requireInteractedSwitch && !player.hasInteractedSwitch) return false;
-        if (requireKey && !player.hasKey) return false;
-        if (requiredInteractedDrawer && !player.hasInteractedDrawer) return false;
-        if (requiredInteractedRef && !player.hasInteractedRef) return false;
+        if (requireFlashlight && !PlayerController.hasFlashlight) return false;
+        if (requireInteractedSwitch && !PlayerController.hasInteractedSwitch) return false;
+        if (requireKey && !PlayerController.hasKey) return false;
+        if (requiredInteractedDrawer && !PlayerController.hasInteractedDrawer) return false;
+        if (requiredInteractedRef && !PlayerController.hasInteractedRef) return false;
         if (requireTalkedToBien && !NPCInteract.hasTalkedBien) return false;
         if (requireTalkedToJam && !NPCInteract.hasTalkedJam) return false;
 

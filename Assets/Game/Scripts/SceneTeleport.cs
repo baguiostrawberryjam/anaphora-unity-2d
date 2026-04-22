@@ -80,13 +80,13 @@ public class Teleport : MonoBehaviour
     {
         if (player == null) return false;
 
-        if (requireFlashlight && !player.hasFlashlight) return false;
-        if (requireInteractedSwitch && !player.hasInteractedSwitch) return false;
-        if (requireKey && !player.hasKey) return false;
-        if (requiredInteractedDrawer && !player.hasInteractedDrawer) return false;
-        if (requiredInteractedRef && !player.hasInteractedRef) return false;
-        if (requiredInteractedBulletinBoard && !player.hasCheckedBulletinBoard) return false;
-        if (requiredCheckedCaseFiles && !player.hasCheckedCaseFiles) return false;
+        if (requireFlashlight && !PlayerController.hasFlashlight) return false;
+        if (requireInteractedSwitch && !PlayerController.hasInteractedSwitch) return false;
+        if (requireKey && !PlayerController.hasKey) return false;
+        if (requiredInteractedDrawer && !PlayerController.hasInteractedDrawer) return false;
+        if (requiredInteractedRef && !PlayerController.hasInteractedRef) return false;
+        if (requiredInteractedBulletinBoard && !PlayerController.hasCheckedBulletinBoard) return false;
+        if (requiredCheckedCaseFiles && !PlayerController.hasCheckedCaseFiles) return false;
         if (requireTalkedMarie && !NPCInteract.hasTalkedMarie) return false;
         if (requireTalkedSimon && !NPCInteract.hasTalkedSimon) return false;
         if (requireTalkedJohnuelle && !NPCInteract.hasTalkedJohnuelle) return false;

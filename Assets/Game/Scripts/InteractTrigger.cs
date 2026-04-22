@@ -17,7 +17,7 @@ public class InteractTrigger : MonoBehaviour
     public UnityEvent onDialogueClose;
 
     [Header("Interact Label")]
-    public string interactLabel = "Interact"; // set this per object in Inspector
+    public string interactLabel = "Interact";
 
     [TextArea(2, 5)]
     public string[] dialogues;
@@ -38,7 +38,6 @@ public class InteractTrigger : MonoBehaviour
     private static List<InteractTrigger> nearbyTriggers = new List<InteractTrigger>();
 
     private bool isTyping;
-
     private int currentIndex;
     private Coroutine typingCoroutine;
 
@@ -46,9 +45,6 @@ public class InteractTrigger : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         interactButton.gameObject.SetActive(false);
-
-        interactButton.onClick.RemoveAllListeners();
-        interactButton.onClick.AddListener(OpenNearestDialogue);
     }
 
     private void OnDestroy()
@@ -143,6 +139,7 @@ public class InteractTrigger : MonoBehaviour
 
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(OnContinuePressed);
+
         StartTyping(dialogues[currentIndex]);
     }
 
@@ -166,12 +163,26 @@ public class InteractTrigger : MonoBehaviour
         }
 
         isTyping = false;
+        typingCoroutine = null;
     }
 
     void OnContinuePressed()
     {
-        if (isTyping) return;
+        // If still typing, skip to full line
+        if (isTyping)
+        {
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+                typingCoroutine = null;
+            }
 
+            dialogueText.text = dialogues[currentIndex];
+            isTyping = false;
+            return;
+        }
+
+        // Typing done, go to next or close
         currentIndex++;
 
         if (currentIndex < dialogues.Length)
@@ -195,7 +206,7 @@ public class InteractTrigger : MonoBehaviour
         if (playerMovementScript != null)
             playerMovementScript.canMove = true;
 
-        SetPlayerBools(); // ← Moved here so it fires after dialogue closes
+        SetPlayerBools();
 
         RefreshInteractButton();
         onDialogueClose?.Invoke();
@@ -206,21 +217,21 @@ public class InteractTrigger : MonoBehaviour
         if (playerMovementScript == null) return;
 
         if (setHasFlashlight)
-            playerMovementScript.hasFlashlight = true;
+            PlayerController.hasFlashlight = true;
 
         if (setHasInteractedSwitch)
-            playerMovementScript.hasInteractedSwitch = true;
+            PlayerController.hasInteractedSwitch = true;
 
         if (setHasKey)
-            playerMovementScript.hasKey = true;
+            PlayerController.hasKey = true;
 
         if (setHasInteractedDrawer)
-            playerMovementScript.hasInteractedDrawer = true;
+            PlayerController.hasInteractedDrawer = true;
 
-        if(setHasInteractedRef)
-            playerMovementScript.hasInteractedRef = true;
+        if (setHasInteractedRef)
+            PlayerController.hasInteractedRef = true;
 
         if (setHasCheckedCaseFiles)
-            playerMovementScript.hasCheckedCaseFiles = true;
+            PlayerController.hasCheckedCaseFiles = true;
     }
 }
