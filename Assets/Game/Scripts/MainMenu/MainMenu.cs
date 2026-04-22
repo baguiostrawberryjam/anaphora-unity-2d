@@ -36,6 +36,11 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
+    void Start()
+    {
+        Screen.SetResolution(1920, 1080, FullScreenMode.FullScreenWindow);
+    }
+
     void Update()
     {
         bool clicked = false;
