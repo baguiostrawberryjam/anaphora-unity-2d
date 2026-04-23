@@ -4428,7 +4428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6110845711418869894, guid: dca4bb893dc5518408b7f71f40effd07, type: 3}
       propertyPath: 'dialogueEntries.Array.data[0].lines.Array.data[0]'
-      value: "Always a pleasure to see you, sir! We\u2019re lucky to have a professional
+      value: "Always a pleasure to see you, Sir! We\u2019re lucky to have a professional
         like you around!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11132,7 +11132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: 'dialogueEntries.Array.data[1].lines.Array.data[0]'
-      value: Thanks Jam, but I'll make my own.
+      value: Thanks, Jam, but I'll make my own.
       objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: 'dialogueEntries.Array.data[1].lines.Array.data[1]'

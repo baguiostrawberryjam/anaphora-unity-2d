@@ -787,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: Heh! Now this is what a professional looks like! Now I can comfortably
+      value: Heh! Now this is how a professional looks like! Now I can comfortably
         go outside.
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
@@ -1011,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
-      value: "Now that\u2019s done and all, I'm ready!! Time to work!!!!"
+      value: "Now that that\u2019s done and all, I'm ready! Time to work!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2046,7 +2046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
-      value: but I suppose those achievements are the only things keeping me grounded
+      value: But I suppose those achievements are the only things keeping me grounded
         these days.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3346,8 +3346,8 @@ PrefabInstance:
       objectReference: {fileID: 94748045}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: "here it is again... That restless rustling of papers... It\u2019s funny,
-        isn't it?"
+      value: "There it is again... That restless rustling of papers... It\u2019s
+        funny, isn't it?"
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
@@ -3355,12 +3355,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[2]'
-      value: People going about their lives, the world just... moving...
+      value: People going on about their lives, the world just... moving.
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[3]'
       value: "Heh! It\u2019s a bit of a sharp contrast to how I\u2019m feeling at
-        the moment..."
+        the moment."
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[4]'
@@ -3959,7 +3959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
-      value: I need to get this in the table
+      value: I need to get this in the table.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9794,7 +9794,7 @@ PrefabInstance:
       objectReference: {fileID: 94748045}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: I'll be late for work now, I should hurry up
+      value: I'll be late for work now, I should hurry up.
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'

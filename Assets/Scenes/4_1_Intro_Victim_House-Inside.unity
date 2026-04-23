@@ -291,7 +291,7 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - You have accepted the anger of the entity...
+  - You have survived an encounter with the entity...
   - You win...
   - FOR NOW!
   delayBeforeShow: 0
@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 1693070272}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: This door is sure hard to open... The door has a strange physical resistance
+      value: This door sure is hard to open... The door has a strange physical resistance
         to it as it creaks slowly inward.
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
@@ -878,7 +878,7 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Desk
   dialogues:
-  - "Hmmm... It looks like there\u2019s particularly nothing to note here."
+  - "Hmmm... It looks like there\u2019s nothing in particular to note here."
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
   joystick: {fileID: 2010444497}
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   dialogues:
   - '*picks up the Sewing Kit*'
   - 'Now, even with both eyes in place, the bear still looks lifeless...  '
-  - Might as well add the ribbon that I saw lying around beside the boxes...
+  - Might as well add the Ribbon that I saw lying around beside the boxes...
   - It might improve the look of the teddy bear.
   typingSpeed: 0.03
   playerMovementScript: {fileID: 1693070272}
@@ -7605,7 +7605,7 @@ PrefabInstance:
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
       value: "Looks like I\u2019m pretty much done with the basic areas. Now here
-        comes the hard part... The 'Hallways."
+        comes the hard part... The 'Hallways.'"
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[1]'
@@ -7614,7 +7614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326163748004149210, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: 'dialogues.Array.data[2]'
-      value: The darkness really makes them seem 'endless.
+      value: The darkness really makes them seem 'endless.'
       objectReference: {fileID: 0}
     - target: {fileID: 4061478800764704104, guid: 963a1c2118d43c74daa6b5154d387951, type: 3}
       propertyPath: m_Name
@@ -7768,7 +7768,7 @@ MonoBehaviour:
   dialogueText: {fileID: 318710297}
   playerMovementScript: {fileID: 1693070272}
   dialogues:
-  - There you go!! All well and stitched up!!
+  - There you go! All well and stitched up!
   delayBeforeShow: 0
   typingSpeed: 0.03
   useAutoTrigger: 0
@@ -8136,7 +8136,7 @@ MonoBehaviour:
     is a family of three... A husband... A wife... and a son.
   - Looks like a family picture of the victim. Judging by its broken state, someone
     purposely broke and thrashed it.
-  - Looks like something fell behind the frame... What??!! A key?
+  - Looks like something fell behind the frame... What?! A key?
   - This... This key is quite convenient with these locked doors and all. Might as
     well try it on one of them.
   typingSpeed: 0.03
@@ -9213,7 +9213,7 @@ MonoBehaviour:
         m_CallState: 2
   interactLabel: F - Desk
   dialogues:
-  - "\"Oh??!! There\u2019s a Pin Cushion with Needles & Tiny Buttons inside the drawer/desk... "
+  - "Oh??!! There\u2019s a Pin Cushion with Needles & Tiny Buttons inside the drawer/desk... "
   - "Other than that, there\u2019s also what seems to be an empty roll of thread
     beside them."
   - Probably the victim was trying to sew something... Maybe the Polo Shirt?!
@@ -10771,7 +10771,7 @@ MonoBehaviour:
   dialogues:
   - Wait a second!... The items that I saw earlier while investigating... I might
     be able to work something out.
-  - Hmmm... I think I remember seeing a pin cushion with needles and a tiny button
+  - Hmmm... I think I remember seeing a Pin Cushion with needles and a tiny button
     in the desk...
   - ' I could probably use those to stitch up the bear and use the buttons as eyes.'
   delayBeforeShow: 1
@@ -12089,7 +12089,7 @@ MonoBehaviour:
       m_Calls: []
   interactLabel: F - Ref
   dialogues:
-  - "Well... That\u2019s odd... Though not fresh, some food here is still in perfect
+  - "Well... That\u2019s odd... Though not fresh, some food here are still in perfect
     condition."
   - This just means that the house had power recently... and someone is clearly living
     in it. Well, with all this food around, after all.
@@ -16597,7 +16597,7 @@ PrefabInstance:
       objectReference: {fileID: 1693070272}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[0]'
-      value: 'What the??!! The switch does not work at all!!!! '
+      value: What the?! The switch does not work at all!
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: 'dialogues.Array.data[1]'

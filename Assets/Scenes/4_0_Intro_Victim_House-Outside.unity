@@ -788,7 +788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: 'dialogueEntries.Array.data[0].lines.Array.data[0]'
-      value: Sorry I just... I still can't believe it.
+      value: Sorry, I just... I still can't believe it.
       objectReference: {fileID: 0}
     - target: {fileID: 7429431213665447145, guid: 3243c520fcb651348b5d8185ebf0508b, type: 3}
       propertyPath: 'dialogueEntries.Array.data[1].lines.Array.data[0]'
