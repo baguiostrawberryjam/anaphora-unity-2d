@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -51,9 +52,9 @@ public class MainMenu : MonoBehaviour
         else if (UnityEngine.InputSystem.Touchscreen.current != null && UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             clicked = true;
 #else
-    // Check for Mouse OR at least one touch starting this frame
-    if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
-        clicked = true;
+        // Check for Mouse OR at least one touch starting this frame
+        if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
+            clicked = true;
 #endif
 
         if (clicked && sfxSource != null && genericClickSound != null && !isTransitioning)
@@ -66,10 +67,37 @@ public class MainMenu : MonoBehaviour
     {
         if (isTransitioning) return;
 
+        // Wipe old save data so the player starts fresh!
+        SaveSystem.DeleteSave();
+
         PlayerPrefs.SetString("SpawnPoint", spawnPointName);
+        // One-Time Session Triggers
+        PlayerPrefs.SetString("savedDialogueTriggers", string.Join(",", DialogueTrigger.sessionTriggers));
+        PlayerPrefs.SetString("savedDoorTeleports", string.Join(",", DoorTeleport.triggeredDoors));
+        PlayerPrefs.SetString("savedSceneTeleports", string.Join(",", SceneTeleport.passedConditions));
         PlayerPrefs.Save();
 
-        StartCoroutine(TransitionToGame());
+        // Pass the default starting scene
+        StartCoroutine(TransitionToGame(gameSceneName));
+    }
+
+    public void ContinueGame()
+    {
+        if (isTransitioning) return;
+
+        // Check if a save actually exists
+        if (!PlayerPrefs.HasKey("savedScene") || string.IsNullOrEmpty(PlayerPrefs.GetString("savedScene")))
+        {
+            Debug.LogWarning("No save data found! Start a new game instead.");
+            // Optional: Play an error sound here if you want
+            return;
+        }
+
+        // Grab the scene the player was last in
+        string sceneToLoad = PlayerPrefs.GetString("savedScene");
+
+        // Start the transition into the saved scene
+        StartCoroutine(TransitionToGame(sceneToLoad));
     }
 
     public void OpenSettings()
@@ -78,21 +106,19 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Opening Settings...");
     }
 
-    private IEnumerator TransitionToGame()
+    // Notice I added a string parameter here so it knows WHICH scene to load
+    private IEnumerator TransitionToGame(string targetScene)
     {
         isTransitioning = true;
 
-        // Variable to remember how long our sound effect is
         float sfxLength = 0f;
 
-        // 1. Play the massive "Start Game" sound
         if (sfxSource != null && startGameSound != null)
         {
             sfxSource.PlayOneShot(startGameSound);
-            sfxLength = startGameSound.length; // Grab the exact duration of the audio clip in seconds
+            sfxLength = startGameSound.length;
         }
 
-        // 2. Lock the screen
         if (fadeGroup != null)
         {
             fadeGroup.blocksRaycasts = true;
@@ -101,7 +127,6 @@ public class MainMenu : MonoBehaviour
         float elapsedTime = 0f;
         float startVolume = (bgmSource != null) ? bgmSource.volume : 0f;
 
-        // 3. Fade out the looping BGM and fade in the black screen simultaneously
         while (elapsedTime < transitionDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -120,16 +145,14 @@ public class MainMenu : MonoBehaviour
             yield return null;
         }
 
-        // 4. THE FIX: If the sound effect is longer than the visual fade, wait for it to finish!
         if (sfxLength > transitionDuration)
         {
             float remainingTime = sfxLength - transitionDuration;
             yield return new WaitForSeconds(remainingTime);
         }
 
-        // 5. Sound is done, screen is black. Load the game!
-        Debug.Log($"Starting game, loading scene '{gameSceneName}', spawn point '{spawnPointName}'");
-        SceneManager.LoadScene(gameSceneName);
+        Debug.Log($"Loading scene '{targetScene}'");
+        SceneManager.LoadScene(targetScene);
     }
 
     public void ExitGame()
@@ -140,7 +163,7 @@ public class MainMenu : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
     }
 }

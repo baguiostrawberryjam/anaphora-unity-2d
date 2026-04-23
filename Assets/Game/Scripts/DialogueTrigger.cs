@@ -28,7 +28,7 @@ public class DialogueTrigger : MonoBehaviour
     public float minPitch = 0.9f;
     public float maxPitch = 1.1f;
 
-    private static HashSet<string> sessionTriggers = new HashSet<string>();
+    public static HashSet<string> sessionTriggers = new HashSet<string>();
 
     private bool hasTriggered = false;
     private bool isTyping = false;

@@ -29,7 +29,7 @@ public class DoorTeleport : MonoBehaviour
     public bool triggerOncePerSession = false;
     public string triggerID = "";
 
-    private static HashSet<string> triggeredDoors = new HashSet<string>();
+    public static HashSet<string> triggeredDoors = new HashSet<string>();
 
     private bool isOnCooldown = false;
 

@@ -283,4 +283,29 @@ public class RoomInvestigationManager : MonoBehaviour
             yield return new WaitUntil(() => cutsceneDone);
         }
     }
+
+    // =====================
+    // SAVE SYSTEM HOOKS
+    // =====================
+    public static bool IsDoneStatic(string step)
+    {
+        return completedSteps.Contains(step);
+    }
+
+    public static void LoadStepStatic(string step, bool isDone)
+    {
+        if (isDone)
+        {
+            completedSteps.Add(step);
+        }
+        else
+        {
+            completedSteps.Remove(step);
+        }
+    }
+
+    public static void ClearAllSteps()
+    {
+        completedSteps.Clear();
+    }
 }
