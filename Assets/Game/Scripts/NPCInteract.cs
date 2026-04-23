@@ -46,6 +46,12 @@ public class NPCInteract : MonoBehaviour
     public PlayerController playerMovementScript;
     public JoystickController joystick;
 
+    // --- ADDED: Audio Settings ---
+    [Header("Audio Settings")]
+    public float minPitch = 0.9f;
+    public float maxPitch = 1.1f;
+    private AudioSource dialogueAudio;
+
     private static NPCInteract activeNPC = null;
     private static List<NPCInteract> nearbyNPCs = new List<NPCInteract>();
 
@@ -61,6 +67,12 @@ public class NPCInteract : MonoBehaviour
 
         // FIXED: removed RemoveAllListeners()
         interactButton.onClick.AddListener(OpenNearestDialogue);
+
+        // --- ADDED: Automatically grab the Audio Source attached to the dialogue panel ---
+        if (dialoguePanel != null)
+        {
+            dialogueAudio = dialoguePanel.GetComponent<AudioSource>();
+        }
     }
 
     private void OnDestroy()
@@ -210,6 +222,14 @@ public class NPCInteract : MonoBehaviour
         foreach (char c in line)
         {
             dialogueText.text += c;
+
+            // --- ADDED: ANIMAL CROSSING AUDIO EFFECT ---
+            if (dialogueAudio != null && c != ' ')
+            {
+                dialogueAudio.pitch = Random.Range(minPitch, maxPitch);
+                dialogueAudio.Play();
+            }
+
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -229,6 +249,10 @@ public class NPCInteract : MonoBehaviour
 
             dialogueText.text = dialogueEntries[entryIndex].lines[lineIndex];
             isTyping = false;
+
+            // --- ADDED: Stop the audio if the player fast-forwards the text ---
+            if (dialogueAudio != null) dialogueAudio.Stop();
+
             return;
         }
 

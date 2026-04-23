@@ -23,6 +23,11 @@ public class DialogueTrigger : MonoBehaviour
     public bool saveTriggered = false;
     public string triggerID = "";
 
+    // Added two small floats so you can tweak the voice pitch directly, but no drag-and-drop required!
+    [Header("Audio Settings")]
+    public float minPitch = 0.9f;
+    public float maxPitch = 1.1f;
+
     private static HashSet<string> sessionTriggers = new HashSet<string>();
 
     private bool hasTriggered = false;
@@ -31,10 +36,18 @@ public class DialogueTrigger : MonoBehaviour
     private int currentIndex = 0;
     private Coroutine typingCoroutine;
 
+    // Automatically grabbed from your dialoguePanel
+    private AudioSource dialogueAudio;
+
     private void Start()
     {
         if (dialoguePanel != null)
+        {
             dialoguePanel.SetActive(false);
+
+            // Automatically grab the Audio Source attached to the dialogue panel!
+            dialogueAudio = dialoguePanel.GetComponent<AudioSource>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -104,12 +117,22 @@ public class DialogueTrigger : MonoBehaviour
     IEnumerator TypeLine(string line)
     {
         isTyping = true;
-
         dialogueText.text = "";
 
         foreach (char letter in line)
         {
             dialogueText.text += letter;
+
+            // --- ANIMAL CROSSING AUDIO EFFECT ---
+            // We check if the letter is not a space so we don't play sounds on blank spaces
+            if (dialogueAudio != null && letter != ' ')
+            {
+                dialogueAudio.pitch = Random.Range(minPitch, maxPitch);
+                // Using .Play() instead of PlayOneShot stops the previous letter's sound instantly, 
+                // preventing a chaotic overlapping mess of audio when typing very fast!
+                dialogueAudio.Play();
+            }
+
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -129,6 +152,10 @@ public class DialogueTrigger : MonoBehaviour
 
             dialogueText.text = dialogues[currentIndex];
             isTyping = false;
+
+            // Stop the audio if the player fast-forwards the text
+            if (dialogueAudio != null) dialogueAudio.Stop();
+
             return;
         }
 
