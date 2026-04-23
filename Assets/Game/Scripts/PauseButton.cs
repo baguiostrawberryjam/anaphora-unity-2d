@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour
@@ -6,6 +6,10 @@ public class PauseButton : MonoBehaviour
     [Header("References")]
     public GameObject pausePanel;
     public Button pauseButton;
+    public GameObject pauseButton1; // ← Pause Button (1)
+    public Button continueButton;
+    public Button returnToMenuButton;
+    public Button exitButton;
 
     public PlayerController playerController;
     public JoystickController joystick;
@@ -19,6 +23,15 @@ public class PauseButton : MonoBehaviour
 
         if (pauseButton != null)
             pauseButton.onClick.AddListener(TogglePause);
+
+        if (continueButton != null)
+            continueButton.onClick.AddListener(Resume);
+
+        if (returnToMenuButton != null)
+            returnToMenuButton.onClick.AddListener(ReturnToMenu);
+
+        if (exitButton != null)
+            exitButton.onClick.AddListener(ExitGame);
     }
 
     public void TogglePause()
@@ -36,6 +49,13 @@ public class PauseButton : MonoBehaviour
         if (pausePanel != null)
             pausePanel.SetActive(true);
 
+        // Hide pause buttons when panel is open
+        if (pauseButton != null)
+            pauseButton.gameObject.SetActive(false);
+
+        if (pauseButton1 != null)
+            pauseButton1.SetActive(false);
+
         if (playerController != null)
             playerController.canMove = false;
 
@@ -52,10 +72,33 @@ public class PauseButton : MonoBehaviour
         if (pausePanel != null)
             pausePanel.SetActive(false);
 
+        // Show pause buttons again when panel closes
+        if (pauseButton != null)
+            pauseButton.gameObject.SetActive(true);
+
+        if (pauseButton1 != null)
+            pauseButton1.SetActive(true);
+
         if (playerController != null)
             playerController.canMove = true;
 
         Time.timeScale = 1f;
+    }
+
+    public void ReturnToMenu()
+    {
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ExitGame()
+    {
+        Time.timeScale = 1f;
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 
     private void OnDestroy()
