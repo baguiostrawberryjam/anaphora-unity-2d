@@ -35,6 +35,12 @@ public class InteractTrigger : MonoBehaviour
     public bool setHasInteractedRef = false;
     public bool setHasCheckedCaseFiles = false;
 
+    // --- ADDED: Audio Settings ---
+    [Header("Audio Settings")]
+    public float minPitch = 0.9f;
+    public float maxPitch = 1.1f;
+    private AudioSource dialogueAudio;
+
     private static List<InteractTrigger> nearbyTriggers = new List<InteractTrigger>();
 
     private bool isTyping;
@@ -43,8 +49,16 @@ public class InteractTrigger : MonoBehaviour
 
     private void Start()
     {
-        dialoguePanel.SetActive(false);
-        interactButton.gameObject.SetActive(false);
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(false);
+
+            // --- ADDED: Automatically grab the Audio Source attached to the dialogue panel ---
+            dialogueAudio = dialoguePanel.GetComponent<AudioSource>();
+        }
+
+        if (interactButton != null)
+            interactButton.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
@@ -165,6 +179,14 @@ public class InteractTrigger : MonoBehaviour
         foreach (char c in line)
         {
             dialogueText.text += c;
+
+            // --- ADDED: ANIMAL CROSSING AUDIO EFFECT ---
+            if (dialogueAudio != null && c != ' ')
+            {
+                dialogueAudio.pitch = Random.Range(minPitch, maxPitch);
+                dialogueAudio.Play();
+            }
+
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -185,6 +207,10 @@ public class InteractTrigger : MonoBehaviour
 
             dialogueText.text = dialogues[currentIndex];
             isTyping = false;
+
+            // --- ADDED: Stop the audio if the player fast-forwards the text ---
+            if (dialogueAudio != null) dialogueAudio.Stop();
+
             return;
         }
 

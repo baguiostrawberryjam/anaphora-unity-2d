@@ -34,6 +34,12 @@ public class ImageInteractable : MonoBehaviour
     [Header("Player Bools To Set")]
     public bool setHasCheckedBulletinBoard = false;
 
+    // --- ADDED: Audio Settings ---
+    [Header("Audio Settings")]
+    public float minPitch = 0.9f;
+    public float maxPitch = 1.1f;
+    private AudioSource dialogueAudio;
+
     private static List<ImageInteractable> nearbyObjects = new List<ImageInteractable>();
 
     private bool isTyping = false;
@@ -42,7 +48,14 @@ public class ImageInteractable : MonoBehaviour
 
     private void Start()
     {
-        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(false);
+
+            // --- ADDED: Automatically grab the Audio Source attached to the dialogue panel ---
+            dialogueAudio = dialoguePanel.GetComponent<AudioSource>();
+        }
+
         if (zoomImagePanel != null) zoomImagePanel.SetActive(false);
     }
 
@@ -190,6 +203,14 @@ public class ImageInteractable : MonoBehaviour
         foreach (char c in line)
         {
             if (dialogueText != null) dialogueText.text += c;
+
+            // --- ADDED: ANIMAL CROSSING AUDIO EFFECT ---
+            if (dialogueAudio != null && c != ' ')
+            {
+                dialogueAudio.pitch = Random.Range(minPitch, maxPitch);
+                dialogueAudio.Play();
+            }
+
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -210,6 +231,10 @@ public class ImageInteractable : MonoBehaviour
                 dialogueText.text = dialogues[currentIndex];
 
             isTyping = false;
+
+            // --- ADDED: Stop the audio if the player fast-forwards the text ---
+            if (dialogueAudio != null) dialogueAudio.Stop();
+
             return;
         }
 
