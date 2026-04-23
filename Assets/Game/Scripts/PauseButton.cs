@@ -6,7 +6,7 @@ public class PauseButton : MonoBehaviour
     [Header("References")]
     public GameObject pausePanel;
     public Button pauseButton;
-    public GameObject pauseButton1; // ← Pause Button (1)
+    public GameObject pauseButton1;
     public Button continueButton;
     public Button returnToMenuButton;
     public Button exitButton;
@@ -49,7 +49,6 @@ public class PauseButton : MonoBehaviour
         if (pausePanel != null)
             pausePanel.SetActive(true);
 
-        // Hide pause buttons when panel is open
         if (pauseButton != null)
             pauseButton.gameObject.SetActive(false);
 
@@ -72,7 +71,6 @@ public class PauseButton : MonoBehaviour
         if (pausePanel != null)
             pausePanel.SetActive(false);
 
-        // Show pause buttons again when panel closes
         if (pauseButton != null)
             pauseButton.gameObject.SetActive(true);
 
@@ -88,6 +86,17 @@ public class PauseButton : MonoBehaviour
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
+
+        if (SaveSystem.instance != null)
+        {
+            SaveSystem.instance.SaveGame();
+            Debug.Log("Game saved before returning to main menu.");
+        }
+        else
+        {
+            Debug.LogWarning("SaveSystem instance not found! Could not save.");
+        }
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 

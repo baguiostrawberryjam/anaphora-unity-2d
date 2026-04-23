@@ -3922,7 +3922,7 @@ PrefabInstance:
       objectReference: {fileID: 76823708}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: interactLabel
-      value: F - Refrigerator
+      value: F - Ref
       objectReference: {fileID: 0}
     - target: {fileID: 7207236140021446596, guid: 173e3fc1830a64c4c828c2779d64dac1, type: 3}
       propertyPath: continueButton

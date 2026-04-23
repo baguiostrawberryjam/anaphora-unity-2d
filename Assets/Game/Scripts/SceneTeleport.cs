@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEditor;
 #endif
 
-public class Teleport : MonoBehaviour
+public class SceneTeleport : MonoBehaviour
 {
 #if UNITY_EDITOR
     public SceneAsset sceneAsset;
@@ -39,7 +39,7 @@ public class Teleport : MonoBehaviour
     public bool checkOnlyOnce = false;
     public string conditionID = "";
 
-    private static HashSet<string> passedConditions = new HashSet<string>();
+    public static HashSet<string> passedConditions = new HashSet<string>();
     private bool isTeleporting = false;
 
     void OnValidate()
